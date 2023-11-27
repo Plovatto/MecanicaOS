@@ -1,0 +1,1056 @@
+CRITICAL - 2023-11-07 10:51:07 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 71.
+ 1 APPPATH\Views\Ver.php(71): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(42): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 10:53:17 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 71.
+ 1 APPPATH\Views\Ver.php(71): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(42): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 10:56:46 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 75.
+ 1 APPPATH\Views\Ver.php(75): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:12:11 --> Class "App\Models\EquipeModel" not found
+in APPPATH\Controllers\ListarController.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:12:36 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:14:03 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:16:07 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:16:46 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:18:58 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:19:23 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:19:24 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:19:25 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:30:59 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:31:00 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:31:06 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 66.
+ 1 APPPATH\Views\Ver.php(66): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(49): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:32:59 --> Undefined variable $user
+in APPPATH\Views\detalhes.php on line 123.
+ 1 APPPATH\Views\detalhes.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(102): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:39:43 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 95.
+ 1 APPPATH\Views\Ver.php(95): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(62): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:45:15 --> Attempt to read property "nome" on array
+in APPPATH\Views\detalhes.php on line 115.
+ 1 APPPATH\Views\detalhes.php(115): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(121): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:46:13 --> Undefined constant "nome"
+in APPPATH\Views\detalhes.php on line 115.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\ListarController.php(121): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 11:47:20 --> Attempt to read property "nome" on array
+in APPPATH\Views\detalhes.php on line 115.
+ 1 APPPATH\Views\detalhes.php(115): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(121): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:00:13 --> Class "App\Controllers\PecaModel" not found
+in APPPATH\Controllers\AddController.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:00:36 --> Undefined variable $validation
+in APPPATH\Controllers\AddController.php on line 103.
+ 1 APPPATH\Controllers\AddController.php(103): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:02:25 --> Undefined variable $validation
+in APPPATH\Controllers\AddController.php on line 103.
+ 1 APPPATH\Controllers\AddController.php(103): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:02:30 --> Undefined variable $validation
+in APPPATH\Controllers\AddController.php on line 103.
+ 1 APPPATH\Controllers\AddController.php(103): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:02:49 --> Undefined variable $validation
+in APPPATH\Controllers\AddController.php on line 103.
+ 1 APPPATH\Controllers\AddController.php(103): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:02:54 --> Undefined variable $validation
+in APPPATH\Controllers\AddController.php on line 103.
+ 1 APPPATH\Controllers\AddController.php(103): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:03:07 --> Undefined variable $pecas
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:03:16 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:03:28 --> Undefined variable $pecas
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:03:33 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:03:44 --> Undefined variable $viewData
+in APPPATH\Controllers\AddController.php on line 105.
+ 1 APPPATH\Controllers\AddController.php(105): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:04:03 --> Undefined variable $data
+in APPPATH\Views\adicionar.php on line 20.
+ 1 APPPATH\Views\adicionar.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\adicionar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\AddController.php(105): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:04:24 --> Undefined variable $data
+in APPPATH\Views\adicionar.php on line 20.
+ 1 APPPATH\Views\adicionar.php(20): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\adicionar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\AddController.php(105): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:04:50 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:06:36 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:06:37 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:06:38 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:06:38 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:06:38 --> Undefined variable $peca
+in APPPATH\Controllers\AddController.php on line 106.
+ 1 APPPATH\Controllers\AddController.php(106): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:09:19 --> Undefined variable $pecasModel
+in APPPATH\Controllers\AddController.php on line 89.
+ 1 APPPATH\Controllers\AddController.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:12:32 --> Undefined variable $pecas
+in APPPATH\Controllers\AddController.php on line 92.
+ 1 APPPATH\Controllers\AddController.php(92): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+ERROR - 2023-11-07 12:12:50 --> mysqli_sql_exception: Duplicate entry 'peça' for key 'peca.nome_UNIQUE' in C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\app\Controllers\AddController.php(89): CodeIgniter\Model->insert()
+#8 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-11-07 12:12:50 --> Undefined variable $pecasModel
+in APPPATH\Controllers\AddController.php on line 97.
+ 1 APPPATH\Controllers\AddController.php(97): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+ERROR - 2023-11-07 12:13:04 --> mysqli_sql_exception: Duplicate entry 'peça' for key 'peca.nome_UNIQUE' in C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\app\Controllers\AddController.php(89): CodeIgniter\Model->insert()
+#8 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-11-07 12:13:10 --> mysqli_sql_exception: Duplicate entry 'peça' for key 'peca.nome_UNIQUE' in C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\BaseModel.php(788): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\app\Controllers\AddController.php(89): CodeIgniter\Model->insert()
+#8 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\OneDrive\Área de Trabalho\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-11-07 12:17:12 --> Undefined variable $peca
+in APPPATH\Controllers\ListarController.php on line 121.
+ 1 APPPATH\Controllers\ListarController.php(121): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 12:18:01 --> Undefined variable $user
+in APPPATH\Views\detalhes.php on line 128.
+ 1 APPPATH\Views\detalhes.php(128): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(122): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:00:33 --> Undefined variable $tipo
+in APPPATH\Controllers\ListarController.php on line 148.
+ 1 APPPATH\Controllers\ListarController.php(148): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:13:24 --> Undefined variable $equipe
+in APPPATH\Controllers\ListarController.php on line 137.
+ 1 APPPATH\Controllers\ListarController.php(137): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:27:54 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhesOS.php on line 38.
+ 1 APPPATH\Views\detalhesOS.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:30:04 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhesOS.php on line 38.
+ 1 APPPATH\Views\detalhesOS.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:30:05 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhesOS.php on line 38.
+ 1 APPPATH\Views\detalhesOS.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:33:01 --> Attempt to read property "situacao" on array
+in APPPATH\Controllers\ListarController.php on line 203.
+ 1 APPPATH\Controllers\ListarController.php(203): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:33:25 --> Attempt to read property "situacao" on array
+in APPPATH\Controllers\ListarController.php on line 203.
+ 1 APPPATH\Controllers\ListarController.php(203): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 13:33:26 --> Attempt to read property "situacao" on array
+in APPPATH\Controllers\ListarController.php on line 203.
+ 1 APPPATH\Controllers\ListarController.php(203): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:08:35 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhes.php on line 125.
+ 1 APPPATH\Views\detalhes.php(125): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(138): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:09:40 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhes.php on line 139.
+ 1 APPPATH\Views\detalhes.php(139): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(138): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:24:10 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhes.php on line 125.
+ 1 APPPATH\Views\detalhes.php(125): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(138): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:25:20 --> Attempt to read property "status" on array
+in APPPATH\Views\detalhes.php on line 126.
+ 1 APPPATH\Views\detalhes.php(126): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(138): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:26:02 --> Attempt to read property "status" on array
+in APPPATH\Controllers\ListarController.php on line 221.
+ 1 APPPATH\Controllers\ListarController.php(221): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:27:15 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update()
+ 3 APPPATH\Controllers\ListarController.php(224): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:28:26 --> Illegal offset type
+in APPPATH\Controllers\ListarController.php on line 223.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:29:19 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update()
+ 3 APPPATH\Controllers\ListarController.php(224): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:29:33 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update()
+ 3 APPPATH\Controllers\ListarController.php(224): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:29:42 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhes.php on line 139.
+ 1 APPPATH\Views\detalhes.php(139): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(138): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:53:12 --> Undefined variable $pecaModel
+in APPPATH\Controllers\ListarController.php on line 235.
+ 1 APPPATH\Controllers\ListarController.php(235): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:54:13 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update()
+ 3 APPPATH\Controllers\ListarController.php(242): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:55:31 --> Attempt to read property "status" on array
+in APPPATH\Controllers\ListarController.php on line 239.
+ 1 APPPATH\Controllers\ListarController.php(239): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:55:34 --> Attempt to read property "status" on array
+in APPPATH\Controllers\ListarController.php on line 239.
+ 1 APPPATH\Controllers\ListarController.php(239): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:56:02 --> Undefined constant "App\Controllers\status"
+in APPPATH\Controllers\ListarController.php on line 239.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:56:33 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update()
+ 3 APPPATH\Controllers\ListarController.php(242): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 17:58:43 --> Attempt to read property "codigo" on null
+in APPPATH\Views\detalhes.php on line 180.
+ 1 APPPATH\Views\detalhes.php(180): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(138): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:00:14 --> Undefined variable $admin
+in APPPATH\Controllers\ListarController.php on line 145.
+ 1 APPPATH\Controllers\ListarController.php(145): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:02:37 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 96.
+ 1 APPPATH\Views\Ver.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(62): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:02:38 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 96.
+ 1 APPPATH\Views\Ver.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(62): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:02:38 --> Attempt to read property "id" on array
+in APPPATH\Views\Ver.php on line 96.
+ 1 APPPATH\Views\Ver.php(96): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(62): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:19:20 --> Class "App\Controllers\ServicoModel" not found
+in APPPATH\Controllers\AddController.php on line 74.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:34:41 --> Attempt to read property "status" on array
+in APPPATH\Controllers\ListarController.php on line 210.
+ 1 APPPATH\Controllers\ListarController.php(210): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:35:50 --> Attempt to read property "status" on array
+in APPPATH\Controllers\ListarController.php on line 210.
+ 1 APPPATH\Controllers\ListarController.php(210): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:48:05 --> Class "App\Controllers\MecanicoModel" not found
+in APPPATH\Controllers\AddController.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 18:58:00 --> Undefined variable $validation
+in APPPATH\Controllers\AddController.php on line 99.
+ 1 APPPATH\Controllers\AddController.php(99): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:13:12 --> Undefined variable $veiculos
+in APPPATH\Views\detalhesOS.php on line 24.
+ 1 APPPATH\Views\detalhesOS.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:13:21 --> Undefined variable $veiculo
+in APPPATH\Views\detalhesOS.php on line 24.
+ 1 APPPATH\Views\detalhesOS.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:13:32 --> Undefined variable $index
+in APPPATH\Views\detalhesOS.php on line 26.
+ 1 APPPATH\Views\detalhesOS.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:14:17 --> Undefined variable $veiculo
+in APPPATH\Views\detalhesOS.php on line 29.
+ 1 APPPATH\Views\detalhesOS.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:15:52 --> Undefined variable $veiculo
+in APPPATH\Views\detalhesOS.php on line 32.
+ 1 APPPATH\Views\detalhesOS.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:16:19 --> Cannot access offset of type string on string
+in APPPATH\Views\detalhesOS.php on line 32.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\osController.php(43): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:16:37 --> Attempt to read property "placa" on string
+in APPPATH\Views\detalhesOS.php on line 32.
+ 1 APPPATH\Views\detalhesOS.php(32): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:16:49 --> Cannot access offset of type string on string
+in APPPATH\Views\detalhesOS.php on line 32.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\osController.php(43): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:17:02 --> Cannot access offset of type string on string
+in APPPATH\Views\detalhesOS.php on line 39.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\osController.php(43): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:21:02 --> Undefined variable $userType
+in APPPATH\Views\detalhes.php on line 53.
+ 1 APPPATH\Views\detalhes.php(53): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(145): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:23:05 --> Undefined variable $session
+in APPPATH\Controllers\ListarController.php on line 78.
+ 1 APPPATH\Controllers\ListarController.php(78): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:33:41 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhes.php on line 129.
+ 1 APPPATH\Views\detalhes.php(129): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(145): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:34:15 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 930.
+ 1 SYSTEMPATH\BaseModel.php(930): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset()
+ 2 SYSTEMPATH\Model.php(776): CodeIgniter\BaseModel->update()
+ 3 APPPATH\Controllers\ListarController.php(249): CodeIgniter\Model->update()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:34:17 --> Call to undefined method App\Models\PecaModel::getClienteById
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\EditarController.php(34): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:35:04 --> Undefined variable $cliente
+in APPPATH\Controllers\EditarController.php on line 41.
+ 1 APPPATH\Controllers\EditarController.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:35:44 --> Undefined constant "App\Controllers\nuul"
+in APPPATH\Controllers\EditarController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:36:32 --> Undefined constant "App\Controllers\nuul"
+in APPPATH\Controllers\EditarController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:36:32 --> Undefined constant "App\Controllers\nuul"
+in APPPATH\Controllers\EditarController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:36:33 --> Undefined constant "App\Controllers\nuul"
+in APPPATH\Controllers\EditarController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:36:53 --> Undefined constant "App\Controllers\nuul"
+in APPPATH\Controllers\EditarController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:37:03 --> Attempt to read property "id" on array
+in APPPATH\Views\editar.php on line 52.
+ 1 APPPATH\Views\editar.php(52): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\editar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\EditarController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:37:38 --> Attempt to read property "nome" on array
+in APPPATH\Views\editar.php on line 56.
+ 1 APPPATH\Views\editar.php(56): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\app\\Views\\editar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\EditarController.php(43): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:47:02 --> Class "App\Controllers\ServicoModel" not found
+in APPPATH\Controllers\EditarController.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:47:28 --> Call to undefined method App\Models\ServicoModel::getPecaById
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\EditarController.php(51): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-07 19:49:20 --> Attempt to read property "status" on array
+in APPPATH\Controllers\ListarController.php on line 210.
+ 1 APPPATH\Controllers\ListarController.php(210): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->alterarStatus()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\OneDrive\\Área de Trabalho\\MVCmecanica\\public\\index.php')

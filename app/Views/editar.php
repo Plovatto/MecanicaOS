@@ -1,4 +1,3 @@
-<!-- app/Views/cliente/editarCliente.php -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +40,52 @@ echo form_dropdown('status', $status_options, $cliente->status);
     <input type="text" name="telefone" value="<?php echo $cliente->telefone; ?>" required>
 
     <input type="submit" value="Atualizar Cliente">
+<a href="/Ver?tipo=cliente">Voltar</a>
+    <?php echo form_close(); ?>    <?php endif;?>
+    
+
+
+    <?php if ($tipo === 'peca'): ?>
+    <h1>Editar Cliente</h1>
+
+    <?php echo form_open('editar/peca/' . $peca['id']); ?>
+    <input type="hidden" name="_method" value="post">
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" value="<?php echo $peca['nome']; ?>" required>
+
+    <label for="valor">Valor</label>
+    <input type="text" name="valor" value="<?php echo $peca['valor']; ?>" required>
+
+    <label for="descricao">descricao</label>
+    <input type="text" name="descricao" value="<?php echo $peca['descricao']; ?>" required>
+
+   
+
+    <input type="submit" value="Atualizar Peça">
 
     <?php echo form_close(); ?>    <?php endif;?>
-    <a href="/Ver?tipo=cliente">Voltar</a>
+
+    <?php if ($tipo === 'servico'): ?>
+    <h1>Editar Cliente</h1>
+
+    <?php echo form_open('editar/servico/' . $servico['id']); ?>
+    <input type="hidden" name="_method" value="post">
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" value="<?php echo $servico['nome']; ?>" required>
+
+    <label for="valor">Valor</label>
+    <input type="text" name="valor" value="<?php echo $servico['valor']; ?>" required>
+
+    <label for="descricao">descricao</label>
+    <input type="text" name="descricao" value="<?php echo $servico['descricao']; ?>" required>
+
+   
+
+    <input type="submit" value="Atualizar Peça">
+
+    <?php echo form_close(); ?>    <?php endif;?>
 
 </body>
 </html>

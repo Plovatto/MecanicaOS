@@ -14,15 +14,39 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Setup
     // --------------------------------------------------------------------
-// Dentro do arquivo Validation.php em Config
+    public $equipe = [
+        'nome' => 'required',
+        'descricao' => 'required',
+        'mecanico_id' => 'required',
+        'especialidade_id' => 'required',
+    ];
+    
 public $cliente = [
     'nome_completo' => 'required',
     'endereco' => 'required',
     'email' => 'required|valid_email',
-    'status' => 'required|in_list[ativo,inativo]',
     'cpf' => 'required|exact_length[11]',
     'cnh' => 'permit_empty|exact_length[10]',
     'telefone' => 'permit_empty|valid_phone',
+];
+public $mecanico = [
+    'nome_completo' => 'required',
+    'endereco' => 'required',
+    'email' => 'required',
+    'cpf' => 'required',
+    'tipo' => 'required',
+    'senha' => 'required',
+];
+
+public $peca = [
+    'nome' => 'required',
+    'descricao' => 'required',
+    'valor' => 'required',
+];
+public $servico= [
+    'nome' => 'required',
+    'descricao' => 'required',
+    'valor' => 'required',
 ];
 
 public $validationRules = [
@@ -39,7 +63,6 @@ public $validationRules = [
         'ano' => 'required',
         'placa' => 'required',
         'cor' => 'required',
-        'status' => 'required|in_list[ativo,desativado]',
         'descricao' => 'required',
         'cliente_id' => 'required',
         'marca_id' => 'required',

@@ -8,7 +8,6 @@
 <body>
 
 
-
 <a href="/orders">Home</a>
 <?php if ($tipo === 'cliente'): ?>
     <h2>Lista de Clientes</h2>
@@ -27,8 +26,6 @@
 
 
 
-
-
 <?php if ($tipo === 'veiculo'): ?>
         <h1></h1>
         <?php foreach ($veiculos as $veiculo): ?>
@@ -41,6 +38,8 @@
         <?php endforeach;?>
     <?php endif;?>
 
+
+
     <?php if ($tipo === 'os'): ?>
     <h1>Ordens de Serviço</h1>
     <?php foreach ($orders as $order): ?>
@@ -49,6 +48,7 @@
         </li>
     <?php endforeach;?>
 <?php endif;?>
+
 
 
 <?php if ($tipo === 'mecanico'): ?>
@@ -60,15 +60,43 @@
     <?php endforeach;?>
 <?php endif;?>
 
-    <?php if ($tipo === 'equipe'): ?>
 
-    <?php endif;?>
 
     <?php if ($tipo === 'peca'): ?>
+    <h1>Peças</h1>
+    <?php foreach ($pecas as $peca): ?>
+        <li>
+                <a href="/detalhes/peca/<?=$peca['id']?>">Detalhes <?=esc($peca['id']);?></a>
+        </li>
+    <?php endforeach;?>
+<?php endif;?>
 
-    <?php endif;?>
+
+<?php if ($tipo === 'equipe'): ?>
+    <?php foreach ($equipes as $equipe): ?>
+        <li>
+                <a href="/detalhes/equipe/<?=$equipe['id']?>">Detalhes <?=esc($equipe['id']);?></a>
+        </li>
+    <?php endforeach;?>
+<?php endif;?>
+
+
     <?php if ($tipo === 'admin'): ?>
-
+        <?php foreach ($users as $user): ?>
+        <li>
+            <a href="/detalhes/admin/<?=$user->id?>">Detalhes <?=esc($user->id);?></a>
+        </li>
+    <?php endforeach;?>
        <?php endif;?>
+
+
+       <?php if ($tipo === 'servico'): ?>
+        <?php foreach ($servicos as $servico): ?>
+        <li>
+            <a href="/detalhes/servico/<?=$servico['id']?>">Detalhes <?=esc($servico['id']);?></a>
+        </li>
+    <?php endforeach;?>
+       <?php endif;?>
+       
 </body>
 </html>

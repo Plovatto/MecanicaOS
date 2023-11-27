@@ -79,23 +79,5 @@ class userController extends BaseController
         return view('perfil', ['perfil' => $perfil]);
     }
 
-    public function alterarStatus($userID)
-    {
-        $userModel = new userModel();
-        $user = $userModel->find($userID);
-
-        if ($user) {
-
-            $novoStatus = ($user->status === 'ativo') ? 'desativado' : 'ativo';
-
-            $data = ['status' => $novoStatus];
-            $userModel->update($userID, $data);
-
-            return redirect()->to(base_url("detalhes/mecanico/$userID"));
-        } else {
-
-            return redirect()->to(base_url(''));
-        }
-    }
 
 }

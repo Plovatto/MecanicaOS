@@ -29,10 +29,10 @@
 <?php endif;?>
     <?php if ($userType === 'admin'): ?>
 
-    <a href="/adicionarAdmin?tipo=mecanico"><button>Adicionar mecânico</button></a>
-    <a href="/adicionarAdmin?tipo=servico"><button>Adicionar serviço</button></a>
-    <a href="/adicionarAdmin?tipo=peca"><button>Adicionar peça</button></a>
-    <a href="/adicionarAdmin?tipo=equipe"><button>Adicionar equipe</button></a><?php endif;?>
+    <a href="<?=site_url('adicionar/mecanico')?>"><button>Adicionar mecânico</button></a>
+    <a href="<?=site_url('adicionar/servico')?>"><button>Adicionar serviço</button></a>
+    <a  href="<?=site_url('adicionar/peca')?>"><button>Adicionar peça</button></a>
+    <a href="<?=site_url('adicionar/equipe')?>"><button>Adicionar equipe</button></a><?php endif;?>
 
 <ul>
     <?php foreach ($orders as $order): ?>

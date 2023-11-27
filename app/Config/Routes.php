@@ -30,11 +30,13 @@ $routes->post('editar/(:segment)/(:num)', 'EditarController::atualizar/$1/$2');
 
 
 
-$routes->get('alterar-status-cliente/(:num)', 'ClienteController::alterarStatus/$1');
-$routes->get('alterar-status-mecanico/(:num)', 'userController::alterarStatus/$1');
+
+$routes->get('alterar-status-(:segment)/(:num)', 'ListarController::alterarStatus/$1/$2');
 
 
 $routes->get('modelos_by_marca/(:num)', 'AddController::getModelosByMarca/$1');   
 
 $routes->post('/adicionarOS', 'osController::adicionarOS');
 $routes->get('/adicionarOS', 'osController::adicionarOS');
+
+$routes->post('/searchVeiculo', 'osController::searchVeiculo');

@@ -1,13 +1,5 @@
 <?php
 
-/**
- * This file is part of CodeIgniter 4 framework.
- *
- * (c) CodeIgniter Foundation <admin@codeigniter.com>
- *
- * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
- */
 
 namespace CodeIgniter;
 
@@ -28,20 +20,6 @@ use ReflectionException;
 use ReflectionProperty;
 use stdClass;
 
-/**
- * The BaseModel class provides a number of convenient features that
- * makes working with a databases less painful. Extending this class
- * provide means of implementing various database systems
- *
- * It will:
- *      - simplifies pagination
- *      - allow specifying the return type (array, object, etc) with each call
- *      - automatically set and update timestamps
- *      - handle soft deletes
- *      - ensure validation is run against objects when saving items
- *      - process various callbacks
- *      - allow intermingling calls to the db connection
- */
 abstract class BaseModel
 {
     /**

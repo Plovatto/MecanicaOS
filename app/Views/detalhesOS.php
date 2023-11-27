@@ -14,9 +14,21 @@
     <p>Detalhes: <?=$order['detalhes']?></p>
     <p>Data de Emissão: <?=$order['data_emissao']?></p>
     <p>Data de Previsão de Conclusão: <?=$order['data_previsao']?></p>
-    <p>Status: <?=$order['status']?></p>
-    <p>Nome da Peça: <?=$order['peca_nome']?></p>
+    <p>Status: <?=$order['situacao']?></p>
+    <p>Nome da Peça:</p>
+    <ul>
+    <?php foreach ($pecas as $peca): ?>
+        <li><?=$peca['nome']?></li>
+    <?php endforeach; ?>
+</ul>
     <p>Valor das Peças: <?=$order['valor_pecas']?></p>
+    
+    <p>Nome do Serviço:</p>
+    <ul>
+    <?php foreach ($servicos as $servico): ?>
+        <li><?=$servico['nome']?></li>
+    <?php endforeach; ?>
+</ul>
     <p>Valor dos Serviços: <?=$order['valor_servicos']?></p>
     <p>Total: <?=$order['total']?></p>
    <br>
@@ -35,6 +47,12 @@
     <p>Equipe Código: <?=$order['equipe_id']?></p>
       <p>Mecânico Código: <?=$order['mecanico_id']?></p> <p>Nome do Mecânico: <?=$order['mecanico_nome']?></p>
 
+      <a href="<?php echo base_url('alterar-status-os/' . $order['id']); ?>">
+    <button style="background-color: <?=($order['situacao'] === 'A concluir') ? 'green' : 'red'?>; color: white;">
+        <?=($order['situacao'] === 'A concluir') ? 'Concluir' : 'Reabrir'?> OS
+    </button>
+</a>
+      <a href="/Ver?tipo=os">Voltar</a>
     <a href="/orders">Voltar</a>
 </body>
 </html>

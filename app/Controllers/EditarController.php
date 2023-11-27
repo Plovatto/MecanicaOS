@@ -2,12 +2,16 @@
 
 namespace App\Controllers;
 
+
 use App\Models\ClienteModel;
+use App\Models\PecaModel;
+use App\Models\ServicoModel;
 
 class EditarController extends BaseController
 {
     public function editar($tipo, $id)
-    {
+    {$cliente = null;
+        $peca = null;
         switch ($tipo) {
 
             case 'cliente':
@@ -23,8 +27,35 @@ class EditarController extends BaseController
                     return redirect()->to(base_url('orders'));
                 }
                 break;
+                case 'peca':
+                    $data['tipo'] = $tipo;
+                    helper('form');
+                    $pecaModel = new PecaModel();
+    
+                    helper('form');
+    
+                    $peca = $pecaModel->getPecaById($id);
+    
+                    if ($peca === null) {
+                        return redirect()->to(base_url('orders'));
+                    }
+                    break;
+
+                    case 'servico':
+                        $data['tipo'] = $tipo;
+                        helper('form');
+                        $servicoModel = new ServicoModel();
+        
+                        helper('form');
+        
+                        $servico = $servicoModel->getServicoById($id);
+        
+                        if ($servico === null) {
+                            return redirect()->to(base_url('orders'));
+                        }
+                        break;
         }
-        return view('editar', ['cliente' => $cliente, 'data' => $data, 'tipo' => $tipo]);
+        return view('editar', ['cliente' => $cliente, 'data' => $data, 'tipo' => $tipo, 'peca'=>$peca, 'servico'=>$servico]);
 
     }
 
@@ -49,6 +80,37 @@ class EditarController extends BaseController
 
                 return redirect()->to(base_url('detalhes/cliente/' . $id));
             }break;
+            
+            case 'peca':
+                $pecaModel = new PecaModel();
+                $data['tipo'] = $tipo;
+                if ($this->request->getMethod() === 'post') {
+                    $data = [
+                        'nome' => $this->request->getPost('nome'),
+                        'valor' => $this->request->getPost('valor'),
+                        'descricao' => $this->request->getPost('descricao'),
+                        
+                    ];
+    
+                    $pecaModel->update($id, $data);
+    
+                    return redirect()->to(base_url('detalhes/peca/' . $id));
+                }break;
+                case 'servico':
+                    $servicoModel = new ServicoModel();
+                    $data['tipo'] = $tipo;
+                    if ($this->request->getMethod() === 'post') {
+                        $data = [
+                            'nome' => $this->request->getPost('nome'),
+                            'valor' => $this->request->getPost('valor'),
+                            'descricao' => $this->request->getPost('descricao'),
+                            
+                        ];
+        
+                        $servicoModel->update($id, $data);
+        
+                        return redirect()->to(base_url('detalhes/servico/' . $id));
+                    }break;
     }
 
     }

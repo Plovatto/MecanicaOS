@@ -30,15 +30,6 @@
 <label for="email">Email</label>
 <input type="email" name="email" required>
 <br>
-<label for="status">Status</label>
-    <?php
-$status_options = [
-    'ativo' => 'Ativo',
-    'desativado' => 'Desativado',
-];
-echo form_dropdown('status', $status_options, 'ativo');
-?>
-<br>
 <label for="cpf">CPF</label>
 <input type="text" name="cpf" required>
 <br>
@@ -90,12 +81,6 @@ echo form_dropdown('status', $status_options, 'ativo');
     <option value="Outra">Outra</option>
 </select>
 <br>
-    <label for="status">Status</label>
-    <select id="status" name="status">
-        <option value="ativo" <?=set_select('status', 'ativo')?>>Ativo</option>
-        <option value="desativado" <?=set_select('status', 'desativado')?>>Desativado</option>
-    </select>
-<br>
 
 
 <label for="cliente_id">Cliente</label>
@@ -133,7 +118,129 @@ echo form_dropdown('status', $status_options, 'ativo');
     <input type="submit" value="Criar Veículo">
 
     <?=form_close();?>
-<?php endif;?>        <a href="/orders">Home</a>
+<?php endif;?> 
+
+
+<?php if ($data['tipo'] === 'peca'): ?>
+
+<?php echo form_open('adicionar/peca'); ?>
+
+<label for="nome">Nome</label>
+<input type="text" name="nome" required>
+<br>
+<label for="valor">Valor</label>
+<input type="text" name="valor" required>
+<br>
+<label for="descricao">Descrição</label>
+<input type="text" name="descricao" required>
+<br>
+
+<input type="submit" value="Adicionar Peça">
+
+<?php echo form_close(); ?>
+
+
+
+<?php endif;?>
+
+<?php if ($data['tipo'] === 'servico'): ?>
+
+<?php echo form_open('adicionar/servico'); ?>
+
+<label for="nome">Nome</label>
+<input type="text" name="nome" required>
+<br>
+<label for="valor">Valor</label>
+<input type="text" name="valor" required>
+<br>
+<label for="descricao">Descrição</label>
+<input type="text" name="descricao" required>
+<br>
+
+<input type="submit" value="Adicionar Serviço">
+
+<?php echo form_close(); ?>
+
+
+
+<?php endif;?>
+
+
+<?php if ($data['tipo'] === 'mecanico'): ?>
+
+<?php echo form_open('adicionar/mecanico'); ?>
+
+<label for="nome_completo">Nome</label>
+<input type="text" name="nome_completo" required>
+<br>
+<label for="endereco">endereco</label>
+<input type="text" name="endereco" required>
+<br>
+<label for="email">email</label>
+<input type="text" name="email" required>
+<br>
+<label for="senha">senha</label>
+<input type="text" name="senha" required>
+<br>
+<label for="cpf">cpf</label>
+<input type="text" name="cpf" required>
+<br>
+<label for="tipo">tipo</label>
+<input type="text" name="tipo" required>
+<br>
+<label for="especialidade_codigo">especialidade_codigo</label>
+<input type="text" name="especialidade_codigo" required>
+<br>
+<input type="submit" value="Adicionar mecânico">
+
+<?php echo form_close(); ?>
+
+
+
+<?php endif;?>
+
+<?php if ($data['tipo'] === 'equipe'): ?>
+
+<?php echo form_open('adicionar/equipe'); ?>
+
+<label for="codigo">Código</label>
+<input type="text" name="codigo" required>
+<br>
+<label for="nome">Nome</label>
+<input type="text" name="nome" required>
+<br>
+<label for="descricao">Descrição</label>
+<input type="text" name="descricao" required>
+<br>
+<br>
+<label for="mecanico_id">Mecânico</label>
+<select name="mecanico_id" required>
+    <?php 
+    if (isset($data['mecanicos'])) {
+        foreach ($data['mecanicos'] as $mecanico): ?>
+            <option value="<?=$mecanico->id?>"><?=$mecanico->nome_completo?></option>
+        <?php endforeach;
+    } ?>
+</select>
+<br>
+<label for="especialidade_id">Especialidade</label>
+<select name="especialidade_id" required>
+    <?php 
+    if (isset($data['especialidades'])) {
+        foreach ($data['especialidades'] as $especialidade): ?>
+            <option value="<?=$especialidade->id?>"><?=$especialidade->nome?></option>
+        <?php endforeach;
+    } ?>
+</select>
+<br>
+<input type="submit" value="Adicionar Equipe">
+
+<?php echo form_close(); ?>
+
+<?php endif;?>
+
+
+<a href="/orders">Home</a>
 </body>
 </html>
 

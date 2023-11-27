@@ -9,6 +9,7 @@
  </head>
  <body>
 
+
  <?php if ($tipo === 'cliente' && $cliente !== null): ?>
     <h1>Detalhes do Cliente</h1>
     <p><strong>Nome:</strong> <?=esc($cliente->nome_completo);?></p>
@@ -65,7 +66,6 @@
 
 
 
-
 <?php if ($tipo === 'veiculo' && $veiculo !== null): ?>
     <h1>Detalhes do Veículo</h1>
     <p><strong>Placa:</strong> <?=esc($veiculo->placa);?></p>
@@ -76,6 +76,7 @@
     <p><strong>Ano:</strong> <?=esc($veiculo->ano);?></p>
     <p><strong>Descrição:</strong> <?=esc($veiculo->descricao);?></p>
 <p><strong>Status:</strong> <?=esc($veiculo->status);?></p>
+
     <div id="accordion">
         <div class="card">
             <div class="card-header" id="headingCliente">
@@ -104,31 +105,88 @@
 </div>
 
         </div>
-    </div>
+    </div>    <a href="<?php echo base_url('alterar-status-veiculo/' . $veiculo->id); ?>">
+        <button style="background-color: <?=($veiculo->status === 'ativo') ? 'red' : 'green'?>; color: white;">
+            <?=($veiculo->status === 'ativo') ? 'Desativar' : 'Ativar'?> Veículo
+        </button>
+    </a>
     <a href="/Ver?tipo=veiculo">Voltar</a>
 <?php endif;?>
 
 
 
+<?php if ($tipo === 'peca' && $peca !== null): ?>
+    <h1>Detalhes da peça</h1>
 
+        <p><strong>Placa:</strong> <?=esc($peca['nome']);?></p>
+        <p><strong>Marca:</strong> <?=esc($peca['valor']);?></p>
+        <p><strong>Descrição:</strong> <?=esc($peca['descricao']);?></p>
+        <p><strong>Status:</strong> <?=esc($peca['status']);?></p>
+        <a href="<?php echo base_url('alterar-status-peca/' . $peca['id']); ?>">
+        <button style="background-color: <?=($peca['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
+            <?=($peca['status'] === 'ativo') ? 'Desativar' : 'Ativar'?> Peça
+        </button>
+    </a><?php if ($userType === 'admin'): ?> <a href="<?php echo base_url('editar/peca/' . $peca['id']); ?>"><button>Editar Cliente</button></a><?php endif;?>
 
+    <a href="/Ver?tipo=peca">Voltar</a>
+<?php endif;?>
+<?php if ($tipo === 'equipe' && $equipe !== null): ?>
+    <h1>Detalhes da equipe</h1>
 
+        <p><strong>Placa:</strong> <?=esc($equipe['nome']);?></p>
 
+        <p><strong>Descrição:</strong> <?=esc($equipe['descricao']);?></p>
+        <p><strong>Status:</strong> <?=esc($equipe['status']);?></p>
+        <a href="<?php echo base_url('alterar-status-equipe/' . $equipe['id']); ?>">
+        <button style="background-color: <?=($equipe['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
+            <?=($equipe['status'] === 'ativo') ? 'Desativar' : 'Ativar'?> Equipe
+        </button>
+    </a>
+    <a href="/Ver?tipo=equipe">Voltar</a>
+<?php endif;?>
 
+<?php if ($tipo === 'servico' && $servico !== null): ?>
+    <h1>Detalhes da serviço</h1>
 
+        <p><strong>Placa:</strong> <?=esc($servico['nome']);?></p>
+        <p><strong>Marca:</strong> <?=esc($servico['valor']);?></p>
+        <p><strong>Descrição:</strong> <?=esc($servico['descricao']);?></p>
+        <p><strong>Status:</strong> <?=esc($servico['status']);?></p>
+        <a href="<?php echo base_url('alterar-status-servico/' . $servico['id']); ?>">
+        <button style="background-color: <?=($servico['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
+            <?=($servico['status'] === 'ativo') ? 'Desativar' : 'Ativar'?> servico  
+        </button>
+    </a><?php if ($userType === 'admin'): ?> <a href="<?php echo base_url('editar/servico/' . $servico['id']); ?>"><button>Editar Cliente</button></a><?php endif;?>
+    <a href="/Ver?tipo=servico">Voltar</a>
+<?php endif;?>
 
 
 <?php if ($tipo === 'mecanico'): ?>
     <h1>Detalhes da os</h1>
-    <p><strong>Número da OS:</strong> <?=esc($user->codigo);?></p>
-    <p><strong>Número da OS:</strong> <?=esc($user->nome_completo);?></p>
-    <p><strong>Número da OS:</strong> <?=esc($user->especialidade_nome);?></p>
+    <p><strong>Código:</strong> <?=esc($user->codigo);?></p>
+    <p><strong>Nome:</strong> <?=esc($user->nome_completo);?></p>
+    <p><strong>Especialidade:</strong> <?=esc($user->especialidade_nome);?></p>
     <p><strong>status:</strong> <?=esc($user->status);?></p>
     <a href="/Ver?tipo=mecanico">Voltar</a>
 
-    <a href="<?php echo base_url('alterar-status-mecanico/' . $user->codigo); ?>"><button>Alterar Status</button></a>
-<?php endif;?>
 
+    <a href="<?php echo base_url('alterar-status-mecanico/' . $user->id); ?>">
+        <button style="background-color: <?=($user->status === 'ativo') ? 'red' : 'green'?>; color: white;">
+            <?=($user->status === 'ativo') ? 'Desativar' : 'Ativar'?> Mecânico
+        </button>
+    </a>
+<?php endif;?>
+<?php if ($tipo === 'admin'): ?>
+    <h1>Detalhes da os</h1>
+    <p><strong>Código:</strong> <?=esc($user->codigo);?></p>
+    <p><strong>Tipo:</strong> <?=esc($user->tipo);?></p>
+    <p><strong>Nome:</strong> <?=esc($user->nome_completo);?></p>
+    <p><strong>Especialidade:</strong> <?=esc($user->especialidade_nome);?></p>
+    <p><strong>status:</strong> <?=esc($user->status);?></p>
+    <a href="/Ver?tipo=admin">Voltar</a>
+
+
+<?php endif;?>
 <a href="/orders">Home</a>
 </body>
 </html>

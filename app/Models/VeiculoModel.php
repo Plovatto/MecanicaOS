@@ -38,4 +38,10 @@ class VeiculoModel extends Model
             ->where('veiculo.id', $veiculoCodigo)
             ->first();
     }
+    public function getVeiculoByPlaca($placa)
+    {
+        return $this->where('placa', $placa)->first();
+    }
+    
+    
 }

@@ -26,7 +26,6 @@ class OsModel extends Model
         'veiculo_id',
         'mecanico_id',
         'equipe_id',
-        'peca_id',
     ];
 
     public function getOrderWithDetails($id)
@@ -42,15 +41,18 @@ class OsModel extends Model
             equipe.nome as equipe_nome,
             peca.nome as peca_nome,
             marca.nome as marca_nome,
-            modelo.nome as modelo_nome')
+            modelo.nome as modelo_nome,
+            ordemdeservico_peca.quantidade as quantidade')
             ->join('cliente', 'cliente.id = ordemdeservico.cliente_id', 'left')
             ->join('veiculo', 'veiculo.id = ordemdeservico.veiculo_id', 'left')
             ->join('user', 'user.id = ordemdeservico.mecanico_id', 'left')
             ->join('equipe', 'equipe.id = ordemdeservico.equipe_id', 'left')
-            ->join('peca', 'peca.id = ordemdeservico.peca_id', 'left')
+            ->join('ordemdeservico_peca', 'ordemdeservico_peca.ordemdeservico_id = ordemdeservico.id', 'left')
+            ->join('peca', 'peca.id = ordemdeservico_peca.peca_id', 'left')
             ->join('marca', 'marca.id = veiculo.marca_id', 'left')
+        
             ->join('modelo', 'modelo.id = veiculo.modelo_id', 'left')
             ->where('ordemdeservico.id', $id)
             ->first();
     }
-}
+} 
