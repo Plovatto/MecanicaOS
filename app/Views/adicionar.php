@@ -50,74 +50,74 @@
 
 
 
-
     <?php if ($data['tipo'] === 'veiculo'): ?>
 
-    <h2>Adicionar veículo</h2><br>
+<h2>Adicionar veículo</h2><br>
 
 
-     <?php echo form_open('adicionar/veiculo'); ?>
+ <?php echo form_open('adicionar/veiculo'); ?>
 
-     <label for="placa">Placa</label>
-    <input type="text" id="placa" name="placa" value="<?=set_value('placa')?>" required>
-   <br>
-    <label for="ano">Ano</label>
- <?=form_dropdown('ano', (new \App\Helpers\FormHelpers())->generate_years_dropdown(), set_value('ano'), 'id="ano" required')?>
+ <label for="placa">Placa</label>
+<input type="text" id="placa" name="placa" value="<?=set_value('placa')?>" required>
+<br>
+<label for="ano">Ano</label>
+<?=form_dropdown('ano', (new \App\Helpers\FormHelpers())->generate_years_dropdown(), set_value('ano'), 'id="ano" required')?>
 <br>
 
-    <label for="cor">Cor</label>
+<label for="cor">Cor</label>
 <select id="cor" name="cor">
-    <option value="Branco">Branco</option>
-    <option value="Preto">Preto</option>
-    <option value="Prata">Prata</option>
-    <option value="Cinza">Cinza</option>
-    <option value="Azul">Azul</option>
-    <option value="Vermelho">Vermelho</option>
-    <option value="Verde">Verde</option>
-    <option value="Amarelo">Amarelo</option>
-    <option value="Laranja">Laranja</option>
-    <option value="Marrom">Marrom</option>
-    <option value="Roxo">Roxo</option>
-    <option value="Outra">Outra</option>
+<option value="Branco">Branco</option>
+<option value="Preto">Preto</option>
+<option value="Prata">Prata</option>
+<option value="Cinza">Cinza</option>
+<option value="Azul">Azul</option>
+<option value="Vermelho">Vermelho</option>
+<option value="Verde">Verde</option>
+<option value="Amarelo">Amarelo</option>
+<option value="Laranja">Laranja</option>
+<option value="Marrom">Marrom</option>
+<option value="Roxo">Roxo</option>
+<option value="Outra">Outra</option>
 </select>
 <br>
+
 
 
 <label for="cliente_id">Cliente</label>
-    <select name="cliente_id" id="cliente_id">
-    <?php foreach ($data['clientes'] as $cliente): ?>
-        <option value="<?=$cliente->id?>"><?=$cliente->nome_completo?></option>
-    <?php endforeach;?>
+<select name="cliente_id" id="cliente_id">
+<?php foreach ($data['clientes'] as $cliente): ?>
+    <option value="<?=$cliente->id?>"><?=$cliente->nome_completo?></option>
+<?php endforeach;?>
 </select>
 <br>
-    <label for="marca_id">Marca</label>
+<label for="marca_id">Marca</label>
 
 <select name="marca_id" id="marca_id">
 <option>Marca</option>
-    <?php foreach ($marcas as $id => $nome): ?>
-        <option value="<?=$id?>"><?=esc($nome)?></option>
-    <?php endforeach;?>
-    <option value="other">Other</option>
+<?php foreach ($marcas as $id => $nome): ?>
+    <option value="<?=$id?>"><?=esc($nome)?></option>
+<?php endforeach;?>
+<option value="other">Other</option>
 </select>
 <input type="text" id="marca_other" name="marca_other" style="display: none;">
 
 <br>
 <label id="modelo" for="modelo_id">Modelo</label>
 <select id="modelo_id" name="modelo_id">
-    <option>Modelo</option>
-    <?php if (!empty($modelos)): ?>
-        <?php foreach ($modelos as $modelo): ?>
-            <option value="<?=$modelo->id?>"><?=$modelo->nome?></option>
-        <?php endforeach;?>
-    <?php endif;?>
-    <option value="other">Other</option>
+<option>Modelo</option>
+<?php if (!empty($modelos)): ?>
+    <?php foreach ($modelos as $modelo): ?>
+        <option value="<?=$modelo->id?>"><?=$modelo->nome?></option>
+    <?php endforeach;?>
+<?php endif;?>
+<option value="other">Other</option>
 </select><br> <label for="descricao">Descrição</label><br>
-    <textarea id="descricao" name="descricao" required><?=set_value('descricao')?></textarea>
+<textarea id="descricao" name="descricao" required><?=set_value('descricao')?></textarea>
 <br>
 <input type="text" id="modelo_other" name="modelo_other" style="display: none;">
-    <input type="submit" value="Criar Veículo">
+<input type="submit" value="Criar Veículo">
 
-    <?=form_close();?>
+<?=form_close();?>
 <?php endif;?> 
 
 
@@ -200,11 +200,13 @@
 <?php endif;?>
 
 <?php if ($data['tipo'] === 'equipe'): ?>
-
+  
 <?php echo form_open('adicionar/equipe'); ?>
-
-<label for="codigo">Código</label>
-<input type="text" name="codigo" required>
+<?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+        <?=session()->getFlashdata('error')?>
+    </div>
+<?php endif;?>
 <br>
 <label for="nome">Nome</label>
 <input type="text" name="nome" required>
@@ -213,22 +215,26 @@
 <input type="text" name="descricao" required>
 <br>
 <br>
-<label for="mecanico_id">Mecânico</label>
-<select name="mecanico_id" required>
-    <?php 
-    if (isset($data['mecanicos'])) {
-        foreach ($data['mecanicos'] as $mecanico): ?>
-            <option value="<?=$mecanico->id?>"><?=$mecanico->nome_completo?></option>
-        <?php endforeach;
-    } ?>
+<label for="mecanico_id">Mecânicos disponíveis</label>
+<select id="mecanicos_disponiveis" multiple="multiple">
+    <?php foreach ($data['mecanicos'] as $mecanico): ?>
+        <option value="<?= $mecanico->id ?>"><?= $mecanico->nome_completo ?></option>
+    <?php endforeach; ?>
 </select>
+
+<label for="mecanicos_selecionados">Mecânicos na equipe</label>
+<select id="mecanicos_selecionados" name="mecanico_id[]" multiple="multiple">
+
+</select>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <br>
 <label for="especialidade_id">Especialidade</label>
 <select name="especialidade_id" required>
     <?php 
     if (isset($data['especialidades'])) {
         foreach ($data['especialidades'] as $especialidade): ?>
-            <option value="<?=$especialidade->id?>"><?=$especialidade->nome?></option>
+       <option value="<?=$especialidade['id']?>"><?=$especialidade['nome']?></option>0
         <?php endforeach;
     } ?>
 </select>
@@ -244,61 +250,69 @@
 </body>
 </html>
 
-<script>
-document.getElementById('marca_id').addEventListener('change', function() {
-    var marca_id = this.value;
-    var select = document.getElementById('modelo_id');
-    var modelin = document.getElementById('modelo');
-    if (marca_id) {
-        fetch('/modelos_by_marca/' + marca_id)
-            .then(response => response.json())
-            .then(data => {
-                select.innerHTML = '';
-                for (var i = 0; i < data.length; i++) {
-                    var option = document.createElement('option');
-                    option.value = data[i].id;
-                    option.text = data[i].nome;
-                    select.appendChild(option);
-                }
-
-                var option = document.createElement('option');
-                option.value = 'other';
-                option.text = 'Other';
-                select.appendChild(option);
-            });
-
-        select.style.display = 'block';
-        modelin.style.display = 'block';
-    } else {
-
-        select.style.display = 'none';
-        modelin.style.display = 'none';
-    }
-});
-
-document.getElementById('marca_id').addEventListener('change', function() {
-    var marca_id = this.value;
-    var marca_other = document.getElementById('marca_other');
-    if (marca_id === 'other') {
-        marca_other.style.display = 'block';
-    } else {
-        marca_other.style.display = 'none';
-
-    }
-});
-
-document.getElementById('modelo_id').addEventListener('change', function() {
-    var modelo_id = this.value;
-    var modelo_other = document.getElementById('modelo_other');
-    if (modelo_id === 'other') {
-        modelo_other.style.display = 'block';
-    } else {
-        modelo_other.style.display = 'none';
-    }
-});
-</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
+    $('#mecanicos_disponiveis').on('click', 'option', function() {
+        var selectedOption = $(this).detach();
+        $('#mecanicos_selecionados').append(selectedOption);
+    });
+
+    $('#mecanicos_selecionados').on('click', 'option', function() {
+        var selectedOption = $(this).detach();
+        $('#mecanicos_disponiveis').append(selectedOption);
+    });
+
+    $('form').on('submit', function() {
+        $('#mecanicos_selecionados option').prop('selected', true);
+    });
+
+    $('#marca_id').change(function() {
+        var marca_id = this.value;
+        var select = $('#modelo_id');
+        var modelin = $('#modelo');
+        if (marca_id) {
+            fetch('/modelos_by_marca/' + marca_id)
+                .then(response => response.json())
+                .then(data => {
+                    select.empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var option = $('<option></option>').val(data[i].id).text(data[i].nome);
+                        select.append(option);
+                    }
+
+                    var option = $('<option></option>').val('other').text('Other');
+                    select.append(option);
+                });
+
+            select.show();
+            modelin.show();
+        } else {
+            select.hide();
+            modelin.hide();
+        }
+    });
+
+    $('#marca_id').change(function() {
+        var marca_id = this.value;
+        var marca_other = $('#marca_other');
+        if (marca_id === 'other') {
+            marca_other.show();
+        } else {
+            marca_other.hide();
+        }
+    });
+
+    $('#modelo_id').change(function() {
+        var modelo_id = this.value;
+        var modelo_other = $('#modelo_other');
+        if (modelo_id === 'other') {
+            modelo_other.show();
+        } else {
+            modelo_other.hide();
+        }
+    });
+
     $('#cliente_id').select2();
 });
 </script><style>

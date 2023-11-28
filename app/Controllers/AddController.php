@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 use App\Models\EquipeModel;
+use App\Models\EspecialidadeModel;
+use App\Models\EquipeMecanicoModel;
 use App\Models\osModel;
 use App\Models\UserModel;
 use App\Models\ClienteModel;
@@ -206,31 +208,43 @@ try{
                 $data['tipo'] = $tipo;
                 helper('form');
                 $equipeModel = new EquipeModel();
-            
+                $mecanicoModel = new UserModel();
+    $especialidadeModel = new EspecialidadeModel();
+
+    $data['mecanicos'] = $mecanicoModel->getMecanicos();
+    $data['especialidades'] = $especialidadeModel->getEspecialidades();
+
                 if ($this->request->getMethod() === 'post') {
                     $validation = \Config\Services::validation();
                     $rules = $validation->getRuleGroup('equipe');
-            
+                    $equipeModel = new EquipeModel();
+                    $equipeMecanicoModel = new EquipeMecanicoModel();
                     $newData = [
-                       
                         'nome' => $this->request->getPost('nome'),
                         'descricao' => $this->request->getPost('descricao'),
-                        
-                        'mecanico_id' => session('user_id'), 
                         'especialidade_id' => $this->request->getPost('especialidade_id'),
-                    ];
-            
-                    $inserted = $equipeModel->insert($newData);
-                    $viewData = [
-                        'data' => $data,
-                        'equipe' => isset($equipe) ? $equipe : null,
-                    ];
-            
-                    if ($inserted === false) {
-                        $viewData['errors'] = $equipeModel->errors();
-                    } else {
-                        return redirect()->to(base_url('Ver?tipo=equipe'));
-                    }
+                        ];
+                        
+                        $viewData = [
+                            'data' => $data,
+                            'equipe' => isset($equipe) ? $equipe : null,
+                        ];
+                        var_dump($data);
+                        $inserted = $equipeModel->insert($newData);
+                        if ($inserted === false) {
+                            $viewData['errors'] = $equipeModel->errors();
+                            var_dump($equipeModel->errors());
+                        } else {
+                            $equipeId = $equipeModel->insertID(); 
+                            $mecanicos = $this->request->getPost('mecanico_id');
+                            foreach ($mecanicos as $mecanicoId) {
+                                $equipeMecanicoModel->insert([
+                                    'equipe_id' => $equipeId,
+                                    'mecanico_id' => $mecanicoId,
+                                ]);
+                            }
+                            return redirect()->to(base_url('Ver?tipo=equipe'));
+                        }
             
                     return view('adicionar', $viewData);
                 }

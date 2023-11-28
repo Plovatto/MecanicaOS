@@ -81,13 +81,15 @@
 <?php endif;?>
 
 
-    <?php if ($tipo === 'admin'): ?>
-        <?php foreach ($users as $user): ?>
-        <li>
-            <a href="/detalhes/admin/<?=$user->id?>">Detalhes <?=esc($user->id);?></a>
-        </li>
+<?php if ($tipo === 'admin'): ?>
+    <?php foreach ($users as $user): ?>
+        <?php if ($user->tipo === 'admin'): ?>
+            <li>
+                <a href="/detalhes/admin/<?=$user->id?>">Detalhes <?=esc($user->id);?></a>
+            </li>
+        <?php endif; ?>
     <?php endforeach;?>
-       <?php endif;?>
+<?php endif;?>
 
 
        <?php if ($tipo === 'servico'): ?>

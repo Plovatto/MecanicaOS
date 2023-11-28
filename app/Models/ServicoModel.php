@@ -8,7 +8,7 @@ class ServicoModel extends Model
 {
     protected $table = 'servicos';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['codigo', 'nome', 'descricao', 'valor','especialidade_id'];
+    protected $allowedFields = ['status','codigo', 'nome', 'descricao', 'valor','especialidade_id'];
 
     public function getServicos()
     {

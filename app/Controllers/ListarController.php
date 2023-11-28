@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ClienteModel;
+use App\Models\EquipeMecanicoModel;
 use App\Models\osModel;
 use App\Models\UserModel;
 use App\Models\VeiculoModel;
@@ -125,17 +126,27 @@ class ListarController extends BaseController
                         break;
                         case 'equipe':
                             $equipeModel = new EquipeModel();
+                            $equipeMecanicoModel = new EquipeMecanicoModel();
+                            $userModel = new UserModel();
+                        
                             $equipe = $equipeModel->find($id);
+                            $mecanicosIds = $equipeMecanicoModel->getMecanicosPorEquipe($id);
+                        
+                            $equipe['mecanicos'] = [];
+                            foreach ($mecanicosIds as $mecanicoId) {
+                                $mecanico = $userModel->find($mecanicoId['mecanico_id']);
+                                if ($mecanico) {
+                                    $equipe['mecanicos'][] = $mecanico;
+                                }
+                            }
+                        
                             $item = $equipe;
-                            
-            
                             break;
                             case 'admin':
                                 $userModel = new userModel();
-                                $user = $userModel->find($id);
-                                $item = $user;
-                                $user = $userModel->getPerfilWithEspecialidade($id);
-                
+                $user = $userModel->find($id);
+                $item = $user;
+                $user = $userModel->getPerfilWithEspecialidade($id);
                                 break;
             default:
 
@@ -267,20 +278,22 @@ class ListarController extends BaseController
                     }
                     break;
                     case 'equipe':
-    
                         $equipeModel = new EquipeModel();
                         $equipe = $equipeModel->find($id);
-                
+                    
                         if ($equipe) {
-                
                             $novoStatus = ($equipe['status'] === 'ativo') ? 'desativado' : 'ativo';
-                
+                    
                             $data = ['status' => $novoStatus];
+                            echo "Updating equipe with ID $id: ";
+                            print_r($data);
+                    
+                            // Uncomment this line
                             $equipeModel->update($id, $data);
-                
+                    
+                            // Uncomment this line
                             return redirect()->to(base_url("detalhes/equipe/$id"));
                         } else {
-                
                             return redirect()->to(base_url('equipe'));
                         }
                         break;

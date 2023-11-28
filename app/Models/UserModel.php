@@ -39,4 +39,8 @@ class UserModel extends Model
             ->where('user.id', $userId)
             ->first();
     }
+    public function getMecanicos()
+{
+    return $this->where('tipo', 'mecanico')->findAll();
+}
 }

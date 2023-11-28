@@ -12,6 +12,7 @@ class EditarController extends BaseController
     public function editar($tipo, $id)
     {$cliente = null;
         $peca = null;
+        $servico = null;
         switch ($tipo) {
 
             case 'cliente':

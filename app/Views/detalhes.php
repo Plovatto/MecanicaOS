@@ -133,16 +133,22 @@
 <?php if ($tipo === 'equipe' && $equipe !== null): ?>
     <h1>Detalhes da equipe</h1>
 
-        <p><strong>Placa:</strong> <?=esc($equipe['nome']);?></p>
+<p><strong>Nome:</strong> <?=esc($equipe['nome']);?></p>
 
-        <p><strong>Descrição:</strong> <?=esc($equipe['descricao']);?></p>
-        <p><strong>Status:</strong> <?=esc($equipe['status']);?></p>
-        <a href="<?php echo base_url('alterar-status-equipe/' . $equipe['id']); ?>">
-        <button style="background-color: <?=($equipe['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
-            <?=($equipe['status'] === 'ativo') ? 'Desativar' : 'Ativar'?> Equipe
-        </button>
-    </a>
-    <a href="/Ver?tipo=equipe">Voltar</a>
+<p><strong>Descrição:</strong> <?=esc($equipe['descricao']);?></p>
+<p><strong>Status:</strong> <?=esc($equipe['status']);?></p>
+<a href="<?php echo base_url('alterar-status-equipe/' . $equipe['id']); ?>">
+    <button style="background-color: <?=($equipe['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
+        <?=($equipe['status'] === 'ativo') ? 'Desativar' : 'Ativar'?> Equipe
+    </button>
+</a>
+<a href="/Ver?tipo=equipe">Voltar</a>
+<h2>Mecânicos na equipe</h2>
+<ul>
+    <?php foreach ($equipe['mecanicos'] as $mecanico): ?>
+        <li><?= esc($mecanico->nome_completo); ?></li>
+    <?php endforeach; ?>
+</ul>
 <?php endif;?>
 
 <?php if ($tipo === 'servico' && $servico !== null): ?>
@@ -178,11 +184,15 @@
 <?php endif;?>
 <?php if ($tipo === 'admin'): ?>
     <h1>Detalhes da os</h1>
-    <p><strong>Código:</strong> <?=esc($user->codigo);?></p>
-    <p><strong>Tipo:</strong> <?=esc($user->tipo);?></p>
-    <p><strong>Nome:</strong> <?=esc($user->nome_completo);?></p>
-    <p><strong>Especialidade:</strong> <?=esc($user->especialidade_nome);?></p>
-    <p><strong>status:</strong> <?=esc($user->status);?></p>
+    
+    <?php if ($user): ?>
+        <p><strong>Tipo:</strong> <?=esc($user->tipo);?></p>
+        <p><strong>Nome:</strong> <?=esc($user->nome_completo);?></p>
+        <p><strong>Especialidade:</strong> <?=esc($user->especialidade_nome);?></p>
+        <p><strong>status:</strong> <?=esc($user->status);?></p>
+    <?php else: ?>
+        <p>Usuário não encontrado.</p>
+    <?php endif; ?>
     <a href="/Ver?tipo=admin">Voltar</a>
 
 

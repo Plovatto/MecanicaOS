@@ -180,7 +180,7 @@
 
                     $('#selected_parts').append($li);
 
-                    // Armazene o preço da peça
+              
                     prices[id] = price;
                 } else {
                     $('#part_' + id).remove();

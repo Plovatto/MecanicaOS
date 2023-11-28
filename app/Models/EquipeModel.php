@@ -8,7 +8,7 @@ class EquipeModel extends Model
 {
     protected $table = 'equipe';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['codigo', 'nome', 'descricao', 'especialidade_id','mecanico_id'];
+    protected $allowedFields = ['status', 'codigo', 'nome', 'descricao', 'especialidade_id','mecanico_id'];
 
     public function getEquipes()
     {
