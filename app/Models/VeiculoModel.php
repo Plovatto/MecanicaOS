@@ -10,7 +10,7 @@ class VeiculoModel extends Model
     protected $primaryKey = 'id'; 
     protected $useAutoIncrement = true;
     protected $returnType = 'object';
-    protected $allowedFields = ['codigo', 'marca_id', 'modelo_id', 'cor', 'placa', 'status', 'ano', 'descricao', 'cliente_id'];
+    protected $allowedFields = ['marca_nome','modelo_nome','codigo', 'marca_id', 'modelo_id', 'cor', 'placa', 'status', 'ano', 'descricao', 'cliente_id'];
 
     public function getVeiculos()
     {
@@ -25,7 +25,14 @@ class VeiculoModel extends Model
             ->where('veiculo.id', $id)
             ->first();
     }
-
+    public function getTodosVeiculosWithMarcaModelo()
+    {
+        return $this->db->table('veiculo')
+            ->select('veiculo.*, marca.nome as marca_nome, modelo.nome as modelo_nome')
+            ->join('marca', 'marca.id = veiculo.marca_id', 'left')
+            ->join('modelo', 'modelo.id = veiculo.modelo_id', 'left')
+            ->get()->getResult();
+    }
     public function getVeiculosDoCliente($cliente_id)
     {
         return $this->where('cliente_id', $cliente_id)->findAll(); 

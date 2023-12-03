@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\EquipeMecanicoModel;
 use App\Models\ClienteModel;
 use App\Models\EquipeModel;
 use App\Models\OsModel;
@@ -14,25 +15,40 @@ use App\Models\ServicoModel;
 use App\Models\OServicoModel;
 class OsController extends BaseController 
 {
-    public function index()
+    public function index($id = null)
     {
         $osModel = new OsModel();
+        $clienteModel = new ClienteModel();
+        $veiculoModel = new VeiculoModel();
+        $clientes = $clienteModel->findAll();
+        $veiculos = $veiculoModel->findAll();
+    
+        $searchParams = $this->request->getGet();
+    
         $session = session();
         $userType = $session->get('user_type');
         $userId = $session->get('user_id');
-        $orders = [];
-
-        if ($userType === 'admin') {
-            $orders = $osModel->orderBy('id', 'DESC')->findAll();
-        } elseif ($userType === 'mecanico') {
-            try {
-                $orders = $osModel->where('mecanico_id', $userId)->findAll(); 
-            } catch (\Exception $e) {
-                log_message('error', 'Error: ' . $e->getMessage());
-            }
+        
+        $orders = $osModel->getAllOrdersWithDetails($searchParams);
+    
+        if ($userType == 'mecanico') { 
+            $orders = $osModel->getOrdersByMechanic($userId, $searchParams ?? []);
+        } else {
+            $orders = $osModel->getAllOrdersWithDetails($searchParams ?? []);
         }
-
-        return view('index', ['userType' => $userType, 'orders' => $orders]);
+        
+        $searchPerformed = !empty($searchParams);
+        $searchResults = $searchPerformed ? $orders : null;
+        
+        $data['searchPerformed'] = $searchPerformed;
+        $data['userType'] = $userType;
+        $data['searchResults'] = $searchResults;
+        $data['orders'] = $orders;
+        $data['clientes'] = $clientes;
+        $data['veiculos'] = $veiculos;
+        
+        echo view('index', $data);
+    
     }
 
     public function detalhes($id) 
@@ -161,4 +177,14 @@ $equipes = $equipeModel->findAll();
             echo json_encode(['cliente_id' => null, 'veiculo_id' => null]);
         }
     }
+    public function searchOS()
+{
+    $codigo = $this->request->getGet('codigo');
+
+    $osModel = new OSModel();
+    $order = $osModel->getOrderByCodigo($codigo);
+
+    return view('search_results', ['order' => $order]);
+}
+
 }

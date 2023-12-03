@@ -17,20 +17,11 @@ class UserModel extends Model
         'status',
         'cpf',
         'especialidade_id', 
+        'especialidade_nome',
         'tipo',
     ];
     protected $returnType = 'object';
 
-    protected $validationRules = [
-        'codigo' => 'required', 
-        'nome_completo' => 'required',
-        'email' => 'required|valid_email',
-        'senha' => 'required',
-        'status' => 'required|in_list[ativo,desativado]',
-        'cpf' => 'required|exact_length[11]',
-        'especialidade_id' => 'required', 
-        'tipo' => 'required',
-    ];
 
     public function getPerfilWithEspecialidade($userId)
     {

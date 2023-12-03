@@ -40,6 +40,12 @@
    <p>Nome da Marca: <?=$order['marca_nome']?></p>
    <p>Nome do Modelo: <?=$order['modelo_nome']?></p>
 <br>
+
+
+
+
+
+
     <p>Nome do Cliente: <?=$order['cliente_nome']?></p>
      <p>Cliente Código: <?=$order['cliente_id']?></p>
 
@@ -53,6 +59,6 @@
     </button>
 </a>
       <a href="/Ver?tipo=os">Voltar</a>
-    <a href="/orders">Voltar</a>
+    <a href="/orders">Home</a>
 </body>
 </html>

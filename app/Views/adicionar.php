@@ -8,15 +8,15 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 </head>
 <body>
-<?php if (isset($data['validation_errors'])): ?>
+<?php if (isset($viewData['data']['validation_errors'])): ?>
     <div class="alert alert-danger">
         <ul>
-            <?php foreach ($data['validation_errors'] as $error): ?>
+            <?php foreach ($viewData['data']['validation_errors'] as $error): ?>
                 <li><?=esc($error)?></li>
             <?php endforeach;?>
         </ul>
     </div>
-<?php endif;?>
+<?php endif; ?>
 <?php if ($data['tipo'] === 'cliente'): ?>
 
     <?php echo form_open('adicionar/cliente'); ?>
@@ -180,16 +180,42 @@
 <input type="text" name="email" required>
 <br>
 <label for="senha">senha</label>
-<input type="text" name="senha" required>
+<div class="password-container">
+    <input type="password" id="senha" name="senha" required>
+    <button type="button" id="togglePassword">👁️</button>
+</div>
+
+<script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#senha");
+
+    togglePassword.addEventListener('click', function (e) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>
 <br>
 <label for="cpf">cpf</label>
 <input type="text" name="cpf" required>
 <br>
-<label for="tipo">tipo</label>
-<input type="text" name="tipo" required>
+<label for="tipo">Tipo</label>
+<select name="tipo" required>
+    <option value="admin">Admin</option>
+    <option value="mecanico">Mecanico</option>
+</select>
 <br>
-<label for="especialidade_codigo">especialidade_codigo</label>
-<input type="text" name="especialidade_codigo" required>
+<br>
+<select name="especialidade_id" required>
+    <?php
+    $especialidadeModel = new \App\Models\EspecialidadeModel();
+    $especialidades = $especialidadeModel->findAll();
+
+    foreach ($especialidades as $especialidade) {
+        echo "<option value='{$especialidade['id']}'>{$especialidade['nome']}</option>";
+    }
+    ?>
+</select>
 <br>
 <input type="submit" value="Adicionar mecânico">
 

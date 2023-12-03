@@ -16,52 +16,82 @@ class ListarController extends BaseController
     public function listar()
     {
         $tipo = $this->request->getGet('tipo');
-
+        $pesquisa = $this->request->getGet('pesquisa') ?? '';
+    
+        $campoPesquisa = 'nome'; 
+        $campoPesquisa2 = null;
+        $campoPesquisa3 = null;
         if ($tipo === 'cliente') {
-            $clienteModel = new ClienteModel();
-            $clientes = $clienteModel->orderBy('id', 'DESC')->findAll();
-
-            return view('Ver', ['tipo' => $tipo, 'clientes' => $clientes]);
+            $model = new ClienteModel();
+            $campoPesquisa = 'nome_completo';
+            $campoPesquisa2 = 'cnh';
+            $campoPesquisa3 = 'codigo';
         } elseif ($tipo === 'veiculo') {
-            $veiculoModel = new VeiculoModel();
-            $veiculos = $veiculoModel->orderBy('id', 'DESC')->findAll();
+            $model = new VeiculoModel();
+            $campoPesquisa = 'placa';
+            $campoPesquisa2 = 'modelo_nome';
+            $campoPesquisa3 = 'marca_nome';
 
-            return view('Ver', ['tipo' => $tipo, 'veiculos' => $veiculos]);
         } elseif ($tipo === 'os') {
-            $osModel = new osModel();
-            $orders = $osModel->orderBy('id', 'DESC')->findAll();
-
-            return view('Ver', ['tipo' => $tipo, 'orders' => $orders]);
+          
+            $campoPesquisa2 = 'codigo';
+            $campoPesquisa = 'data_previsao';
+            $model = new osModel();
         } elseif ($tipo === 'mecanico') {
-            $userModel = new UserModel();
-            $users = $userModel->orderBy('id', 'DESC')->findAll();
-
-            return view('Ver', ['tipo' => $tipo, 'users' => $users]);
+            $campoPesquisa = 'nome_completo';
+            $campoPesquisa2 = 'especialidade_nome';
+            $campoPesquisa3 = 'codigo';
+            $model = new UserModel();
+        } elseif ($tipo === 'peca') {
+            $campoPesquisa = 'nome';
+            $campoPesquisa2 = 'valor';
+            $campoPesquisa3 = 'codigo';
+            $model = new PecaModel();
+        } elseif ($tipo === 'equipe') {
+            $campoPesquisa = 'nome';
+            $campoPesquisa3 = 'codigo';
+            
+            $model = new EquipeModel();
+           
+        } elseif ($tipo === 'admin') {
+            $model = new UserModel();
+            $campoPesquisa3 = 'codigo';
+            $campoPesquisa = 'nome_completo';
+            $campoPesquisa2 = 'tipo';
+        } elseif ($tipo === 'servico') {
+            $model = new ServicoModel(); 
+            $campoPesquisa3 = 'codigo';
+            $campoPesquisa2 = 'valor';
+            $campoPesquisa = 'nome';
         }
-        elseif ($tipo === 'peca') {
-            $pecaModel = new PecaModel();
-            $pecas = $pecaModel->orderBy('id', 'DESC')->findAll();
-
-            return view('Ver', ['tipo' => $tipo, 'pecas' => $pecas]);
-
-        }   elseif ($tipo === 'equipe') {
-            $equipeModel = new EquipeModel();
-            $equipes = $equipeModel->orderBy('id', 'DESC')->findAll();
-
-            return view('Ver', ['tipo' => $tipo, 'equipes' => $equipes]);
+    
+     
+    $dados = [];
+    if ($model) {
+        try {
+            if ($pesquisa) {
+                if ($campoPesquisa == 'cnh') {
+                    $query = $model->where($campoPesquisa, $pesquisa);
+                } else {
+                    $query = $model->like($campoPesquisa, $pesquisa);
+                }
+                if ($campoPesquisa2) {
+                    $query = $query->orLike($campoPesquisa2, $pesquisa);
+                }
+                if ($campoPesquisa3) {
+                    $query = $query->orLike($campoPesquisa3, $pesquisa);
+                }
+                $dados = $query->orderBy('id', 'DESC')->findAll();
+            } else {
+                $dados = $model->orderBy('id', 'DESC')->findAll();
+            }
+        } catch (\Exception $e) {
+            error_log($e->getMessage());
         }
-        elseif ($tipo === 'admin') {
-            $userModel = new UserModel();
-            $users = $userModel->orderBy('id', 'DESC')->findAll();
+    }
 
-            return view('Ver', ['tipo' => $tipo, 'users' => $users]);
-        }
-        elseif ($tipo === 'servico') {
-            $servicoModel = new ServicoModel();
-            $servicos = $servicoModel->orderBy('id', 'DESC')->findAll();
-
-            return view('Ver', ['tipo' => $tipo, 'servicos' => $servicos]);
-        }
+    
+        return view('Ver', ['tipo' => $tipo, 'dados' => $dados, 'pesquisa' => $pesquisa]);
     }
 
     public function detalhes($tipo, $id)
@@ -288,10 +318,8 @@ class ListarController extends BaseController
                             echo "Updating equipe with ID $id: ";
                             print_r($data);
                     
-                            // Uncomment this line
                             $equipeModel->update($id, $data);
                     
-                            // Uncomment this line
                             return redirect()->to(base_url("detalhes/equipe/$id"));
                         } else {
                             return redirect()->to(base_url('equipe'));

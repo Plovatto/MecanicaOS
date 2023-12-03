@@ -40,3 +40,5 @@ $routes->post('/adicionarOS', 'osController::adicionarOS');
 $routes->get('/adicionarOS', 'osController::adicionarOS');
 
 $routes->post('/searchVeiculo', 'osController::searchVeiculo');
+
+$routes->get('/search', 'OsController::search');

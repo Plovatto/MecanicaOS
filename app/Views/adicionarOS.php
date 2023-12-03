@@ -12,14 +12,14 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/adicionarOS"  method="post">
+<form action="/adicionarOS"  method="post"><br><br>
 <label for="placa">Placa do Veículo:</label><br>
         <input type="text" name="placa" id="placa" required>
         <button type="button" onclick="searchVeiculo()">Pesquisar Veículo</button>
-        <br>
+      <br><br>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#clienteDetails" aria-expanded="false" aria-controls="clienteDetails" style="display: none;" id="btnClienteDetails">
         <span id="btn_cliente_nome"></span>
-</button>
+</button><br>
 <?php if (session()->getFlashdata('error')): ?>
     <div class="alert alert-danger">
         <?=session()->getFlashdata('error')?>
@@ -38,7 +38,7 @@
 </div><br>
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#veiculoDetails" aria-expanded="false" aria-controls="veiculoDetails" style="display: none;" id="btnVeiculoDetails">
 <span id="btn_veiculo_placa"></span>
-</button>
+</button><br>
 <div class="collapse" id="veiculoDetails">
   <div class="card card-body">
   <p><strong>Placa:</strong> <span id="veiculo_placa"></span></p>
@@ -51,41 +51,39 @@
   </div>
 </div>
 <br>
-    <label for="defeito">Defeito:</label>
+    <label for="defeito">Defeito:</label><br>
     <input type="text" name="defeito" required><br>
 
-    <label for="solucao">Solução:</label>
+    <label for="solucao">Solução:</label><br>
     <input type="text" name="solucao" required><br>
 
-    <label for="detalhes">Detalhes:</label>
+    <label for="detalhes">Detalhes:</label><br>
     <input type="text" name="detalhes"><br>
+    <br>
 
-
-    <label for="valor_servicos">Valor de Serviços:</label>
-    <input  type="hidden" type="text" name="valor_servicos" id="valor_servicos2" required><br>
-
-    <label for="valor_pecas">Valor de Peças:</label>
-    <input type="hidden"   id="valor_pecas" type="text" name="valor_pecas" required><br>
-
-
-    <label for="data_previsao">Data de Previsão de Conclusão:</label>
+    <input  type="hidden" type="text" name="valor_servicos" id="valor_servicos2" required>
+    <input type="hidden"  name="cliente_id" id="cliente_id">
+    <input type="hidden"   name="veiculo_id" id="veiculo_id">
+    <input type="hidden"   id="valor_pecas" type="text" name="valor_pecas" required>
+    <input type="hidden"  id="quantidade_peca" name="quantidade_peca" min="1">
+    <input type="hidden" name="peca_codigo[]" id="peca_codigo_hidden">
+    <label for="data_previsao">Data de Previsão de Conclusão:</label><br>
     <input type="date" name="data_previsao" required><br>
 
-    <input type="hidden"  name="cliente_id" id="cliente_id">
-<input type="hidden"   name="veiculo_id" id="veiculo_id">
 
 
 
-<label for="equipe_codigo">Equipe:</label>
+    <br>
+<label for="equipe_codigo">Equipe:</label><br>
 <select name="equipe_codigo" id="equipe_codigo" required>
     <?php foreach ($equipes as $equipe): ?>
         <option value="<?=$equipe['id']?>"><?=$equipe['nome']?></option>
     <?php endforeach;?>
 </select>
 
-    <input type="hidden"  id="quantidade_peca" name="quantidade_peca" min="1">
-
-
+   
+<br><br>
+<label>Serviços</label><br>
     <select id="servicos_codigo" name="servicos_codigo[]" multiple="multiple">
 <?php foreach ($servicos as $servico): ?>
     <option value="<?=$servico['id']?>" data-price="<?=$servico['valor']?>"><?=$servico['nome']?></option>
@@ -93,19 +91,19 @@
 </select>
 <p id="valor_servicos"></p>
 
-<input id="selected_services_ids" name="selected_services_ids">
-    <label for="peca_codigo">Peças:</label>
+<input  type="hidden" id="selected_services_ids" name="selected_services_ids">
+<br><label for="peca_codigo">Peças:</label><br>
 
     <select id="peca_codigo" name="peca_codigo[]" multiple="multiple">
 <?php foreach ($pecas as $peca): ?>
     <option value="<?=$peca['id']?>" data-price="<?=$peca['valor']?>"><?=$peca['nome']?></option>    <?php endforeach;?>
 </select>
 
-<input type="hidden" name="peca_codigo[]" id="peca_codigo_hidden">
+<br>
 <ul id="selected_parts"></ul>
-
-<p id="quantidade_peca2"></p>
-<p id="valor_pecas2"></p>
+<br>
+<p id="quantidade_peca2"></p><br>
+<p id="valor_pecas2"></p><br>
     <button type="submit">Adicionar OS</button>
 </form>
 

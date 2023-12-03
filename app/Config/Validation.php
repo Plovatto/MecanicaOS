@@ -7,7 +7,6 @@ use CodeIgniter\Validation\StrictRules\CreditCardRules;
 use CodeIgniter\Validation\StrictRules\FileRules;
 use CodeIgniter\Validation\StrictRules\FormatRules;
 use CodeIgniter\Validation\StrictRules\Rules;
-use \App\Validation\CustomRules;
 
 class Validation extends BaseConfig
 {
@@ -36,6 +35,7 @@ public $mecanico = [
     'cpf' => 'required',
     'tipo' => 'required',
     'senha' => 'required',
+    'especialidade_id'  => 'required',
 ];
 
 public $peca = [
@@ -49,15 +49,7 @@ public $servico= [
     'valor' => 'required',
 ];
 
-public $validationRules = [
-    'valid_phone' => [
-        'label' => 'Phone Number',
-        'rules' => 'regex_match[/^[0-9]{10}$/]',
-        'errors' => [
-            'regex_match' => 'The {field} field must be a valid phone number.'
-        ]
-    ],
-];
+
 
     public $veiculo = [
         'ano' => 'required',
@@ -80,7 +72,7 @@ public $validationRules = [
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
-        CustomRules::class,
+        
     ];
 
     /**

@@ -224,3 +224,53 @@ Stack trace:
 #11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
 #13 {main}
+ERROR - 2023-11-28 12:21:47 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica2`.`ordemdeservico_peca`, CONSTRAINT `ordemdeservico_peca_ibfk_2` FOREIGN KEY (`peca_id`) REFERENCES `peca` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(126): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-11-28 13:24:43 --> Undefined variable $veiculos
+in APPPATH\Views\detalhesOS.php on line 47.
+ 1 APPPATH\Views\detalhesOS.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(55): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-28 13:25:09 --> Cannot access offset of type string on string
+in APPPATH\Views\detalhesOS.php on line 52.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\osController.php(55): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-11-28 13:25:10 --> Cannot access offset of type string on string
+in APPPATH\Views\detalhesOS.php on line 52.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\osController.php(55): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
