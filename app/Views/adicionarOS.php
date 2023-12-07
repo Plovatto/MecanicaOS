@@ -16,7 +16,7 @@
 <label for="placa">Placa do Veículo:</label><br>
         <input type="text" name="placa" id="placa" required>
         <button type="button" onclick="searchVeiculo()">Pesquisar Veículo</button>
-      <br><br>
+      <br><br><p id="error_message" style="color: red;"></p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#clienteDetails" aria-expanded="false" aria-controls="clienteDetails" style="display: none;" id="btnClienteDetails">
         <span id="btn_cliente_nome"></span>
 </button><br>
@@ -58,25 +58,26 @@
     <input type="text" name="solucao" required><br>
 
     <label for="detalhes">Detalhes:</label><br>
-    <input type="text" name="detalhes"><br>
+    <input type="text" name="detalhes" required><br>
     <br>
 
-    <input  type="hidden" type="text" name="valor_servicos" id="valor_servicos2" required>
+    <input type="hidden" type="text" name="valor_servicos" id="valor_servicos2" required>
     <input type="hidden"  name="cliente_id" id="cliente_id">
     <input type="hidden"   name="veiculo_id" id="veiculo_id">
     <input type="hidden"   id="valor_pecas" type="text" name="valor_pecas" required>
     <input type="hidden"  id="quantidade_peca" name="quantidade_peca" min="1">
-    <input type="hidden" name="peca_codigo[]" id="peca_codigo_hidden">
+    <input type="hidden" name="peca_codigo[]" id="peca_codigo_hidden" required>
     <label for="data_previsao">Data de Previsão de Conclusão:</label><br>
     <input type="date" name="data_previsao" required><br>
-
+<input type="hidden" id="selected_services_ids" name="servico_codigo[]"required>
 
 
 
     <br>
 <label for="equipe_codigo">Equipe:</label><br>
 <select name="equipe_codigo" id="equipe_codigo" required>
-    <?php foreach ($equipes as $equipe): ?>
+    <option disable >Selecione uma equipe</option>  <?php foreach ($equipes as $equipe): ?>
+      
         <option value="<?=$equipe['id']?>"><?=$equipe['nome']?></option>
     <?php endforeach;?>
 </select>
@@ -84,19 +85,21 @@
    
 <br><br>
 <label>Serviços</label><br>
-    <select id="servicos_codigo" name="servicos_codigo[]" multiple="multiple">
+    <select id="servico_codigo" name="servico_codigo[]" multiple="multiple" required>
 <?php foreach ($servicos as $servico): ?>
     <option value="<?=$servico['id']?>" data-price="<?=$servico['valor']?>"><?=$servico['nome']?></option>
 <?php endforeach;?>
 </select>
 <p id="valor_servicos"></p>
 
-<input  type="hidden" id="selected_services_ids" name="selected_services_ids">
+
+
 <br><label for="peca_codigo">Peças:</label><br>
 
-    <select id="peca_codigo" name="peca_codigo[]" multiple="multiple">
+<select id="peca_codigo" name="peca_codigo[]" multiple="multiple" required>
 <?php foreach ($pecas as $peca): ?>
-    <option value="<?=$peca['id']?>" data-price="<?=$peca['valor']?>"><?=$peca['nome']?></option>    <?php endforeach;?>
+    <option value="<?=$peca['id']?>" data-price="<?=$peca['valor']?>"><?=$peca['nome']?></option>
+<?php endforeach;?>
 </select>
 
 <br>
@@ -104,7 +107,7 @@
 <br>
 <p id="quantidade_peca2"></p><br>
 <p id="valor_pecas2"></p><br>
-    <button type="submit">Adicionar OS</button>
+<button type="submit">Adicionar OS</button>
 </form>
 
 </body>
@@ -129,75 +132,69 @@
 
    
     $(document).ready(function () {
-        var quantities = {};
-        var prices = {};
+    var quantities = {};
+    var prices = {};
 
-        $('#peca_codigo').multiselect({
-            includeSelectAllOption: true,
+    $('#peca_codigo').multiselect({
         enableFiltering: true,
         enableCaseInsensitiveFiltering: true,
         buttonWidth: '400px',
-            onChange: function (option, checked) {
-                var id = $(option).val();
-                var name = $(option).text();
-                var price = parseFloat($(option).data('price'));
-                console.log('Price for part ' + id + ': ' + price);
-                if (checked) {
-                    prices[id] = price;
-                    var $input = $('<input>')
-                        .attr('type', 'number')
-                        .attr('min', '1')
-                        .attr('step', '1')
-                        .attr('id', 'quantity_' + id)
-                        .val('1')  
-                        .on('input', function () {
-      
-                            quantities[id] = parseInt($(this).val());
+        onChange: function (option, checked) {
+            var id = $(option).val();
+            var name = $(option).text();
+            var price = parseFloat($(option).data('price'));
+            console.log('Price for part ' + id + ': ' + price);
+            if (checked) {
+                prices[id] = price;
+                var $input = $('<input>')
+                    .attr('type', 'number')
+                    .attr('min', '1')
+                    .attr('step', '1')
+                    .attr('id', 'quantity_' + id)
+                    .val('1')  
+                    .on('input', function () {
+                        quantities[id] = parseInt($(this).val());
 
-               
-                            var totalQuantity = 0;
+                        var totalQuantity = 0;
+                        var totalValue = 0;
+                        for (var partId in quantities) {
+                            var quantity = quantities[partId] || 0;
+                            totalQuantity += quantity;
+                            totalValue += quantity * prices[partId];
+                        }
 
-                            var totalValue = 0;
-                            for (var partId in quantities) {
-                                var quantity = quantities[partId] || 0;
-                                totalQuantity += quantity;
-                                totalValue += quantity * prices[partId];
-                            }
+                        $('#valor_pecas2').text('Valor total de peças: ' + totalValue.toFixed(2));
+                        $('#valor_pecas').val(totalValue.toFixed(2));
+                        $('#quantidade_peca').val(JSON.stringify(quantities));
+                        $('#quantidade_peca2').text('Quantidade total: ' + totalQuantity);
 
-                            $('#valor_pecas2').text('Valor total de peças' + totalValue.toFixed(2));
-                            $('#valor_pecas').val(totalValue.toFixed(2));
-                            $('#quantidade_peca').val(totalQuantity);
-                          
-                            $('#quantidade_peca2').text('Quantidade total: ' + totalQuantity);
-                        }).trigger('input');
+                        $('#valor_pecas2').show();
+                        $('#quantidade_peca2').show();
+                    }).trigger('input');
 
-                    var $li = $('<li>')
-                        .attr('id', 'part_' + id)
-                        .text(name)
-                        .append($input);
+                var $li = $('<li>')
+                    .attr('id', 'part_' + id)
+                    .text(name)
+                    .append($input);
 
-                    $('#selected_parts').append($li);
+                $('#selected_parts').append($li);
+            } else {
+                delete prices[id];
+                delete quantities[id];
+                $('#part_' + id).remove();
 
-              
-                    prices[id] = price;
-                } else {
-                    $('#part_' + id).remove();
-                    quantities[id] = 0;
+                if (Object.keys(quantities).length === 0) {
+                    $('#valor_pecas2').hide();
+                    $('#quantidade_peca2').hide();
                 }
             }
-        });
-
-        document.querySelectorAll('input').forEach(function (input) {
-            input.addEventListener('input', displayFormData);
-        });
+        }
     });
-
-    $(document).ready(function() {
-    var selectedServices = [];
+});
+$(document).ready(function () {
     var prices = {};
 
-    $('#servicos_codigo').multiselect({
-        includeSelectAllOption: true,
+    $('#servico_codigo').multiselect({
         enableFiltering: true,
         enableCaseInsensitiveFiltering: true,
         buttonWidth: '400px',
@@ -207,32 +204,41 @@
             console.log('Price for service ' + id + ': ' + price);
             if (checked) {
                 prices[id] = price;
-                selectedServices.push(id);
+                var totalValue = 0;
+                for (var serviceId in prices) {
+                    totalValue += prices[serviceId];
+                }
+
+                $('#valor_servicos').text('Valor total de serviços: ' + totalValue.toFixed(2));
+                $('#valor_servicos2').val(totalValue.toFixed(2));
+
+                $('#valor_servicos').show();
             } else {
                 delete prices[id];
-                var index = selectedServices.indexOf(id);
-                if (index > -1) {
-                    selectedServices.splice(index, 1);
+
+                if (Object.keys(prices).length === 0) {
+                    $('#valor_servicos').hide();
                 }
             }
-
-        
-            var totalValue = 0;
-            for (var serviceId in prices) {
-                totalValue += prices[serviceId];
-            }
-
-            $('#valor_servicos').text('Valor total de serviços:'+totalValue.toFixed(2));
-            $('#valor_servicos2').val(totalValue.toFixed(2));
-           
-            $('#selected_services_ids').val(selectedServices.join(','));
         }
+    });
+
+
+    document.querySelectorAll('input').forEach(function (input) {
+        input.addEventListener('input', displayFormData);
     });
 });
     function searchVeiculo() {
         var placa = document.getElementById('placa').value;
 
-        console.log('Enviando requisição para /os/searchVeiculo');
+        var timeoutId = setTimeout(function() {
+        var errorMessageElement = document.getElementById('error_message');
+        errorMessageElement.innerText = 'A pesquisa está demorando muito. Por favor, tente novamente mais tarde.';
+        setTimeout(function() {
+            errorMessageElement.innerText = '';
+        }, 4000); 
+    }, 6000); 
+
 
         $.ajax({
             url: '/searchVeiculo',
@@ -240,8 +246,17 @@
             data: { placa: placa },
             dataType: 'json',  
             success: function (response) {
-                console.log('Resposta recebida:', response);
-
+                clearTimeout(timeoutId);
+            console.log('Resposta recebida:', response);
+            if (response.error) {
+                var errorMessageElement = document.getElementById('error_message');
+                errorMessageElement.innerText = response.error;
+                setTimeout(function() {
+                    errorMessageElement.innerText = '';
+                }, 2000); 
+            } else {
+                document.getElementById('error_message').innerText = '';
+            }
                 if (response.cliente_id !== undefined && response.veiculo_id !== undefined) {
                     document.getElementById('cliente_id').value = response.cliente_id;
                     document.getElementById('veiculo_id').value = response.veiculo_id;
@@ -271,8 +286,13 @@
                 }
             },
             error: function (error) {
-                console.error('Erro na requisição AJAX:', error);
-            }
-        });
+            clearTimeout(timeoutId);
+            var errorMessageElement = document.getElementById('error_message');
+            errorMessageElement.innerText = 'Ocorreu um erro na pesquisa.';
+            setTimeout(function() {
+                errorMessageElement.innerText = '';
+            }, 2000); 
+        }
+    });
     }
 </script>

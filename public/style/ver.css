@@ -1,0 +1,17 @@
+.card {
+    width: 600px;
+    color: #000000;
+    background-color: #ffffff;
+    height: 250px;
+    overflow: auto;
+    text-decoration: none;
+  
+}
+.card a {
+    color: inherit;     
+    text-decoration: none; 
+    border: 1px solid #000000;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}

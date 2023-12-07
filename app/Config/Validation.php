@@ -43,6 +43,12 @@ public $peca = [
     'descricao' => 'required',
     'valor' => 'required',
 ];
+
+public $especialidade = [
+    'nome' => 'required',
+    'descricao' => 'required',
+   
+];
 public $servico= [
     'nome' => 'required',
     'descricao' => 'required',

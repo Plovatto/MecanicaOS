@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/style/style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="/style/home.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  <title>Login</title>
@@ -21,12 +21,12 @@
 
 
     <div class="aling">
-<div class="form">  
+<div class="form">
 
 <img src="/imagens/icon.svg">
     <form method="post" action="/">
 <h2>Login</h2>
-       
+
         <input type="text" placeholder="Email" name="email" class="mt-3" id="email">
 <br>
       <br>
@@ -52,8 +52,8 @@
     <?php endif;?>
 
         <button class="btn" type="submit">Entrar</button>
-       
-    </form><br><div class="text"> Esqueceu a senha? <a href="/forgot-password">Clique aqui</a></div></div>
+
+    </form><br><div class="text"> Esqueceu a senha? <a href="/user/forgot-password">Clique aqui</a></div></div>
     <br>
    </div>
 </body>

@@ -1,0 +1,2052 @@
+ERROR - 2023-12-07 00:12:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(307): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 00:18:48 --> Undefined array key "equipe_codigo"
+in APPPATH\Views\detalhesOS.php on line 111.
+ 1 APPPATH\Views\detalhesOS.php(111): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(76): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:21:30 --> Undefined variable $mecanicos
+in APPPATH\Views\detalhesOS.php on line 113.
+ 1 APPPATH\Views\detalhesOS.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(76): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:25:06 --> Class "App\Controllers\EquipeMecanicoModel" not found
+in APPPATH\Controllers\osController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:25:36 --> Class "App\Controllers\OServicoModel" not found
+in APPPATH\Controllers\osController.php on line 61.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:25:59 --> Class "App\Controllers\OsModel" not found
+in APPPATH\Controllers\osController.php on line 64.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:26:14 --> Class "App\Controllers\OsPecaModel" not found
+in APPPATH\Controllers\osController.php on line 66.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 00:27:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(298): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 00:27:53 --> Cannot use object of type stdClass as array
+in APPPATH\Views\detalhesOS.php on line 114.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\osController.php(79): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:28:38 --> Undefined property: stdClass::$nome
+in APPPATH\Views\detalhesOS.php on line 114.
+ 1 APPPATH\Views\detalhesOS.php(114): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:30:55 --> Undefined variable $user
+in APPPATH\Views\detalhesOS.php on line 127.
+ 1 APPPATH\Views\detalhesOS.php(127): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:35:57 --> Undefined variable $user
+in APPPATH\Views\detalhesOS.php on line 121.
+ 1 APPPATH\Views\detalhesOS.php(121): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:41:16 --> Undefined array key "nome_completo"
+in APPPATH\Views\detalhesOS.php on line 99.
+ 1 APPPATH\Views\detalhesOS.php(99): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:42:50 --> Undefined array key "cliente_codigo"
+in APPPATH\Views\detalhesOS.php on line 99.
+ 1 APPPATH\Views\detalhesOS.php(99): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:45:14 --> Undefined array key "valor"
+in APPPATH\Views\detalhesOS.php on line 57.
+ 1 APPPATH\Views\detalhesOS.php(57): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:55:23 --> Undefined array key "descricao"
+in APPPATH\Views\detalhesOS.php on line 58.
+ 1 APPPATH\Views\detalhesOS.php(58): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:56:49 --> Undefined array key "descricao"
+in APPPATH\Views\detalhesOS.php on line 58.
+ 1 APPPATH\Views\detalhesOS.php(58): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 00:57:28 --> mysqli_sql_exception: Unknown column 'servicos.valor as servico_valor servicos.descricao' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\app\Models\OServicoModel.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(70): App\Models\OServicoModel->getServicosForOrdem()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-12-07 00:57:28 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\OServicoModel.php on line 24.
+ 1 APPPATH\Controllers\osController.php(70): App\Models\OServicoModel->getServicosForOrdem()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 00:57:45 --> Undefined array key "descricao"
+in APPPATH\Views\detalhesOS.php on line 58.
+ 1 APPPATH\Views\detalhesOS.php(58): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 01:10:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-07 01:12:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 01:16:49 --> Undefined array key "id"
+in APPPATH\Views\detalhesOS.php on line 55.
+ 1 APPPATH\Views\detalhesOS.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:18:27 --> Undefined array key "id"
+in APPPATH\Views\detalhesOS.php on line 55.
+ 1 APPPATH\Views\detalhesOS.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:18:28 --> Undefined array key "id"
+in APPPATH\Views\detalhesOS.php on line 55.
+ 1 APPPATH\Views\detalhesOS.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:18:28 --> Undefined array key "id"
+in APPPATH\Views\detalhesOS.php on line 55.
+ 1 APPPATH\Views\detalhesOS.php(55): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 01:21:22 --> mysqli_sql_exception: Unknown column 'peca.quantidade' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\app\Models\OsPecaModel.php(21): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(69): App\Models\OsPecaModel->getPecasForOrdem()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-12-07 01:21:22 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\OsPecaModel.php on line 22.
+ 1 APPPATH\Controllers\osController.php(69): App\Models\OsPecaModel->getPecasForOrdem()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:21:42 --> Undefined array key "peca_quantidade"
+in APPPATH\Views\detalhesOS.php on line 54.
+ 1 APPPATH\Views\detalhesOS.php(54): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhesOS.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(79): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:45:43 --> Attempt to read property "id" on array
+in APPPATH\Views\detalhes.php on line 133.
+ 1 APPPATH\Views\detalhes.php(133): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(195): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:46:35 --> Undefined array key "descricao"
+in APPPATH\Views\detalhes.php on line 134.
+ 1 APPPATH\Views\detalhes.php(134): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(195): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:48:16 --> Attempt to read property "descricao" on array
+in APPPATH\Views\detalhes.php on line 134.
+ 1 APPPATH\Views\detalhes.php(134): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(195): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 01:50:08 --> mysqli_sql_exception: Unknown column 'ordemdeservico.descricao' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 01:50:08 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 238.
+ 1 SYSTEMPATH\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+ 3 APPPATH\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 01:51:36 --> mysqli_sql_exception: Unknown column 'ordemdeservico.descricao' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 01:51:36 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 238.
+ 1 SYSTEMPATH\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+ 3 APPPATH\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 01:51:36 --> mysqli_sql_exception: Unknown column 'ordemdeservico.descricao' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 01:51:36 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 238.
+ 1 SYSTEMPATH\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+ 3 APPPATH\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 01:51:40 --> mysqli_sql_exception: Unknown column 'ordemdeservico.descricao' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 01:51:40 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 238.
+ 1 SYSTEMPATH\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Models\osModel.php(112): CodeIgniter\BaseModel->findAll()
+ 3 APPPATH\Controllers\ListarController.php(129): App\Models\OsModel->getOrdersByVehicle()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:52:26 --> Undefined array key "ordemdeservico_descricao"
+in APPPATH\Views\detalhes.php on line 134.
+ 1 APPPATH\Views\detalhes.php(134): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(195): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:57:23 --> Undefined variable $pecas
+in APPPATH\Views\detalhes.php on line 162.
+ 1 APPPATH\Views\detalhes.php(162): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(195): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 01:59:37 --> Class "App\Controllers\OServicoModel" not found
+in APPPATH\Controllers\ListarController.php on line 132.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:00:18 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:01:56 --> Undefined variable $data
+in APPPATH\Controllers\ListarController.php on line 217.
+ 1 APPPATH\Controllers\ListarController.php(217): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:02:35 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(217): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:25 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(218): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:29 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(218): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:29 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(218): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:51 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:51 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:52 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:52 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:52 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:52 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:04:53 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:05:03 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:12:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:17:30 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:17:31 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:17:45 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:17:45 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:17:45 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:17:46 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ListarController.php on line 143.
+ 1 APPPATH\Controllers\ListarController.php(143): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:19:43 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(216): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:21:05 --> Undefined variable $data
+in APPPATH\Controllers\ListarController.php on line 219.
+ 1 APPPATH\Controllers\ListarController.php(219): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:21:23 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(219): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:21:46 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(220): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:21:47 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(220): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:21:55 --> Undefined variable $tipo
+in APPPATH\Views\detalhes.php on line 35.
+ 1 APPPATH\Views\detalhes.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(220): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:25:19 --> Undefined variable $pecas
+in APPPATH\Views\detalhes.php on line 162.
+ 1 APPPATH\Views\detalhes.php(162): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(196): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:28:35 --> Class "App\Controllers\OSPecaModel" not found
+in APPPATH\Controllers\ListarController.php on line 129.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:28:56 --> Undefined array key "valor_pecas"
+in APPPATH\Views\detalhes.php on line 186.
+ 1 APPPATH\Views\detalhes.php(186): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(197): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:36:53 --> Undefined variable $servicos
+in APPPATH\Views\detalhes.php on line 204.
+ 1 APPPATH\Views\detalhes.php(204): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(202): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:37:32 --> Undefined variable $servicos
+in APPPATH\Controllers\ListarController.php on line 202.
+ 1 APPPATH\Controllers\ListarController.php(202): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:39:54 --> Class "App\Controllers\OServicoModel" not found
+in APPPATH\Controllers\ListarController.php on line 124.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:40:15 --> Undefined array key "valor_servicos"
+in APPPATH\Views\detalhes.php on line 227.
+ 1 APPPATH\Views\detalhes.php(227): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(209): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:41:20 --> Undefined array key "valor_servicos"
+in APPPATH\Views\detalhes.php on line 149.
+ 1 APPPATH\Views\detalhes.php(149): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(209): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:44:18 --> Class "App\Controllers\OSPecaModel" not found
+in APPPATH\Controllers\ListarController.php on line 129.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:45:40 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 145.
+ 1 APPPATH\Views\detalhes.php(145): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(196): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 02:46:05 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 146.
+ 1 APPPATH\Views\detalhes.php(146): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(196): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:07:56 --> Undefined variable $equipes
+in APPPATH\Views\detalhes.php on line 242.
+ 1 APPPATH\Views\detalhes.php(242): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:09:01 --> Attempt to read property "nome" on array
+in APPPATH\Views\detalhes.php on line 243.
+ 1 APPPATH\Views\detalhes.php(243): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:10:11 --> Undefined array key "nome"
+in APPPATH\Views\detalhes.php on line 243.
+ 1 APPPATH\Views\detalhes.php(243): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:11:06 --> Undefined array key "nome"
+in APPPATH\Views\detalhes.php on line 243.
+ 1 APPPATH\Views\detalhes.php(243): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:11:07 --> Undefined array key "nome"
+in APPPATH\Views\detalhes.php on line 243.
+ 1 APPPATH\Views\detalhes.php(243): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 03:11:56 --> mysqli_sql_exception: Table 'mecanica3.equipes' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\EquipeMecanicoModel.php(36): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(147): App\Models\EquipeMecanicoModel->getEquipesPorMecanico()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 03:11:56 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 238.
+ 1 SYSTEMPATH\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+ 2 APPPATH\Models\EquipeMecanicoModel.php(36): CodeIgniter\BaseModel->findAll()
+ 3 APPPATH\Controllers\ListarController.php(147): App\Models\EquipeMecanicoModel->getEquipesPorMecanico()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:13:07 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 237.
+ 1 APPPATH\Views\detalhes.php(237): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:13:14 --> Undefined variable $equipes
+in APPPATH\Controllers\ListarController.php on line 198.
+ 1 APPPATH\Controllers\ListarController.php(198): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:16:26 --> Undefined array key "data_conclusao"
+in APPPATH\Views\detalhes.php on line 151.
+ 1 APPPATH\Views\detalhes.php(151): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:28:18 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 247.
+ 1 APPPATH\Views\detalhes.php(247): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:29:35 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 247.
+ 1 APPPATH\Views\detalhes.php(247): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:35:20 --> Undefined array key "id"
+in APPPATH\Views\detalhes.php on line 259.
+ 1 APPPATH\Views\detalhes.php(259): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:35:30 --> Undefined array key "id"
+in APPPATH\Views\detalhes.php on line 259.
+ 1 APPPATH\Views\detalhes.php(259): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:35:40 --> Undefined array key "id"
+in APPPATH\Views\detalhes.php on line 259.
+ 1 APPPATH\Views\detalhes.php(259): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:36:35 --> Undefined array key "status"
+in APPPATH\Views\detalhes.php on line 269.
+ 1 APPPATH\Views\detalhes.php(269): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:36:57 --> Undefined array key "status"
+in APPPATH\Views\detalhes.php on line 269.
+ 1 APPPATH\Views\detalhes.php(269): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:41:35 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 112.
+ 1 APPPATH\Views\detalhes.php(112): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:42:45 --> Undefined variable $ordem
+in APPPATH\Views\detalhes.php on line 142.
+ 1 APPPATH\Views\detalhes.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:44:51 --> syntax error, unexpected token "endforeach", expecting "elseif" or "else" or "endif"
+in APPPATH\Views\detalhes.php on line 172.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 3 APPPATH\Controllers\ListarController.php(198): view()
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:45:09 --> Undefined variable $ordem
+in APPPATH\Views\detalhes.php on line 142.
+ 1 APPPATH\Views\detalhes.php(142): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:46:27 --> Cannot use object of type stdClass as array
+in APPPATH\Views\detalhes.php on line 55.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 4 APPPATH\Controllers\ListarController.php(198): view()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 03:49:16 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 256.
+ 1 APPPATH\Views\detalhes.php(256): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(198): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:07:45 --> Undefined variable $userType
+in APPPATH\Views\perfil.php on line 29.
+ 1 APPPATH\Views\perfil.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\perfil.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\userController.php(80): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\userController->perfil()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:09:18 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php on line 80
+in SYSTEMPATH\Common.php on line 1178.
+ 1 APPPATH\Controllers\userController.php(80): view()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\userController->perfil()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:12:39 --> Undefined variable $query
+in APPPATH\Models\osModel.php on line 48.
+ 1 APPPATH\Models\osModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\osController.php(38): App\Models\OsModel->getOrdersByMechanic()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:16:08 --> Undefined variable $query
+in APPPATH\Models\osModel.php on line 48.
+ 1 APPPATH\Models\osModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH\Controllers\osController.php(38): App\Models\OsModel->getOrdersByMechanic()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:16:26 --> Call to a member function getResultArray() on array
+in APPPATH\Models\osModel.php on line 51.
+ 1 APPPATH\Controllers\osController.php(38): App\Models\OsModel->getOrdersByMechanic()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:16:27 --> Call to a member function getResultArray() on array
+in APPPATH\Models\osModel.php on line 51.
+ 1 APPPATH\Controllers\osController.php(38): App\Models\OsModel->getOrdersByMechanic()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 04:23:25 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 04:32:54 --> "especialidade" is not a validation rules group.
+in SYSTEMPATH\Validation\Validation.php on line 615.
+ 1 SYSTEMPATH\Validation\Validation.php(615): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound()
+ 2 APPPATH\Controllers\AddController.php(177): CodeIgniter\Validation\Validation->getRuleGroup()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:33:18 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 72.
+ 1 APPPATH\Controllers\ListarController.php(72): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:42:29 --> Trying to access array offset on value of type null
+in APPPATH\Views\detalhes.php on line 215.
+ 1 APPPATH\Views\detalhes.php(215): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\detalhes.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(211): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 04:47:21 --> Undefined variable $data
+in APPPATH\Controllers\EditarController.php on line 239.
+ 1 APPPATH\Controllers\EditarController.php(239): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:09:16 --> Undefined variable $especialidade
+in APPPATH\Views\editar.php on line 49.
+ 1 APPPATH\Views\editar.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\editar.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\EditarController.php(251): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:14:00 --> Class "App\Controllers\PDO" not found
+in APPPATH\Controllers\osController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 05:14:50 --> mysqli_sql_exception: Table 'mecanica3.orders' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(24): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 05:14:50 --> mysqli_sql_exception: Table 'mecanica3.orders' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(25): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 05:14:50 --> mysqli_sql_exception: Table 'mecanica3.orders' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(26): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2023-12-07 05:14:50 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\osController.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 05:15:35 --> mysqli_sql_exception: Table 'mecanica3.orders' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(212): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(312): include_once('...')
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(23): CodeIgniter\Autoloader\Autoloader->loadClass()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-07 05:15:35 --> mysqli_sql_exception: Table 'mecanica3.orders' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(213): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(312): include_once('...')
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(23): CodeIgniter\Autoloader\Autoloader->loadClass()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-07 05:15:35 --> mysqli_sql_exception: Table 'mecanica3.orders' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Models\osModel.php(214): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(312): include_once('...')
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(23): CodeIgniter\Autoloader\Autoloader->loadClass()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-07 05:15:35 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\osModel.php on line 216.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 4 APPPATH\Controllers\osController.php(23): CodeIgniter\Autoloader\Autoloader->loadClass()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:17:46 --> Undefined variable $partsData
+in APPPATH\Views\index.php on line 85.
+ 1 APPPATH\Views\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(57): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:19:24 --> Undefined variable $partsData
+in APPPATH\Views\index.php on line 85.
+ 1 APPPATH\Views\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(67): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:19:25 --> Undefined variable $partsData
+in APPPATH\Views\index.php on line 85.
+ 1 APPPATH\Views\index.php(85): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(67): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:20:25 --> Undefined variable $teamsData
+in APPPATH\Views\index.php on line 87.
+ 1 APPPATH\Views\index.php(87): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(67): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:20:45 --> Undefined variable $teamsData
+in APPPATH\Controllers\osController.php on line 57.
+ 1 APPPATH\Controllers\osController.php(57): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:20:57 --> Undefined variable $teamsQuery
+in APPPATH\Controllers\osController.php on line 64.
+ 1 APPPATH\Controllers\osController.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:22:26 --> Undefined variable $partsData
+in APPPATH\Views\index.php on line 89.
+ 1 APPPATH\Views\index.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(67): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:23:14 --> Undefined variable $servicesData
+in APPPATH\Views\index.php on line 90.
+ 1 APPPATH\Views\index.php(90): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\osController.php(67): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:29:39 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:30:15 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 91.
+ 1 APPPATH\Controllers\ListarController.php(91): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:30:28 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(115): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:30:47 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 28.
+ 1 APPPATH\Views\Ver.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(115): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:32:05 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(115): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:33:41 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(115): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:05 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 91.
+ 1 APPPATH\Controllers\ListarController.php(91): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:26 --> Undefined variable $dados
+in APPPATH\Controllers\ListarController.php on line 86.
+ 1 APPPATH\Controllers\ListarController.php(86): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:36 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:45 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:46 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:46 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:46 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:34:47 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(86): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:36:17 --> Too few arguments to function App\Controllers\ListarController::listar(), 0 passed in C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\ListarController.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:37:00 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:37:22 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:37:30 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:37:31 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:37:44 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:37:45 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:38:46 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:41:24 --> Undefined variable $model
+in APPPATH\Controllers\ListarController.php on line 77.
+ 1 APPPATH\Controllers\ListarController.php(77): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:43:08 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(116): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:43:25 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(118): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:43:26 --> Undefined variable $tipo
+in APPPATH\Views\Ver.php on line 7.
+ 1 APPPATH\Views\Ver.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(118): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:43:59 --> Undefined variable $partsData
+in APPPATH\Views\Ver.php on line 174.
+ 1 APPPATH\Views\Ver.php(174): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(118): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:44:45 --> Undefined variable $partsData
+in APPPATH\Views\Ver.php on line 171.
+ 1 APPPATH\Views\Ver.php(171): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\pando\\Desktop\\MVCmecanica\\app\\Views\\Ver.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render()
+ 5 APPPATH\Controllers\ListarController.php(118): view()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:51:10 --> Class "Amenadiel\JpGraph\Graph\Graph" not found
+in APPPATH\Controllers\ListarController.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:54:40 --> Uncaught Error: Undefined constant "Amenadiel\JpGraph\Util\IMG_PNG" in C:\Users\pando\Desktop\MVCmecanica\vendor\amenadiel\jpgraph\src\util\JpGraphErrObjectImg.php:52
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\vendor\amenadiel\jpgraph\src\util\JpGraphException.php(35): Amenadiel\JpGraph\Util\JpGraphErrObjectImg->Raise()
+#1 C:\Users\pando\Desktop\MVCmecanica\vendor\amenadiel\jpgraph\src\util\JpGraphException.php(42): Amenadiel\JpGraph\Util\JpGraphException->Stroke()
+#2 [internal function]: Amenadiel\JpGraph\Util\JpGraphException::defaultHandler()
+#3 {main}
+  thrown
+in VENDORPATH\amenadiel\jpgraph\src\util\JpGraphErrObjectImg.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-07 05:55:57 --> Constant _IMG_HANDLER already defined
+in VENDORPATH\amenadiel\jpgraph\src\config.inc.php on line 375.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 VENDORPATH\amenadiel\jpgraph\src\config.inc.php(375): define()
+ 3 VENDORPATH\amenadiel\jpgraph\src\graph\Graph.php(9): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\vendor\\amenadiel\\jpgraph\\src\\config.inc.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\vendor\\amenadiel\\jpgraph\\src\\graph\\Graph.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(256): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 6 APPPATH\Controllers\ListarController.php(88): CodeIgniter\Autoloader\Autoloader->loadClassmap()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 05:57:17 --> Uncaught Error: Undefined constant "Amenadiel\JpGraph\Util\IMG_PNG" in C:\Users\pando\Desktop\MVCmecanica\vendor\amenadiel\jpgraph\src\util\JpGraphErrObjectImg.php:52
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\vendor\amenadiel\jpgraph\src\util\JpGraphException.php(35): Amenadiel\JpGraph\Util\JpGraphErrObjectImg->Raise()
+#1 C:\Users\pando\Desktop\MVCmecanica\vendor\amenadiel\jpgraph\src\util\JpGraphException.php(42): Amenadiel\JpGraph\Util\JpGraphException->Stroke()
+#2 [internal function]: Amenadiel\JpGraph\Util\JpGraphException::defaultHandler()
+#3 {main}
+  thrown
+in VENDORPATH\amenadiel\jpgraph\src\util\JpGraphErrObjectImg.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-07 05:59:59 --> Class "App\Controllers\Graph\Graph" not found
+in APPPATH\Controllers\ListarController.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 06:18:26 --> Undefined variable $data
+in APPPATH\Controllers\ListarController.php on line 119.
+ 1 APPPATH\Controllers\ListarController.php(119): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-07 06:19:27 --> Undefined variable $partsData
+in APPPATH\Controllers\ListarController.php on line 119.
+ 1 APPPATH\Controllers\ListarController.php(119): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 06:21:17 --> mysqli_sql_exception: Table 'mecanica3.os' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(83): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2023-12-07 06:21:17 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\ListarController.php on line 87.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 06:22:11 --> mysqli_sql_exception: Table 'mecanica3.os' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(86): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2023-12-07 06:22:11 --> Array to string conversion
+in APPPATH\Controllers\ListarController.php on line 89.
+ 1 APPPATH\Controllers\ListarController.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 06:22:12 --> mysqli_sql_exception: Table 'mecanica3.os' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(86): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2023-12-07 06:22:12 --> Array to string conversion
+in APPPATH\Controllers\ListarController.php on line 89.
+ 1 APPPATH\Controllers\ListarController.php(89): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 06:22:40 --> mysqli_sql_exception: Table 'mecanica3.os' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(86): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 06:23:34 --> mysqli_sql_exception: Unknown column 'ordemdeservico.peca_id' in 'on clause' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(86): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 06:24:11 --> mysqli_sql_exception: Unknown column 'ordemdeservico_peca.id' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(86): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 06:25:42 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-07 06:28:00 --> mysqli_sql_exception: Table 'mecanica3.ordemdeservico_equipe' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(84): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2023-12-07 06:28:00 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\ListarController.php on line 92.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 06:28:16 --> mysqli_sql_exception: Table 'mecanica3.ordemdeservico_equipe' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(84): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 06:28:16 --> mysqli_sql_exception: Table 'mecanica3.ordemdeservico_equipe' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(95): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 06:28:46 --> mysqli_sql_exception: Table 'mecanica3.ordemdeservico_equipe' doesn't exist in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(95): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+ERROR - 2023-12-07 06:34:33 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`mecanica3`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-07 06:45:11 --> mysqli_sql_exception: Unknown column 'veiculo.nome' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(83): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+CRITICAL - 2023-12-07 06:45:11 --> Undefined variable $carQuery
+in APPPATH\Controllers\ListarController.php on line 95.
+ 1 APPPATH\Controllers\ListarController.php(95): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-07 06:45:22 --> mysqli_sql_exception: Unknown column 'veiculo.nome' in 'field list' in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(83): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}

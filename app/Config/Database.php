@@ -13,7 +13,7 @@ class Database extends Config
         'hostname' => '127.0.0.1',
         'username' => 'root',
         'password' => 'password',
-        'database' => 'mecanica2',
+        'database' => 'mecanica3',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

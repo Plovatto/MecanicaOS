@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 </head>
@@ -17,6 +18,7 @@
         </ul>
     </div>
 <?php endif; ?>
+<div class="card">
 <?php if ($data['tipo'] === 'cliente'): ?>
 
     <?php echo form_open('adicionar/cliente'); ?>
@@ -65,7 +67,8 @@
 <br>
 
 <label for="cor">Cor</label>
-<select id="cor" name="cor">
+<select id="cor" name="cor" required>
+
 <option value="Branco">Branco</option>
 <option value="Preto">Preto</option>
 <option value="Prata">Prata</option>
@@ -84,17 +87,23 @@
 
 
 <label for="cliente_id">Cliente</label>
-<select name="cliente_id" id="cliente_id">
-<?php foreach ($data['clientes'] as $cliente): ?>
-    <option value="<?=$cliente->id?>"><?=$cliente->nome_completo?></option>
-<?php endforeach;?>
+<select name="cliente_id" id="cliente_id" required>
+<?php if (empty($data['clientes'])): ?>
+    <option>Nenhum cliente ativo</option>
+<?php else: ?>
+    <?php foreach ($data['clientes'] as $cliente): ?>
+     
+        <option value="<?=$cliente->id?>"><?=$cliente->nome_completo?></option>
+    <?php endforeach;?>
+<?php endif; ?>
 </select>
 <br>
 <label for="marca_id">Marca</label>
 
-<select name="marca_id" id="marca_id">
-<option>Marca</option>
+<select name="marca_id" id="marca_id" required>
+
 <?php foreach ($marcas as $id => $nome): ?>
+ 
     <option value="<?=$id?>"><?=esc($nome)?></option>
 <?php endforeach;?>
 <option value="other">Other</option>
@@ -103,8 +112,8 @@
 
 <br>
 <label id="modelo" for="modelo_id">Modelo</label>
-<select id="modelo_id" name="modelo_id">
-<option>Modelo</option>
+<select id="modelo_id" name="modelo_id" required>
+
 <?php if (!empty($modelos)): ?>
     <?php foreach ($modelos as $modelo): ?>
         <option value="<?=$modelo->id?>"><?=$modelo->nome?></option>
@@ -112,7 +121,7 @@
 <?php endif;?>
 <option value="other">Other</option>
 </select><br> <label for="descricao">Descrição</label><br>
-<textarea id="descricao" name="descricao" required><?=set_value('descricao')?></textarea>
+<textarea required id="descricao" name="descricao" required><?=set_value('descricao')?></textarea>
 <br>
 <input type="text" id="modelo_other" name="modelo_other" style="display: none;">
 <input type="submit" value="Criar Veículo">
@@ -142,6 +151,33 @@
 
 
 <?php endif;?>
+
+
+
+<?php if ($data['tipo'] === 'especialidade'): ?>
+
+<?php echo form_open('adicionar/especialidade'); ?>
+
+<label for="nome">Nome</label>
+<input type="text" name="nome" required>
+<br>
+<label for="descricao">Descrição</label>
+<input type="text" name="descricao" required>
+<br>
+
+<input type="submit" value="Adicionar Especialidade">
+
+<?php echo form_close(); ?>
+
+
+
+<?php endif;?>
+
+
+
+
+
+
 
 <?php if ($data['tipo'] === 'servico'): ?>
 
@@ -201,18 +237,24 @@
 <br>
 <label for="tipo">Tipo</label>
 <select name="tipo" required>
+
     <option value="admin">Admin</option>
     <option value="mecanico">Mecanico</option>
 </select>
 <br>
 <br>
 <select name="especialidade_id" required>
+
     <?php
     $especialidadeModel = new \App\Models\EspecialidadeModel();
-    $especialidades = $especialidadeModel->findAll();
+    $especialidades = $especialidadeModel->where('status', 'ativo')->findAll();
 
-    foreach ($especialidades as $especialidade) {
-        echo "<option value='{$especialidade['id']}'>{$especialidade['nome']}</option>";
+    if (empty($especialidades)) {
+        echo "<option value=''>Nenhuma especialidade disponível</option>";
+    } else {
+        foreach ($especialidades as $especialidade) {
+            echo "<option value='{$especialidade['id']}'>{$especialidade['nome']}</option>";
+        }
     }
     ?>
 </select>
@@ -242,14 +284,14 @@
 <br>
 <br>
 <label for="mecanico_id">Mecânicos disponíveis</label>
-<select id="mecanicos_disponiveis" multiple="multiple">
+<select  id="mecanicos_disponiveis" multiple="multiple">
     <?php foreach ($data['mecanicos'] as $mecanico): ?>
         <option value="<?= $mecanico->id ?>"><?= $mecanico->nome_completo ?></option>
     <?php endforeach; ?>
 </select>
 
 <label for="mecanicos_selecionados">Mecânicos na equipe</label>
-<select id="mecanicos_selecionados" name="mecanico_id[]" multiple="multiple">
+<select required id="mecanicos_selecionados" name="mecanico_id[]" multiple="multiple">
 
 </select>
 
@@ -270,7 +312,7 @@
 <?php echo form_close(); ?>
 
 <?php endif;?>
-
+</div>
 
 <a href="/orders">Home</a>
 </body>

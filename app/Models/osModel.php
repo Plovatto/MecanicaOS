@@ -15,7 +15,6 @@ class OsModel extends Model
         'solucao',
         'detalhes',
         'data_emissao',
-        'quantidade_peca',
         'valor_servicos',
         'valor_pecas',
         'status',
@@ -46,13 +45,9 @@ class OsModel extends Model
             }
         }
     
-        $query = $builder->get();
+        $results = $builder->orderBy('ordemdeservico.id', 'DESC')->findAll();
     
-        if (! $query) {
-            die(print_r($this->db->error(), true));
-        }
-    
-        return $query->getResultArray();
+        return $results;
     }
     public function getOrdersByCodigo($codigo)
     {
@@ -66,14 +61,27 @@ class OsModel extends Model
     {
         return $this->select('ordemdeservico.*,
             cliente.nome_completo as cliente_nome,
+            cliente.cpf as cliente_cpf,
+            cliente.cnh as cliente_cnh,
+            cliente.endereco as cliente_endereco,
+            cliente.email as cliente_email,
+            cliente.status as cliente_status,
+            cliente.codigo as cliente_codigo ,
+            cliente.telefone as cliente_telefone ,
             veiculo.placa as veiculo_placa,
             veiculo.ano as veiculo_ano,
+            veiculo.codigo as veiculo_codigo,
             veiculo.cor as veiculo_cor,
+            veiculo.marca_nome  as veiculo_marca,
+            veiculo.modelo_nome  as veiculo_modelo,
             veiculo.descricao as veiculo_descricao,
             veiculo.status as veiculo_status,
             user.nome_completo as mecanico_nome,
             equipe.nome as equipe_nome,
-            peca.nome as peca_nome,
+            equipe.id as equipe_id,
+            equipe.codigo as equipe_codigo,
+            peca.nome as peca_id,
+            peca.id as peca_nome,
             marca.nome as marca_nome,
             modelo.nome as modelo_nome,
             ordemdeservico_peca.quantidade as quantidade')
@@ -88,30 +96,42 @@ class OsModel extends Model
             ->join('modelo', 'modelo.id = veiculo.modelo_id', 'left')
             ->where('ordemdeservico.id', $id)
             ->first();
+            $query = $builder->orderBy('ordemdeservico.id', 'DESC')->get();
+            return $query->getResultArray();
     }
+
+    public function getOrdersByVehicle($veiculo_id) {
+        return $this->select('ordemdeservico.*, veiculo.placa as veiculo_placa, cliente.nome_completo as cliente_nome ,ordemdeservico.detalhes as ordemdeservico_detalhes')
+                    ->join('veiculo', 'veiculo.id = ordemdeservico.veiculo_id')
+                    ->join('cliente', 'cliente.id = ordemdeservico.cliente_id')
+                    ->where('ordemdeservico.veiculo_id', $veiculo_id)
+                    ->findAll();$query = $builder->limit($limit, $offset)->get();
+                    echo $query->getLastQuery(); 
+                    $result = $query->getResult($this->tempReturnType);
+    }
+
+
     public function getAllOrdersWithDetails($params)
     {
         $query = $this->select('ordemdeservico.*,
-            cliente.nome_completo as cliente_nome,
-            veiculo.placa as veiculo_placa,
-            veiculo.ano as veiculo_ano,
-            veiculo.cor as veiculo_cor,
-            veiculo.descricao as veiculo_descricao,
-            veiculo.status as veiculo_status,
-            user.nome_completo as mecanico_nome,
-            equipe.nome as equipe_nome,
-            peca.nome as peca_nome,
-            marca.nome as marca_nome,
-            modelo.nome as modelo_nome,
-            ordemdeservico_peca.quantidade as quantidade')
-            ->join('cliente', 'cliente.id = ordemdeservico.cliente_id', 'left')
-            ->join('veiculo', 'veiculo.id = ordemdeservico.veiculo_id', 'left')
-            ->join('user', 'user.id = ordemdeservico.mecanico_id', 'left')
-            ->join('equipe', 'equipe.id = ordemdeservico.equipe_id', 'left')
-            ->join('ordemdeservico_peca', 'ordemdeservico_peca.ordemdeservico_id = ordemdeservico.id', 'left')
-            ->join('peca', 'peca.id = ordemdeservico_peca.peca_id', 'left')
-            ->join('marca', 'marca.id = veiculo.marca_id', 'left')
-            ->join('modelo', 'modelo.id = veiculo.modelo_id', 'left');
+        cliente.nome_completo as cliente_nome,
+        cliente.cpf as cliente_cpf,
+        veiculo.placa as veiculo_placa,
+        veiculo.ano as veiculo_ano,
+        veiculo.cor as veiculo_cor,
+        veiculo.descricao as veiculo_descricao,
+        veiculo.status as veiculo_status,
+        user.nome_completo as mecanico_nome,
+        equipe.nome as equipe_nome,
+        marca.nome as marca_nome,
+        modelo.nome as modelo_nome')
+        ->join('cliente', 'cliente.id = ordemdeservico.cliente_id', 'left')
+        ->join('veiculo', 'veiculo.id = ordemdeservico.veiculo_id', 'left')
+        ->join('user', 'user.id = ordemdeservico.mecanico_id', 'left')
+        ->join('equipe', 'equipe.id = ordemdeservico.equipe_id', 'left')
+        ->join('marca', 'marca.id = veiculo.marca_id', 'left')
+        ->join('modelo', 'modelo.id = veiculo.modelo_id', 'left');
+
             if (empty($params)) {
                 return $this->findAll();
             }
@@ -129,7 +149,10 @@ class OsModel extends Model
             $query->where('ordemdeservico.data_previsao', $params['data_previsao']);
         }
     
-        return $query->findAll();
+        $query = $query->orderBy('ordemdeservico.id', 'DESC');
+
+    return $query->findAll();
+
     }
 public function getOrderByCodigo($codigo)
 {
@@ -171,5 +194,16 @@ public function getOrdersByFilters($placa, $cliente)
     }
 
     return $builder->get()->getResult();
+}public function getPecas($orderId) {
+    $builder = $this->db->table('pecas');
+    $builder->where('order_id', $orderId);
+    $query = $builder->get();
+
+    if ($query === false) {
+    
+        return [];
+    }
+
+    return $query->getResult();
 }
 } 

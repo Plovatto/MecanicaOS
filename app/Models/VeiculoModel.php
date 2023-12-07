@@ -47,7 +47,7 @@ class VeiculoModel extends Model
     }
     public function getVeiculoByPlaca($placa)
     {
-        return $this->where('placa', $placa)->first();
+        return $this->where('placa', $placa)->where('veiculo.status !=', 'desativado')->first();
     }
     
     

@@ -8,9 +8,7 @@
 <body>
     <h1>Perfil do Usuário</h1>
 
-    <table>
-
-<tr><label>Codigo</label>
+<label>Codigo</label>
     <p><?=esc($perfil->id)?></p>
     <label>Nome</label>
     <p><?=esc($perfil->nome_completo)?></p>
@@ -26,16 +24,15 @@
     <p><?=esc($perfil->status)?></p>
     <label>Especialidade</label>
     <p><?=esc($perfil->especialidade_nome)?></p>
+ <a href="/logout">Logout</a>
+
+    <?php if ($userType === 'admin'): ?>
 
 
-</tr>
+    <a href="<?php echo base_url('editar/admin/' . $perfil->id); ?>"><button>Editar Administrador</button></a>
+  <?php endif;?>
 
 
-    </table>
-
-
-
-    <a href="/logout">Logout</a>
 <button><a href="/orders">home</a></button>
 </body>
 </html>

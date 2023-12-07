@@ -44,7 +44,7 @@ class AddController extends BaseController
                             ];
 
                             $clienteModel->insert($newData);
-
+                            session()->setFlashdata('success', 'Cliente criado com sucesso!');
                             return redirect()->to(base_url('Ver?tipo=cliente'));
                         } else {
 
@@ -74,7 +74,7 @@ class AddController extends BaseController
                 helper('form');
                 $userModel = new UserModel();
                 $especialidadeModel = new EspecialidadeModel();
-                $especialidades = $especialidadeModel->findAll();
+                $especialidades = $especialidadeModel->where('status', 'ativo')->findAll();
                 $options = [];
                 foreach ($especialidades as $especialidade) {
                     $options[$especialidade['id']] = $especialidade['nome'];
@@ -90,7 +90,7 @@ class AddController extends BaseController
                         $data['validation_errors'] = $errors;
                     } else {
                         $especialidade_id = $this->request->getPost('especialidade_id');
-                        $especialidade = $especialidadeModel->find($especialidade_id);
+                        $especialidade = $especialidadeModel->where('status', 'ativo')->find($especialidade_id);
                         $senha = $this->request->getPost('senha');
                         $senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
 
@@ -110,7 +110,7 @@ class AddController extends BaseController
                             'user' => isset($user) ? $user : null,
                         ];
 
-                        {
+                        {session()->setFlashdata('success', 'Mecânico criado com sucesso!');
                             return redirect()->to(base_url('Ver?tipo=mecanico'));
                         }
 
@@ -150,7 +150,7 @@ class AddController extends BaseController
 
                     if ($inserted === false) {
                         $viewData['errors'] = $servicoModel->errors();
-                    } else {
+                    } else {session()->setFlashdata('success', 'Serviço criado com sucesso!');
                         return redirect()->to(base_url('Ver?tipo=servico'));
                     }
 
@@ -160,6 +160,44 @@ class AddController extends BaseController
                 $viewData = [
                     'data' => $data,
                     'servico' => isset($servico) ? $servico : null,
+                ];
+
+                return view('adicionar', $viewData);
+
+                break;
+
+            case 'especialidade':
+                $data['tipo'] = $tipo;
+                helper('form');
+                $especialidadeModel = new EspecialidadeModel();
+
+                if ($this->request->getMethod() === 'post') {
+                    $validation = \Config\Services::validation();
+                    $rules = $validation->getRuleGroup('especialidade');
+
+                    $newData = [
+                        'nome' => $this->request->getPost('nome'),
+                        'descricao' => $this->request->getPost('descricao'),
+
+                    ];
+                    $inserted = $especialidadeModel->insert($newData);
+                    $viewData = [
+                        'data' => $data,
+                        'especialidade' => isset($especialidade) ? $especialidade : null,
+                    ];
+
+                    if ($inserted === false) {
+                        $viewData['errors'] = $especialidadeModel->errors();
+                    } else {session()->setFlashdata('success', 'Especialidade criada com sucesso!');
+                        return redirect()->to(base_url('Ver?tipo=especialidade'));
+                    }
+
+                    return view('adicionar', $viewData);
+                }
+
+                $viewData = [
+                    'data' => $data,
+                    'especialidade' => isset($especialidade) ? $especialidade : null,
                 ];
 
                 return view('adicionar', $viewData);
@@ -189,7 +227,7 @@ class AddController extends BaseController
 
                     if ($inserted === false) {
                         $viewData['errors'] = $pecaModel->errors();
-                    } else {
+                    } else {session()->setFlashdata('success', 'Peça criada com sucesso!');
                         return redirect()->to(base_url('Ver?tipo=peca'));
                     }
 
@@ -211,9 +249,9 @@ class AddController extends BaseController
                 $equipeModel = new EquipeModel();
                 $mecanicoModel = new UserModel();
                 $especialidadeModel = new EspecialidadeModel();
-
+                
                 $data['mecanicos'] = $mecanicoModel->getMecanicos();
-                $data['especialidades'] = $especialidadeModel->getEspecialidades();
+                $data['especialidades'] = $especialidadeModel->where('status', 'ativo')->getEspecialidades();
 
                 if ($this->request->getMethod() === 'post') {
                     $validation = \Config\Services::validation();
@@ -243,7 +281,7 @@ class AddController extends BaseController
                                 'equipe_id' => $equipeId,
                                 'mecanico_id' => $mecanicoId,
                             ]);
-                        }
+                        }session()->setFlashdata('success', 'Equipe criada com sucesso!');
                         return redirect()->to(base_url('Ver?tipo=equipe'));
                     }
 
@@ -270,7 +308,7 @@ class AddController extends BaseController
                 $data['marcas'] = $marcas;
                 $data['modelos'] = $modelos;
                 $clienteModel = new ClienteModel();
-                $clientes = $clienteModel->findAll();
+                $clientes = $clienteModel->where('status', 'ativo')->findAll();
                 $data['clientes'] = $clientes;
                 if ($this->request->getMethod() === 'post') {
                     $validation = \Config\Services::validation();
@@ -328,7 +366,8 @@ class AddController extends BaseController
 
                         if ($inserted === false) {
                             $viewData['errors'] = $veiculoModel->errors();
-                        } else {
+                        } else {session()->setFlashdata('success', 'Veículo criado com sucesso!');
+
                             return redirect()->to(base_url('Ver?tipo=veiculo'));
 
                         }

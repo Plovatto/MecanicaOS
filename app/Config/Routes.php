@@ -41,4 +41,21 @@ $routes->get('/adicionarOS', 'osController::adicionarOS');
 
 $routes->post('/searchVeiculo', 'osController::searchVeiculo');
 
-$routes->get('/search', 'OsController::search');
+$routes->group('user', ['namespace' => 'App\Controllers'], function ($routes) {
+    $routes->get('forgot-password', 'UserController::forgotPassword');
+
+$routes->get('reset-password', 'UserController::forgotPassword3');
+$routes->post('send-reset-code', 'UserController::sendResetCode');
+$routes->get('confirm-code', 'UserController::confirmCode');
+$routes->post('verify-code', 'UserController::verifyCode');
+    $routes->post('reset-password', 'userController::resetPassword');
+});
+
+
+$routes->get('/faturamento/(:num)', 'osController::Faturamento/$1');
+$routes->get('/gerarPdf/(:num)', 'osController::gerarPdf/$1');
+$routes->get('/os/editar/(:segment)', 'OsController::editar/$1');
+$routes->post('/os/editar/(:segment)', 'OsController::editar/$1');
+$routes->post('/os/editar/(:segment)', 'OsController::atualizar/$1');
+$routes->post('/request_part', 'ListarController::requestPart');
+$routes->post('/request_part2', 'ListarController::requestPart2');
