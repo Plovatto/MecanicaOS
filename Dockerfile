@@ -16,7 +16,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-install intl mbstring mysqli pdo pdo_mysql
 
 RUN chown -R www-data:www-data /var/www/html
-COPY src /var/www/html
+
 
 RUN rm /etc/nginx/sites-enabled/default
 
