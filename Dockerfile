@@ -26,13 +26,6 @@ COPY . .
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
 
-# Remove default Nginx configuration
-RUN rm /etc/nginx/sites-enabled/default
-
-# Copy custom Nginx configuration
-COPY nginx.conf /etc/nginx/sites-available/default
-RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-
 # Expose ports
 EXPOSE 80 443
 
