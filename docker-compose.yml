@@ -8,11 +8,13 @@ services:
       - .:/var/www/html
 
   php-fpm:
-    image: php:8.2-fpm
     environment:
-      - PORT=9000  # ou a porta que você deseja, ajuste conforme necessário
-    expose:
-      - "9000"  # A porta que o PHP-FPM estará escutando internamente
+      - PORT=7000
+    ports:
+      - "7000:7000"
+    image: php:8.2-fpm
+    volumes:
+      - .:/var/www/html
 
   nginx:
     image: nginx:latest
