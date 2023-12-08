@@ -4,7 +4,6 @@ FROM php:8.2-fpm
 RUN apt-get update && apt-get install -y \
     libicu-dev \
     libonig-dev \
-    nginx \
     git \
     unzip
 
@@ -25,9 +24,3 @@ COPY . .
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
-
-# Expose ports
-EXPOSE 80 443
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
