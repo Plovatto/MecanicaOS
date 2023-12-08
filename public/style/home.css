@@ -1,17 +1,17 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.aling{
+*{
+    font-family: 'Inter', sans-serif;
+}
+ .aling{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
  
-}*{
-    font-family: 'Inter', sans-serif;
-}
-    .form{
+}   .form{
         border-radius: 50px;
 border: 1px solid #000;
 
@@ -85,6 +85,7 @@ border:none;
 
 
 .border-green {
+    
     border: 1px solid #48ff0b;
     height: 220px;
     width: 210px;
@@ -117,7 +118,7 @@ border:none;
 
 button.buttonzin{
         border-radius: 3.125rem;
-        background: rgba(88, 124, 71, 0.76);
+        background: #587c47c2;
 
 
 

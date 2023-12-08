@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <link rel="stylesheet" href="/style/home.css"><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -30,8 +32,15 @@
         <input type="text" placeholder="Email" name="email" class="mt-3" id="email">
 <br>
       <br>
-        <input type="password" placeholder="Senha"  name="password" id="password">
-<br><br>
+      <div class="password-container">
+    <input type="password" placeholder="Senha" name="password" id="password">
+    <button type="button" id="togglePassword" class="eye-button">
+    <span class="material-icons" id="eyeIcon">
+        visibility_off
+    </span>
+</button>
+</div>
+<br>
 
  <?php if (!empty($emailError)): ?>
         <div class="alert alert-danger m-0">
@@ -58,3 +67,30 @@
    </div>
 </body>
 </html>
+<script>
+document.getElementById('togglePassword').addEventListener('click', function () {
+    var passwordInput = document.getElementById('password');
+    var eyeIcon = document.getElementById('eyeIcon');
+    var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+   
+    if (type === 'text') {
+        eyeIcon.textContent = 'visibility';
+    } else {
+        eyeIcon.textContent = 'visibility_off';
+    }
+});
+</script><style>.password-container {
+    position: relative;
+}
+
+.eye-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+}</style>

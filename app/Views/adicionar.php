@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/style/add.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 </head>
@@ -18,7 +20,7 @@
         </ul>
     </div>
 <?php endif; ?>
-<div class="card">
+<div class="card"><br>
 <?php if ($data['tipo'] === 'cliente'): ?>
 
     <?php echo form_open('adicionar/cliente'); ?>
@@ -140,6 +142,9 @@
 <label for="valor">Valor</label>
 <input type="text" name="valor" required>
 <br>
+<label for="tipo">Tipo</label>
+<input type="text" name="tipo" required>
+<br>
 <label for="descricao">Descrição</label>
 <input type="text" name="descricao" required>
 <br>
@@ -192,7 +197,8 @@
 <label for="descricao">Descrição</label>
 <input type="text" name="descricao" required>
 <br>
-
+<label for="tipo">Tipo</label>
+<input type="text" name="tipo" required>
 <input type="submit" value="Adicionar Serviço">
 
 <?php echo form_close(); ?>
@@ -217,8 +223,12 @@
 <br>
 <label for="senha">senha</label>
 <div class="password-container">
-    <input type="password" id="senha" name="senha" required>
-    <button type="button" id="togglePassword">👁️</button>
+    <input type="password" placeholder="Senha" name="password" id="password">
+    <button type="button" id="togglePassword" class="eye-button">
+    <span class="material-icons" id="eyeIcon">
+        visibility_off
+    </span>
+</button>
 </div>
 
 <script>
@@ -237,9 +247,9 @@
 <br>
 <label for="tipo">Tipo</label>
 <select name="tipo" required>
-
+ <option value="mecanico">Mecanico</option>
     <option value="admin">Admin</option>
-    <option value="mecanico">Mecanico</option>
+   
 </select>
 <br>
 <br>
@@ -313,8 +323,9 @@
 
 <?php endif;?>
 </div>
-
-<a href="/orders">Home</a>
+<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><b><br><br><br><br></b>
+<br><br><br><a  href="/orders">Home</a>
 </body>
 </html>
 
@@ -389,4 +400,30 @@ $(document).ready(function() {
 }#modelo{
     display: none;
 }
-</style>
+</style><script>
+document.getElementById('togglePassword').addEventListener('click', function () {
+    var passwordInput = document.getElementById('password');
+    var eyeIcon = document.getElementById('eyeIcon');
+    var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+   
+    if (type === 'text') {
+        eyeIcon.textContent = 'visibility';
+    } else {
+        eyeIcon.textContent = 'visibility_off';
+    }
+});
+</script><style>.password-container {
+    position: relative;
+}
+
+.eye-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+}</style>

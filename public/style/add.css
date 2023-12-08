@@ -7,11 +7,17 @@
 
 }.concluído {
     color: lightgray;
+
 }
 *{
     text-decoration: none;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+}
 body.body {
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
@@ -74,3 +80,59 @@ height: 260px;
 }.text{
     text-align: center;
 }
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="email"], select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+input[type="password"], select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+
+
+

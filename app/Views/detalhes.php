@@ -3,6 +3,7 @@
  <html>
  <head>
     <title>Detalhes</title>
+    <link rel="stylesheet" href="/style/detalhes2.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -178,7 +179,7 @@ if (session()->getFlashdata('success')): ?>
 
     <?php endif;?>
 </div>
-        </div> <a href="<?php echo base_url('editar/veiculo/' . $veiculo->id); ?>"><button>Editar veículo</button></a>
+        </div> <br><br><a href="<?php echo base_url('editar/veiculo/' . $veiculo->id); ?>"><button>Editar veículo</button></a>
     </div>    <a href="<?php echo base_url('alterar-status-veiculo/' . $veiculo->id); ?>">
         <button style="background-color: <?=($veiculo->status === 'ativo') ? 'red' : 'green'?>; color: white;">
             <?=($veiculo->status === 'ativo') ? 'Desativar' : 'Ativar'?> Veículo
@@ -194,8 +195,11 @@ if (session()->getFlashdata('success')): ?>
     <p><strong>Codigo : </strong> <?=esc($peca['codigo']);?></p>
         <p><strong>Nome : </strong> <?=esc($peca['nome']);?></p>
         <p><strong>Valor : R$ </strong> <?=esc($peca['valor']);?></p>
+        <p><strong>Tipo : </strong> <?=esc($peca['tipo']);?></p>
         <p><strong>Descrição:</strong> <?=esc($peca['descricao']);?></p>
         <p><strong>Status:</strong> <?=esc($peca['status']);?></p>
+
+        <br><br>
         <a href="<?php echo base_url('alterar-status-peca/' . $peca['id']); ?>">
 
     </a><?php if ($userType === 'admin'): ?> <button style="background-color: <?=($peca['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
@@ -213,6 +217,8 @@ if (session()->getFlashdata('success')): ?>
         <p><strong>Descrição:</strong> <?=esc($especialidade['descricao']);?></p>
         <p><strong>Status:</strong> <?=esc($especialidade['status']);?></p>
       <?php if ($userType === 'admin'): ?>
+
+        <br><br>
         <a href="<?php echo base_url('alterar-status-especialidade/' . $especialidade['id']); ?>">
 
         <button style="background-color: <?=($especialidade['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
@@ -272,7 +278,7 @@ if (session()->getFlashdata('success')): ?>
     </div>
 </div>  <?php if ($userType === 'admin'): ?>
 
-
+    <br><br>
       <a href="<?php echo base_url('alterar-status-equipe/' . $equipe['id']); ?>">
     <button style="background-color: <?=($equipe['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
         <?=($equipe['status'] === 'ativo') ? 'Desativar' : 'Ativar'?> Equipe
@@ -286,9 +292,11 @@ if (session()->getFlashdata('success')): ?>
     <h1>Detalhes da serviço</h1>
  <p><strong>Codigo : </strong> <?=esc($servico['codigo']);?></p>
         <p><strong>Nome : </strong> <?=esc($servico['nome']);?></p>
+        <p><strong>Tipo : </strong> <?=esc($servico['tipo']);?></p>
         <p><strong>Valor : R$ </strong> <?=esc($servico['valor']);?></p>
         <p><strong>Descrição : </strong> <?=esc($servico['descricao']);?></p>
         <p><strong>Status : </strong> <?=esc($servico['status']);?></p>
+        <br><br>
         <a href="<?php echo base_url('alterar-status-servico/' . $servico['id']); ?>">
 
     </a><?php if ($userType === 'admin'): ?> <button style="background-color: <?=($servico['status'] === 'ativo') ? 'red' : 'green'?>; color: white;">
@@ -334,7 +342,7 @@ if (session()->getFlashdata('success')): ?>
 </div>
 <?php if ($userType === 'admin'): ?>
 
-
+    <br><br>
 
 
     <a href="<?php echo base_url('editar/mecanico/' . $user->id); ?>"><button>Editar Mecânico</button></a>

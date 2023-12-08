@@ -34,7 +34,10 @@ class AddController extends BaseController
                         $validation->setRules($rules);
 
                         if ($validation->withRequest($this->request)->run()) {
+                            $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
+
                             $newData = [
+                                'codigo' => $codigo,
                                 'nome_completo' => $this->request->getPost('nome_completo'),
                                 'endereco' => $this->request->getPost('endereco'),
                                 'email' => $this->request->getPost('email'),
@@ -93,8 +96,10 @@ class AddController extends BaseController
                         $especialidade = $especialidadeModel->where('status', 'ativo')->find($especialidade_id);
                         $senha = $this->request->getPost('senha');
                         $senha_hashed = password_hash($senha, PASSWORD_DEFAULT);
+                        $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
                         $newData = [
+                            'codigo' => $codigo,
                             'nome_completo' => $this->request->getPost('nome_completo'),
                             'endereco' => $this->request->getPost('endereco'),
                             'email' => $this->request->getPost('email'),
@@ -110,8 +115,14 @@ class AddController extends BaseController
                             'user' => isset($user) ? $user : null,
                         ];
 
-                        {session()->setFlashdata('success', 'Mecânico criado com sucesso!');
-                            return redirect()->to(base_url('Ver?tipo=mecanico'));
+                        {
+                            if ($this->request->getPost('tipo') === 'admin') {
+                                session()->setFlashdata('success', 'Administrador criado com sucesso!');
+                                return redirect()->to(base_url('Ver?tipo=admin'));
+                            } else {
+                                session()->setFlashdata('success', 'Mecânico criado com sucesso!');
+                                return redirect()->to(base_url('Ver?tipo=mecanico'));
+                            }
                         }
 
                         return view('adicionar', $viewData);
@@ -135,11 +146,14 @@ class AddController extends BaseController
                 if ($this->request->getMethod() === 'post') {
                     $validation = \Config\Services::validation();
                     $rules = $validation->getRuleGroup('servico');
+                    $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
                     $newData = [
+                        'codigo' => $codigo,
                         'nome' => $this->request->getPost('nome'),
                         'descricao' => $this->request->getPost('descricao'),
                         'valor' => $this->request->getPost('valor'),
+                        'tipo'=> $this->request->getPost('tipo'),
 
                     ];
                     $inserted = $servicoModel->insert($newData);
@@ -174,8 +188,9 @@ class AddController extends BaseController
                 if ($this->request->getMethod() === 'post') {
                     $validation = \Config\Services::validation();
                     $rules = $validation->getRuleGroup('especialidade');
+                    $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
-                    $newData = [
+                    $newData = [ 'codigo' => $codigo,
                         'nome' => $this->request->getPost('nome'),
                         'descricao' => $this->request->getPost('descricao'),
 
@@ -212,11 +227,13 @@ class AddController extends BaseController
                 if ($this->request->getMethod() === 'post') {
                     $validation = \Config\Services::validation();
                     $rules = $validation->getRuleGroup('peca');
+                    $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
-                    $newData = [
+                    $newData = [ 'codigo' => $codigo,
                         'nome' => $this->request->getPost('nome'),
                         'descricao' => $this->request->getPost('descricao'),
                         'valor' => $this->request->getPost('valor'),
+                        'tipo'=> $this->request->getPost('tipo'),
 
                     ];
                     $inserted = $pecaModel->insert($newData);
@@ -258,7 +275,9 @@ class AddController extends BaseController
                     $rules = $validation->getRuleGroup('equipe');
                     $equipeModel = new EquipeModel();
                     $equipeMecanicoModel = new EquipeMecanicoModel();
-                    $newData = [
+                    $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
+
+                    $newData = [ 'codigo' => $codigo,
                         'nome' => $this->request->getPost('nome'),
                         'descricao' => $this->request->getPost('descricao'),
                         'especialidade_id' => $this->request->getPost('especialidade_id'),
@@ -345,8 +364,10 @@ class AddController extends BaseController
                             if ($modelo) {
                                 $modelo_nome = $modelo->nome;}
                         }
+                        $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
                         $newData = [
+                             'codigo' => $codigo,
                             'ano' => $this->request->getPost('ano'),
                             'placa' => $this->request->getPost('placa'),
                             'cor' => $this->request->getPost('cor'),

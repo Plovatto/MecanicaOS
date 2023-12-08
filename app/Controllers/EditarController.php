@@ -20,7 +20,7 @@ class EditarController extends BaseController
         $servico = null;
         $user = null;
 $equipe = null;
-
+$especialidade = null; 
         $veiculo = null;
         switch ($tipo) {
 
@@ -49,7 +49,8 @@ $equipe = null;
                     if ($peca === null) {
                         return redirect()->to(base_url('orders'));
                     }
-                    break; case 'especialidade':
+                    break; 
+                    case 'especialidade':
                         $data['tipo'] = $tipo;
                         helper('form');
                         $especialidadeModel = new EspecialidadeModel();
@@ -296,6 +297,7 @@ $equipe = null;
                         'nome' => $this->request->getPost('nome'),
                         'valor' => $this->request->getPost('valor'),
                         'descricao' => $this->request->getPost('descricao'),
+                        'tipo' => $this->request->getPost('tipo'),
                         
                     ];
     
@@ -311,7 +313,7 @@ $equipe = null;
                             'nome' => $this->request->getPost('nome'),
                             'valor' => $this->request->getPost('valor'),
                             'descricao' => $this->request->getPost('descricao'),
-                            
+                            'tipo' => $this->request->getPost('tipo'),
                         ];
         
                         $servicoModel->update($id, $data);

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <link rel="stylesheet" href="/style/add.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Cliente</title>
 </head>
@@ -72,6 +72,8 @@ echo form_dropdown('status', $status_options, $cliente->status);
 
     <label for="valor">Valor</label>
     <input type="text" name="valor" value="<?php echo $peca['valor']; ?>" required>
+    <label for="tipo">Tipo</label>
+    <input type="text" name="tipo" value="<?php echo $peca['tipo']; ?>" required>
 
     <label for="descricao">descricao</label>
     <input type="text" name="descricao" value="<?php echo $peca['descricao']; ?>" required>
@@ -93,6 +95,9 @@ echo form_dropdown('status', $status_options, $cliente->status);
 
     <label for="valor">Valor</label>
     <input type="text" name="valor" value="<?php echo $servico['valor']; ?>" required>
+
+    <label for="tipo">Tipo</label>
+    <input type="text" name="tipo" value="<?php echo $servico['tipo']; ?>" required>
 
     <label for="descricao">descricao</label>
     <input type="text" name="descricao" value="<?php echo $servico['descricao']; ?>" required>
@@ -119,9 +124,10 @@ echo form_dropdown('status', $status_options, $cliente->status);
 <input type="text" name="cpf" value="<?php echo $user->cpf; ?>" required>
 <br>
 <label for="tipo">Tipo</label>
-<select name="tipo" required>
-    <option value="admin" <?php echo $user->tipo === 'admin' ? 'selected' : ''; ?>>Admin</option>
+<select name="tipo" required> 
     <option value="mecanico" <?php echo $user->tipo === 'mecanico' ? 'selected' : ''; ?>>Mecânico</option>
+    <option value="admin" <?php echo $user->tipo === 'admin' ? 'selected' : ''; ?>>Admin</option>
+   
 </select>
 <br>
 <br>

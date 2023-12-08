@@ -8,7 +8,7 @@ class PecaModel extends Model
 {
     protected $table = 'peca';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['status','codigo', 'nome', 'descricao', 'valor'];
+    protected $allowedFields = ['status','codigo', 'nome', 'descricao', 'valor', 'tipo'];
 
     public function getPecas()
     {

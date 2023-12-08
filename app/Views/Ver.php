@@ -24,13 +24,14 @@
 </head>
 <body>
 
-<form id="searchForm" method="get" style="<?=$tipo === 'graficos' ? 'display: none;' : ''?>">
+<form style="margin-left:110px;" class="myForm" id="searchForm" method="get" style="<?=$tipo === 'graficos' ? 'display: none;' : ''?>">
     <input  type="hidden" name="tipo" value="<?=esc($tipo)?>">
-    <input  onblur="this.form.submit()" type="text" name="pesquisa" placeholder="Pesquisar" oninput="submitForm()">
+    <br><br>
+    <input style="margin-left:-80px;" onblur="this.form.submit()" type="text" name="pesquisa" placeholder="Pesquisar" oninput="submitForm()">
 
     <button type="reset" onclick="this.form.submit()">Limpar pesquisa</button>
 </form>
-<a href="/orders">Home</a>
+<br><br><br>
 <div style="<?=$tipo === 'graficos' ? 'display: none;' : ''?>" class="card">
 <?php if ($tipo === 'cliente'): ?>
     <h4>Lista de Clientes</h4>
@@ -283,9 +284,9 @@ new Chart(document.getElementById('teamsChart'), {
 
 
 
+<br>
 
-
-
+<a href="/orders">Home</a><br>
 </body>
 </html>
 <style>
@@ -294,5 +295,8 @@ canvas {
     max-height: 400px;
 }
 
-
+a{
+    text-decoration: none;
+    color: #000000;
+}
 /style>

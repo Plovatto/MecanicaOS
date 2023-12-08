@@ -1,0 +1,456 @@
+ERROR - 2023-12-08 12:37:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(138): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-08 15:53:40 --> Undefined variable $especialidade
+in APPPATH\Controllers\EditarController.php on line 251.
+ 1 APPPATH\Controllers\EditarController.php(251): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 16:16:13 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Models\UserModel.php(32): CodeIgniter\BaseModel->first()
+#8 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(77): App\Models\UserModel->getPerfilWithEspecialidade()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->perfil()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\UserModel.php(32): CodeIgniter\BaseModel->first()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(77): App\Models\UserModel->getPerfilWithEspecialidade()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->perfil()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Models\UserModel.php(32): CodeIgniter\BaseModel->first()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(77): App\Models\UserModel->getPerfilWithEspecialidade()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->perfil()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-12-08 16:16:13 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(640): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(32): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\userController.php(77): App\Models\UserModel->getPerfilWithEspecialidade()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\userController->perfil()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 17:41:55 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Models\VeiculoModel.php(46): CodeIgniter\BaseModel->first()
+#8 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(163): App\Models\VeiculoModel->getClienteFromVeiculo()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#12 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Models\VeiculoModel.php(46): CodeIgniter\BaseModel->first()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(163): App\Models\VeiculoModel->getClienteFromVeiculo()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Models\VeiculoModel.php(46): CodeIgniter\BaseModel->first()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(163): App\Models\VeiculoModel->getClienteFromVeiculo()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-12-08 17:41:55 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(640): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\VeiculoModel.php(46): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ListarController.php(163): App\Models\VeiculoModel->getClienteFromVeiculo()
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 18:42:54 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(82): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#8 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#10 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(82): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#7 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#9 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(82): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#6 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#8 {main}
+CRITICAL - 2023-12-08 18:42:54 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\ListarController.php(82): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->listar()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 18:43:02 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(22): CodeIgniter\BaseModel->findAll()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(22): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->index()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-12-08 18:43:02 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(602): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Controllers\osController.php(22): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 18:43:05 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(541): CodeIgniter\Model->doFind()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(154): CodeIgniter\BaseModel->find()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(541): CodeIgniter\Model->doFind()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(154): CodeIgniter\BaseModel->find()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(541): CodeIgniter\Model->doFind()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\ListarController.php(154): CodeIgniter\BaseModel->find()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-12-08 18:43:05 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(541): CodeIgniter\Model->doFind()
+ 5 APPPATH\Controllers\ListarController.php(154): CodeIgniter\BaseModel->find()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ListarController->detalhes()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 18:43:30 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->index()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->index()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->index()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-12-08 18:43:30 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(640): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\userController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 18:44:07 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host nï¿½o ï¿½ conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->index()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(184): mysqli->real_connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#6 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->index()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(640): CodeIgniter\Model->doFirst()
+#5 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\userController->index()
+#7 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2023-12-08 18:44:07 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host não é conhecido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(640): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\userController.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\userController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 15:59:58 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\Users\pando\Desktop\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\pando\Desktop\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\Users\pando\Desktop\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\Users\pando\Desktop\MVCmecanica\app\Controllers\osController.php(138): CodeIgniter\Model->insert()
+#8 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\Users\pando\Desktop\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}

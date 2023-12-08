@@ -93,8 +93,11 @@ class OsController extends BaseController
         if ($this->request->getMethod() === 'post') {
 
             $osModel = new OsModel();
+            $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
+            date_default_timezone_set('America/Sao_Paulo');
 
             $data = [
+                'codigo' => $codigo,
                 'defeito' => $this->request->getPost('defeito'),
                 'solucao' => $this->request->getPost('solucao'),
                 'detalhes' => $this->request->getPost('detalhes'),
@@ -106,6 +109,8 @@ class OsController extends BaseController
                 'veiculo_id' => $this->request->getPost('veiculo_id'),
                 'mecanico_id' => session('user_id'),
                 'equipe_id' => $this->request->getPost('equipe_codigo'),
+                'total' => $this->request->getPost('valor_servicos') + $this->request->getPost('valor_pecas'),
+                'data_emissao' => date('Y-m-d'),  
 
             ];
             var_dump($data);
@@ -222,16 +227,19 @@ class OsController extends BaseController
         $bootstrapCss = file_get_contents('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
         $addCss = file_get_contents('style/fatura.css');
         $dompdf = new \Dompdf\Dompdf();
+
         $html = view('faturamento', ['order' => $order, 'pecas' => $pecas, 'servicos' => $servicos, 'isPdf' => true, 'isPdf2' => true]);
         $html = '<style>' . $addCss . '</style>' . '<style>' . $bootstrapCss . '</style>' . $html;
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A3', 'landscape');
         $dompdf->render();
+$this->response->setHeader('Content-Type', 'application/pdf');
+$this->response->setBody($dompdf->output());
 
         $dompdf->stream("Faturamento.pdf", array("Attachment" => false));
 
     }
-
+    
     public function editar($id)
     {$osModel = new OsModel();
         $order = $osModel->getOrderWithDetails($id);

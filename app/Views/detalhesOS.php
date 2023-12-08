@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes da Ordem de Serviço</title>
+    <title>Detalhes da Ordem de Serviço</title><link rel="stylesheet" href="/style/detalhes.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -16,24 +16,28 @@
 <div class="accordion" id="orderDetailsAccordion">
     <div class="card">
         <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <?=$order['codigo']?>
-                </button>
-            </h2>
+        <h2 class="mb-0 header">
+    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <?=$order['codigo']?>
+    </button>
+    <div>
+        <a href="/Ver?tipo=os">Voltar</a>
+        <a href="/orders">Home</a>
+    </div>
+</h2>
         </div>
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#orderDetailsAccordion">
-            <div class="card-body">  <p>Número da OS: <?=$order['codigo']?></p><p>Criado por : <?=$order['mecanico_nome']?> em <?=$order['data_emissao']?></p>
+            <div class="card-body">  <p><strong>Número da OS : </strong><?=$order['codigo']?></p><p><strong>Criado por : </strong><?=$order['mecanico_nome']?> em <?=$order['data_emissao']?></p>
 
-                <p>Data de Previsão de Conclusão: <?=$order['data_previsao']?></p>
-                <p>Defeito: <?=$order['defeito']?></p>
-                <p>Solução: <?=$order['solucao']?></p>
-                <p>Detalhes: <?=$order['detalhes']?></p>
-
-                <p>Status: <?=$order['situacao']?></p>
-                  <p>Valor Total: R$ <?=$order['total']?></p><div class="accordion" id="partsDetailsAccordion">
-    <div class="card">
+            <p><strong>Data de Previsão de Conclusão :</strong> <?=$order['data_previsao']?></p>
+<p><strong>Defeito : </strong> <?=$order['defeito']?></p>
+<p><strong>Solução : </strong> <?=$order['solucao']?></p>
+<p><strong>Detalhes : </strong> <?=$order['detalhes']?></p>
+<p><strong>Status  :</strong> <?=$order['situacao']?></p>
+<p><strong>Valor Total : R$</strong> <?=$order['total']?></p></p><div class="accordion" id="partsDetailsAccordion">
+   <br>
+<div class="card">
         <div class="card-header" id="headingTotalParts">
             <h2 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTotalParts" aria-expanded="true" aria-controls="collapseTotalParts">
@@ -63,13 +67,14 @@
                                 <p><strong>Nome :</strong> <?=$peca['nome']?></p>
                                 <p><strong>Codigo : </strong> <?=esc($peca['peca_codigo']);?></p>
                                 <p><strong>Valor Un : </strong>  R$ <?=esc($peca['peca_valor']);?></p>
+                                <p><strong>Tipo : </strong>  <?=esc($peca['peca_tipo']);?></p>
         <p><strong>Descrição : </strong> <?=esc($peca['peca_descricao']);?></p>
         <p><strong>Status : </strong> <?=esc($peca['peca_status']);?></p>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach;?>
-                </div><br>  <p>Valor das Peças: <?=$order['valor_pecas']?></p>
+                </div><br> <strong> <p>Valor total das Peças: <?=$order['valor_pecas']?></p></strong>
             </div>
         </div>
     </div>
@@ -95,7 +100,7 @@
                                         <?=$servico['nome']?>
                                     </button>
                                     <a href="/detalhes/servico/<?=esc($servico['servico_id']);?>">
-    <button class="btn btn-primary float-right">Detalhes</button>
+    <button class="btn float-right">Detalhes</button>
 </a>
                                 </h2>
                             </div>
@@ -104,13 +109,15 @@
                                 <p><strong>Codigo : </strong> <?=esc($servico['servico_codigo']);?></p>
                                     <p><strong>Nome : </strong> <?=esc($servico['nome']);?></p>
                                     <p><strong>Valor Un : R$ </strong> <?=esc($servico['servico_valor']);?></p>
-                                    <p><strong>Descrição : </strong> <?=esc($servico['servico_descricao']);?></p>
-                                    <p><strong>Status : </strong> <?=esc($servico['servico_status']);?></p>
+                                    <p><strong>Tipo : </strong> <?=esc($servico['servico_tipo']);?></p> 
+
+                                    <p><strong>Descrição : </strong> <?=esc($servico['servico_descricao']);?></p> 
+                                   <p><strong>Status : </strong> <?=esc($servico['servico_status']);?></p>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach;?>
-                </div> <br>     <p>Valor dos Serviços: <?=$order['valor_servicos']?></p>
+                </div> <br>    <strong> <p>Valor total dos Serviços: <?=$order['valor_servicos']?></p></strong>
             </div>
         </div>
     </div>
@@ -129,13 +136,13 @@
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#vehicleDetailsAccordion">
             <div class="card-body">
-                <p>Placa do Veículo: <?=$order['veiculo_placa']?></p>
-                <p>Veículo Código: <?=$order['veiculo_descricao']?></p>
-                <p>Veículo Código: <?=$order['veiculo_cor']?></p>
-                <p>Veículo Código: <?=$order['veiculo_ano']?></p>
-                <p>Veículo Código: <?=$order['veiculo_status']?></p>
-                <p>Nome da Marca: <?=$order['marca_nome']?></p>
-                <p>Nome do Modelo: <?=$order['modelo_nome']?></p>
+            <p><strong>Placa do Veículo:</strong> <?=$order['veiculo_placa']?></p>
+<p><strong>Descrição do Veículo:</strong> <?=$order['veiculo_descricao']?></p>
+<p><strong>Cor do Veículo:</strong> <?=$order['veiculo_cor']?></p>
+<p><strong>Ano do Veículo:</strong> <?=$order['veiculo_ano']?></p>
+<p><strong>Status do Veículo:</strong> <?=$order['veiculo_status']?></p>
+<p><strong>Nome da Marca:</strong> <?=$order['marca_nome']?></p>
+<p><strong>Nome do Modelo:</strong> <?=$order['modelo_nome']?></p>
             </div>
         </div>
     </div>
@@ -158,15 +165,15 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#clientDetailsAccordion">
             <div class="card-body">
-            <p>Nome do Cliente: <?=$order['cliente_codigo']?></p>
-                <p>Nome do Cliente: <?=$order['cliente_nome']?></p>
-                <p>Cliente Código: <?=$order['cliente_id']?></p>
-                <p>Nome do Cliente: <?=$order['cliente_endereco']?></p>
-                <p>Cliente Código: <?=$order['cliente_email']?></p>
-                <p>Nome do Cliente: <?=$order['cliente_status']?></p>
-                <p>Cliente Código: <?=$order['cliente_cpf']?></p>
-                <p>Nome do Cliente: <?=$order['cliente_cnh']?></p>
-                <p>Cliente Código: <?=$order['cliente_telefone']?></p>
+            <p><strong>Código do Cliente: </strong><?=$order['cliente_codigo']?></p>
+            <p><strong>Nome do Cliente:</strong> <?=$order['cliente_nome']?></p>
+<p><strong>Código do Cliente:</strong> <?=$order['cliente_id']?></p>
+<p><strong>Endereço do Cliente:</strong> <?=$order['cliente_endereco']?></p>
+<p><strong>Email do Cliente:</strong> <?=$order['cliente_email']?></p>
+<p><strong>Status do Cliente:</strong> <?=$order['cliente_status']?></p>
+<p><strong>CPF do Cliente:</strong> <?=$order['cliente_cpf']?></p>
+<p><strong>CNH do Cliente:</strong> <?=$order['cliente_cnh']?></p>
+<p><strong>Telefone do Cliente:</strong> <?=$order['cliente_telefone']?></p>
             </div>
         </div>
     </div>
@@ -185,9 +192,11 @@
         </div>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#teamDetailsAccordion">
             <div class="card-body">
-                <p>Nome da Equipe: <?=$order['equipe_nome']?></p>
-                <p>Equipe Código: <?=$order['equipe_codigo']?></p>
-              <h4>Mecânicos da equipe</h4>
+               <p><strong>Equipe Código: </strong><?=$order['equipe_codigo']?></p> 
+               <p><strong>Nome da Equipe:</strong><?=$order['equipe_nome']?></p>
+                
+                <br>
+              <strong>Mecânicos da equipe</strong>
                 <div class="accordion" id="mechanicDetailsAccordion">
     <?php foreach ($mecanicos as $index => $mecanico): ?>
         <div class="card">
@@ -205,13 +214,13 @@
             <div id="collapseMechanic<?=$index?>" class="collapse" aria-labelledby="headingMechanic<?=$index?>" data-parent="#mechanicDetailsAccordion">
                 <div class="card-body">
 
-                    <p><strong>Código:</strong> <?=esc($mecanico->codigo);?></p>
-    <p><strong>Nome:</strong> <?=esc($mecanico->nome_completo);?></p>
-    <p><strong>Nome:</strong> <?=esc($mecanico->email);?></p>
-    <p><strong>Nome:</strong> <?=esc($mecanico->cpf);?></p>
-    <p><strong>Nome:</strong> <?=esc($mecanico->tipo);?></p>
-    <p><strong>Especialidade:</strong> <?=esc($mecanico->especialidade_nome);?></p>
-    <p><strong>status:</strong> <?=esc($mecanico->status);?></p>
+                <p><strong>Código:</strong> <?=esc($mecanico->codigo);?></p>
+<p><strong>Nome Completo:</strong> <?=esc($mecanico->nome_completo);?></p>
+<p><strong>Email:</strong> <?=esc($mecanico->email);?></p>
+<p><strong>CPF:</strong> <?=esc($mecanico->cpf);?></p>
+<p><strong>Tipo:</strong> <?=esc($mecanico->tipo);?></p>
+<p><strong>Especialidade:</strong> <?=esc($mecanico->especialidade_nome);?></p>
+<p><strong>Status:</strong> <?=esc($mecanico->status);?></p>
                 </div>
             </div>
         </div>
@@ -220,16 +229,16 @@
             </div>
         </div>
     </div>
-</div>
+</div><br><br>
       <a href="<?php echo base_url('alterar-status-os/' . $order['id']); ?>">
-    <button style="background-color: <?=($order['situacao'] === 'A concluir') ? 'green' : 'red'?>; color: white;">
+    <button class="aaa" style="background-color: <?=($order['situacao'] === 'A concluir') ? 'green' : 'red'?>; color: white;">
         <?=($order['situacao'] === 'A concluir') ? 'Concluir' : 'Reabrir'?> OS
     </button>
 </a><a href="/faturamento/<?=$order['id']?>">
-    <button>Ver Faturamento</button>
-</a>        <a href="<?php echo base_url('os/editar/' . $order['id']); ?>"><button>Editar OS</button></a>
-
-      <a href="/Ver?tipo=os">Voltar</a>
-    <a href="/orders">Home</a>
+    <button class="billing-button">Ver Faturamento</button>
+</a>
+<a href="<?php echo base_url('os/editar/' . $order['id']); ?>">
+    <button class="edit-button">Editar OS</button>
+</a>
 </body>
 </html>

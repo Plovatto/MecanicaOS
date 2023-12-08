@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>    <link rel="stylesheet" href="/style/add.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css">
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -101,14 +101,15 @@
     <option value="<?=$peca['id']?>" data-price="<?=$peca['valor']?>"><?=$peca['nome']?></option>
 <?php endforeach;?>
 </select>
-
+<br>
 <br>
 <ul id="selected_parts"></ul>
 <br>
 <p id="quantidade_peca2"></p><br>
 <p id="valor_pecas2"></p><br>
-<button type="submit">Adicionar OS</button>
+<button type="submit">Adicionar OS</button><br><a  href="/orders">Home</a><br><br>
 </form>
+
 
 </body>
 </html>
