@@ -24,6 +24,6 @@ RUN rm /etc/nginx/sites-enabled/default
 
 COPY ./nginx.conf /etc/nginx/sites-enabled/
 WORKDIR /var/www/html/public
-
+EXPOSE 3000
 
 CMD service nginx start & php-fpm
