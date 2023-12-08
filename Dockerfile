@@ -6,8 +6,11 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libonig-dev \
     nginx \
-       composer -n validate --strict ; \
-    composer -n install --no-scripts --ignore-platform-reqs --no-dev
+    git \
+    unzip
+
+RUN composer validate --strict
+RUN composer install --no-scripts --ignore-platform-reqs --no-dev
 
 COPY . /var/www/html/
 
@@ -16,7 +19,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-install intl mbstring mysqli pdo pdo_mysql
 
 RUN chown -R www-data:www-data /var/www/html
-
 
 RUN rm /etc/nginx/sites-enabled/default
 
