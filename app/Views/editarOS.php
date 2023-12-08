@@ -86,7 +86,7 @@
     <input type="text" name="solucao" value="<?=$order['solucao']?>" required><br>
     <input type="text" name="detalhes" value="<?=$order['detalhes']?>" required><br>
     <input type="date" name="data_previsao" value="<?=$order['data_previsao']?>" required><br>
-
+    <input type="hidden" type="date" name="data_emissao" value="<?=$order['data_emissao']?>" required><br>
     <input type="hidden" type="text" name="valor_servicos" id="valor_servicos2" value="<?=$order['valor_servicos']?>" required>
     <input type="hidden"  name="cliente_id" value="<?=$order['cliente_id']?>" id="cliente_id">
     <input type="hidden"   name="veiculo_id" id="veiculo_id" value="<?=$order['veiculo_id']?>" >
@@ -143,9 +143,10 @@ foreach ($selectedPecas as $selectedPeca) {
 <br>
 <p id="quantidade_peca2"></p><br>
 <p id="valor_pecas2" ></p><br>
-<button type="submit">Adicionar OS</button>
+<button type="submit">Editar OS</button>
 </form>
-
+<a href="/orders">Home</a>
+ <a href="/detalhesOS/<?=$order['id']?>">Voltar</a>
 </body>
 </html>
 

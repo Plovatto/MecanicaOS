@@ -20,7 +20,11 @@ class EditarController extends BaseController
         $servico = null;
         $user = null;
 $equipe = null;
+<<<<<<< HEAD
 $especialidade = null; 
+=======
+$especialidade = null;
+>>>>>>> d1d48a76316fabed94a0632a26bf01d02dff9494
         $veiculo = null;
         switch ($tipo) {
 

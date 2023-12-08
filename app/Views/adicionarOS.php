@@ -107,10 +107,16 @@
 <br>
 <p id="quantidade_peca2"></p><br>
 <p id="valor_pecas2"></p><br>
+<<<<<<< HEAD
 <button type="submit">Adicionar OS</button><br><a  href="/orders">Home</a><br><br>
 </form>
 
 
+=======
+<button type="submit">Adicionar OS</button> 
+</form>
+<a href="/orders">Home</a>
+>>>>>>> d1d48a76316fabed94a0632a26bf01d02dff9494
 </body>
 </html>
 

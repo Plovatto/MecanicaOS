@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ERROR - 2023-12-08 12:37:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:306
 Stack trace:
 #0 C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
@@ -15,12 +16,432 @@ Stack trace:
 #12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
 #13 {main}
 CRITICAL - 2023-12-08 15:53:40 --> Undefined variable $especialidade
+=======
+ERROR - 2023-12-08 00:04:40 --> mysqli_sql_exception: Unknown column 'modelo_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(372): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:04:45 --> mysqli_sql_exception: Unknown column 'modelo_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(372): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:04:50 --> mysqli_sql_exception: Unknown column 'modelo_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(372): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:32:33 --> mysqli_sql_exception: Unknown column 'modelo_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(372): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:33:03 --> mysqli_sql_exception: Unknown column 'modelo_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(372): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:33:44 --> mysqli_sql_exception: Unknown column 'modelo_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(373): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:35:54 --> mysqli_sql_exception: Unknown column 'especialidade_nome' in 'field list' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\AddController.php(112): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\AddController->adicionar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:38:09 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:39:31 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(298): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:39:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(137): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->adicionarOS()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:44:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(299): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:56:17 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:57:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:59:01 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_1` FOREIGN KEY (`ordemdeservico_id`) REFERENCES `ordemdeservico` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:59:01 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_1` FOREIGN KEY (`ordemdeservico_id`) REFERENCES `ordemdeservico` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 00:59:01 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_peca`, CONSTRAINT `ordemdeservico_peca_ibfk_1` FOREIGN KEY (`ordemdeservico_id`) REFERENCES `ordemdeservico` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(315): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-08 01:00:35 --> Undefined variable $osId
+in APPPATH\Controllers\osController.php on line 291.
+ 1 APPPATH\Controllers\osController.php(291): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-08 01:02:37 --> Undefined variable $existingOs
+in APPPATH\Controllers\osController.php on line 281.
+ 1 APPPATH\Controllers\osController.php(281): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-08 01:03:28 --> Undefined variable $osId
+in APPPATH\Controllers\osController.php on line 297.
+ 1 APPPATH\Controllers\osController.php(297): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+CRITICAL - 2023-12-08 01:04:57 --> Undefined variable $osId
+in APPPATH\Controllers\osController.php on line 312.
+ 1 APPPATH\Controllers\osController.php(312): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 01:06:20 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:06:29 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-08 01:08:07 --> Undefined variable $osId
+in APPPATH\Controllers\osController.php on line 299.
+ 1 APPPATH\Controllers\osController.php(299): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 01:08:41 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:08:57 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-08 01:11:06 --> Undefined variable $osId
+in APPPATH\Controllers\osController.php on line 299.
+ 1 APPPATH\Controllers\osController.php(299): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\OsController->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 01:12:15 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:12:15 --> mysqli_sql_exception: Duplicate entry '20-2' for key 'PRIMARY' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:12:15 --> mysqli_sql_exception: Duplicate entry '20-1' for key 'PRIMARY' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(315): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-08 01:13:13 --> Undefined variable $especialidade
+>>>>>>> d1d48a76316fabed94a0632a26bf01d02dff9494
 in APPPATH\Controllers\EditarController.php on line 251.
  1 APPPATH\Controllers\EditarController.php(251): CodeIgniter\Debug\Exceptions->errorHandler()
  2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\EditarController->editar()
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\pando\\Desktop\\MVCmecanica\\public\\index.php')
 ERROR - 2023-12-08 16:16:13 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql10.freemysqlhosting.net failed: Este host n�o � conhecido.  in C:\Users\pando\Desktop\MVCmecanica\system\Database\MySQLi\Connection.php:184
 Stack trace:
@@ -454,3 +875,280 @@ Stack trace:
 #11 C:\Users\pando\Desktop\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
 #12 C:\Users\pando\Desktop\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
 #13 {main}
+=======
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\MVCmecanica\\public\\index.php')
+ERROR - 2023-12-08 01:16:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:16:27 --> mysqli_sql_exception: Duplicate entry '22-2' for key 'PRIMARY' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:16:27 --> mysqli_sql_exception: Duplicate entry '22-1' for key 'PRIMARY' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(315): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:16:38 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:16:38 --> mysqli_sql_exception: Duplicate entry '22-2' for key 'PRIMARY' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(303): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+ERROR - 2023-12-08 01:16:38 --> mysqli_sql_exception: Duplicate entry '22-1' for key 'PRIMARY' in C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\MVCmecanica\system\Database\MySQLi\Connection.php(306): mysqli->query()
+#1 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 C:\xampp\htdocs\MVCmecanica\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 C:\xampp\htdocs\MVCmecanica\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query()
+#4 C:\xampp\htdocs\MVCmecanica\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\MVCmecanica\system\BaseModel.php(766): CodeIgniter\Model->doInsert()
+#6 C:\xampp\htdocs\MVCmecanica\system\Model.php(715): CodeIgniter\BaseModel->insert()
+#7 C:\xampp\htdocs\MVCmecanica\app\Controllers\osController.php(315): CodeIgniter\Model->insert()
+#8 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(942): App\Controllers\OsController->editar()
+#9 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#10 C:\xampp\htdocs\MVCmecanica\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\xampp\htdocs\MVCmecanica\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\MVCmecanica\system\Commands\Server\rewrite.php(47): require_once('...')
+#13 {main}
+CRITICAL - 2023-12-08 01:17:46 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 2 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH/Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH/Controllers/userController.php(32): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\userController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\userController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 01:17:52 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 2 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH/Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH/Controllers/userController.php(32): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\userController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\userController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 01:20:46 --> Undefined constant "CodeIgniter\Database\MySQLi\MYSQLI_STORE_RESULT"
+in SYSTEMPATH/Database/Database.php on line 137.
+ 1 SYSTEMPATH/Database/Database.php(55): CodeIgniter\Database\Database->initDriver('MySQLi', 'Connection', [...])
+ 2 SYSTEMPATH/Database/Config.php(83): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH/Model.php(151): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH/Controllers/userController.php(32): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\userController->index()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\userController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 01:34:40 --> Undefined variable $pdf
+in APPPATH/Controllers/osController.php on line 237.
+ 1 APPPATH/Controllers/osController.php(237): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pdf', '/var/www/html/app/Controllers/osController.php', 237)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\OsController->gerarPdf('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-08 01:37:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(306): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-08 01:37:11 --> mysqli_sql_exception: Duplicate entry '22-2' for key 'PRIMARY' in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(306): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-08 01:37:11 --> mysqli_sql_exception: Duplicate entry '22-1' for key 'PRIMARY' in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(318): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-08 01:37:49 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sql10666294`.`ordemdeservico_servico`, CONSTRAINT `ordemdeservico_servico_ibfk_2` FOREIGN KEY (`servico_id`) REFERENCES `servicos` (`id`)) in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(306): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-08 01:37:49 --> mysqli_sql_exception: Duplicate entry '22-2' for key 'PRIMARY' in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(306): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2023-12-08 01:37:49 --> mysqli_sql_exception: Duplicate entry '22-1' for key 'PRIMARY' in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(318): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-08 01:41:45 --> Undefined array key "id"
+in APPPATH/Controllers/OsController.php on line 313.
+ 1 APPPATH/Controllers/OsController.php(313): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', '/var/www/html/app/Controllers/OsController.php', 313)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-08 01:44:11 --> mysqli_sql_exception: Duplicate entry '22-1' for key 'PRIMARY' in /var/www/html/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /var/www/html/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `or...', 0)
+#1 /var/www/html/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `or...')
+#2 /var/www/html/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `or...')
+#3 /var/www/html/system/Database/BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `or...', Array, false)
+#4 /var/www/html/system/Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 /var/www/html/system/BaseModel.php(766): CodeIgniter\Model->doInsert(Array)
+#6 /var/www/html/system/Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 /var/www/html/app/Controllers/OsController.php(318): CodeIgniter\Model->insert(Array)
+#8 /var/www/html/system/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+#9 /var/www/html/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+#10 /var/www/html/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /var/www/html/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-12-08 01:46:18 --> Undefined array key "quantidade_peca"
+in APPPATH/Views/editarOS.php on line 94.
+ 1 APPPATH/Views/editarOS.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "quantidade_peca"', '/var/www/html/app/Views/editarOS.php', 94)
+ 2 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/editarOS.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editarOS', [], true)
+ 5 APPPATH/Controllers/OsController.php(329): view('editarOS', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 01:48:09 --> Undefined variable $pecaId
+in APPPATH/Controllers/OsController.php on line 255.
+ 1 APPPATH/Controllers/OsController.php(255): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pecaId', '/var/www/html/app/Controllers/OsController.php', 255)
+ 2 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-08 01:49:59 --> Undefined variable $quantidade_peca
+in APPPATH/Views/editarOS.php on line 94.
+ 1 APPPATH/Views/editarOS.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $quantidade_peca', '/var/www/html/app/Views/editarOS.php', 94)
+ 2 SYSTEMPATH/View/View.php(228): include('/var/www/html/app/Views/editarOS.php')
+ 3 SYSTEMPATH/View/View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1190): CodeIgniter\View\View->render('editarOS', [], true)
+ 5 APPPATH/Controllers/OsController.php(335): view('editarOS', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\OsController->editar('22')
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OsController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+>>>>>>> d1d48a76316fabed94a0632a26bf01d02dff9494

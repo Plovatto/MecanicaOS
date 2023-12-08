@@ -10,16 +10,16 @@
         "slack": "https://codeigniterchat.slack.com"
     },
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.2",
         "ext-intl": "*",
         "ext-json": "*",
-        "ext-mbstring": "*",
+        "ext-mbstring": "^1.28.0",
         "dompdf/dompdf": "^2.0",
-        "josegonzalez/dotenv": "*",
+        "josegonzalez/dotenv": "^4.0.0",
         "laminas/laminas-escaper": "^2.9",
         "phpmailer/phpmailer": "^6.9",
         "psr/log": "^1.1",
-        "vlucas/phpdotenv": "*"
+        "vlucas/phpdotenv": "^5.6.0"
     },
     "require-dev": {
         "codeigniter/coding-standard": "^1.5",
