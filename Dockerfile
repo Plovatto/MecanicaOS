@@ -28,4 +28,4 @@ RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 WORKDIR /var/www/html/public
 EXPOSE 80 443
 
-CMD service php-fpm start && nginx -g 'daemon off;'
+CMD nginx -g 'daemon off;'
