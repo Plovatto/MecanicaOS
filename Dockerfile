@@ -22,8 +22,10 @@ RUN chown -R www-data:www-data /var/www/html
 
 RUN rm /etc/nginx/sites-enabled/default
 
-COPY ./nginx.conf /etc/nginx/sites-enabled/
-WORKDIR /var/www/html/public
-EXPOSE 3000
+COPY ./nginx.conf /etc/nginx/sites-available/default
+RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 
-CMD service nginx start & php-fpm
+WORKDIR /var/www/html/public
+EXPOSE 80 443
+
+CMD service php8.2-fpm start && nginx -g 'daemon off;'
