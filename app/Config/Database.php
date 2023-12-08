@@ -10,10 +10,10 @@ class Database extends Config
 
     public $default = [
         'DSN'      => '',
-        'hostname' => '127.0.0.1',
-        'username' => 'root',
-        'password' => 'password',
-        'database' => 'mecanica3',
+        'hostname' => 'sql10.freemysqlhosting.net',
+        'username' => 'sql10666294',
+        'password' => 'ceE4dAaRrl',
+        'database' => 'sql10666294',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

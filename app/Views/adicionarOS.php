@@ -107,9 +107,9 @@
 <br>
 <p id="quantidade_peca2"></p><br>
 <p id="valor_pecas2"></p><br>
-<button type="submit">Adicionar OS</button>
+<button type="submit">Adicionar OS</button> 
 </form>
-
+<a href="/orders">Home</a>
 </body>
 </html>
 

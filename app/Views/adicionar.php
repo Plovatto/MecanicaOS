@@ -106,7 +106,7 @@
  
     <option value="<?=$id?>"><?=esc($nome)?></option>
 <?php endforeach;?>
-<option value="other">Other</option>
+<option value="other">Outro</option>
 </select>
 <input type="text" id="marca_other" name="marca_other" style="display: none;">
 
@@ -119,7 +119,7 @@
         <option value="<?=$modelo->id?>"><?=$modelo->nome?></option>
     <?php endforeach;?>
 <?php endif;?>
-<option value="other">Other</option>
+<option value="other">Outro</option>
 </select><br> <label for="descricao">Descrição</label><br>
 <textarea required id="descricao" name="descricao" required><?=set_value('descricao')?></textarea>
 <br>
@@ -349,7 +349,7 @@ $(document).ready(function() {
                         select.append(option);
                     }
 
-                    var option = $('<option></option>').val('other').text('Other');
+                    var option = $('<option></option>').val('Outro').text('Outro');
                     select.append(option);
                 });
 
@@ -364,7 +364,7 @@ $(document).ready(function() {
     $('#marca_id').change(function() {
         var marca_id = this.value;
         var marca_other = $('#marca_other');
-        if (marca_id === 'other') {
+        if (marca_id === 'Outro') {
             marca_other.show();
         } else {
             marca_other.hide();
@@ -374,7 +374,7 @@ $(document).ready(function() {
     $('#modelo_id').change(function() {
         var modelo_id = this.value;
         var modelo_other = $('#modelo_other');
-        if (modelo_id === 'other') {
+        if (modelo_id === 'Outro') {
             modelo_other.show();
         } else {
             modelo_other.hide();

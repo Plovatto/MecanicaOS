@@ -93,8 +93,11 @@ class OsController extends BaseController
         if ($this->request->getMethod() === 'post') {
 
             $osModel = new OsModel();
+            $codigo = str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT);
+            date_default_timezone_set('America/Sao_Paulo');
 
             $data = [
+                'codigo' => $codigo,
                 'defeito' => $this->request->getPost('defeito'),
                 'solucao' => $this->request->getPost('solucao'),
                 'detalhes' => $this->request->getPost('detalhes'),
@@ -106,6 +109,8 @@ class OsController extends BaseController
                 'veiculo_id' => $this->request->getPost('veiculo_id'),
                 'mecanico_id' => session('user_id'),
                 'equipe_id' => $this->request->getPost('equipe_codigo'),
+                'total' => $this->request->getPost('valor_servicos') + $this->request->getPost('valor_pecas'),
+                'data_emissao' => date('Y-m-d'),  
 
             ];
             var_dump($data);
@@ -222,11 +227,14 @@ class OsController extends BaseController
         $bootstrapCss = file_get_contents('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
         $addCss = file_get_contents('style/fatura.css');
         $dompdf = new \Dompdf\Dompdf();
+
         $html = view('faturamento', ['order' => $order, 'pecas' => $pecas, 'servicos' => $servicos, 'isPdf' => true, 'isPdf2' => true]);
         $html = '<style>' . $addCss . '</style>' . '<style>' . $bootstrapCss . '</style>' . $html;
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A3', 'landscape');
         $dompdf->render();
+$this->response->setHeader('Content-Type', 'application/pdf');
+$this->response->setBody($dompdf->output());
 
         $dompdf->stream("Faturamento.pdf", array("Attachment" => false));
 
@@ -254,8 +262,10 @@ class OsController extends BaseController
         if ($this->request->getMethod() === 'post') {
 
             $osModel = new OsModel();
-
+           
+            
             $data = [
+           
                 'defeito' => $this->request->getPost('defeito'),
                 'solucao' => $this->request->getPost('solucao'),
                 'detalhes' => $this->request->getPost('detalhes'),
@@ -267,18 +277,20 @@ class OsController extends BaseController
                 'veiculo_id' => $this->request->getPost('veiculo_id'),
                 'mecanico_id' => session('user_id'),
                 'equipe_id' => $this->request->getPost('equipe_codigo'),
-
+              
             ];
             var_dump($data);
-            $osId = $osModel->insert($data);
+          
+            $update = $osModel->update($id, $data);
 
-            if ($osId === false) {
-                var_dump($osModel->errors());
-            } else {
+    if ($update === false) {
+        var_dump($osModel->errors());
+    } else {            
+
                 $pecaIds = $this->request->getPost('peca_codigo');
                 $servicoIds = $this->request->getPost('servico_codigo[]');
 
-                $quantidades = json_decode($this->request->getPost('quantidade_peca'), true);
+             $quantidades = json_decode($this->request->getPost('quantidade_peca'), true);
 
                 $osPecaModel = new OsPecaModel();
 
@@ -287,7 +299,7 @@ class OsController extends BaseController
                 }
                 foreach ($servicoIds as $servicoId) {
                     $osServicoData = [
-                        'ordemdeservico_id' => $osId,
+                        'ordemdeservico_id' => $id,
                         'servico_id' => $servicoId,
                     ];
 
@@ -298,7 +310,7 @@ class OsController extends BaseController
                 foreach ($pecaIds as $pecaId) {
                     if (!empty($pecaId)) {
                         $osPecaData = [
-                            'ordemdeservico_id' => $osId,
+                            'ordemdeservico_id' => $id,
                             'peca_id' => $pecaId,
                             'quantidade' => isset($quantidades[$pecaId]) ? $quantidades[$pecaId] : 0,
                         ];
@@ -308,88 +320,12 @@ class OsController extends BaseController
                         }
                     }
                 }
-                session()->setFlashdata('success', 'Ordem de |Serviço criada com sucesso!');
-                return redirect()->to('/orders')->with('success', 'Ordem de Serviço adicionada com sucesso.');
+                session()->setFlashdata('success', 'Ordem de Serviço editada com sucesso!');
+                return redirect()->to('/orders')->with('success', 'Ordem de Serviço editada com sucesso!');
             }
         }
 
         return view('editarOS', ['order' => $order, 'pecas' => $pecas, 'servicos' => $servicos, 'equipes' => $equipes, 'selectedPecas' => $selectedPecas, 'selectedPecaIds' => $selectedPecaIds, 'selectedServiçosIds' => $selectedServiçosIds]);
     }
-    public function atualizar($id)
-    {
-        $servicoModel = new ServicoModel();
-        $pecaModel = new PecaModel();
-        $pecas = $pecaModel->where('status', 'ativo')->findAll();
-        $servicos = $servicoModel->where('status', 'ativo')->findAll();
-        $equipeModel = new EquipeModel();
-        $equipes = $equipeModel->where('status', 'ativo')->findAll();
-        $formData = $this->request->getPost();
-        $osServicoModel = new OServicoModel();
-
-        $pecaIds = isset($formData['peca_codigo']) ? $formData['peca_codigo'] : [];
-        $servicosIds = isset($formData['servico_codigo']) ? $formData['servico_codigo'] : [];
-        if ($this->request->getMethod() === 'post') {
-
-            $osModel = new OsModel();
-
-            $data = [
-                'defeito' => $this->request->getPost('defeito'),
-                'solucao' => $this->request->getPost('solucao'),
-                'detalhes' => $this->request->getPost('detalhes'),
-                'valor_servicos' => $this->request->getPost('valor_servicos'),
-                'quantidade_peca' => $this->request->getPost('quantidade_peca'),
-                'valor_pecas' => $this->request->getPost('valor_pecas'),
-                'data_previsao' => $this->request->getPost('data_previsao'),
-                'cliente_id' => $this->request->getPost('cliente_id'),
-                'veiculo_id' => $this->request->getPost('veiculo_id'),
-                'mecanico_id' => session('user_id'),
-                'equipe_id' => $this->request->getPost('equipe_codigo'),
-
-            ];
-            var_dump($data);
-            $osId = $osModel->insert($data);
-
-            if ($osId === false) {
-                var_dump($osModel->errors());
-            } else {
-                $pecaIds = $this->request->getPost('peca_codigo');
-                $servicoIds = $this->request->getPost('servico_codigo[]');
-
-                $quantidades = json_decode($this->request->getPost('quantidade_peca'), true);
-
-                $osPecaModel = new OsPecaModel();
-
-                if ($servicoIds === null) {
-                    $servicoIds = [];
-                }
-                foreach ($servicoIds as $servicoId) {
-                    $osServicoData = [
-                        'ordemdeservico_id' => $osId,
-                        'servico_id' => $servicoId,
-                    ];
-
-                    if ($osServicoModel->insert($osServicoData) === false) {
-                        var_dump($osServicoModel->errors());
-                    }
-                }
-                foreach ($pecaIds as $pecaId) {
-                    if (!empty($pecaId)) {
-                        $osPecaData = [
-                            'ordemdeservico_id' => $osId,
-                            'peca_id' => $pecaId,
-                            'quantidade' => $quantidades[$pecaId],
-                        ];
-
-                        if ($osPecaModel->insert($osPecaData) === false) {
-                            var_dump($osPecaModel->errors());
-                        }
-                    }
-                }
-                session()->setFlashdata('success', 'Ordem de |Serviço criada com sucesso!');
-                return redirect()->to('/orders')->with('success', 'Ordem de Serviço adicionada com sucesso.');
-            }
-        }
-
-        return view('editarOS', ['pecas' => $pecas, 'servicos' => $servicos, 'equipes' => $equipes]);
-    }
+   
 }
