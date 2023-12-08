@@ -12,13 +12,14 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-install intl mbstring mysqli pdo pdo_mysql
 
 RUN chown -R www-data:www-data /var/www/html
+
 WORKDIR /var/www/html/
+
 RUN composer install --no-interaction -vvv
 
 RUN rm /etc/nginx/sites-enabled/default
 
 COPY ./nginx.conf /etc/nginx/sites-enabled/
 WORKDIR /var/www/html/public
-
 
 CMD service nginx start && php-fpm
