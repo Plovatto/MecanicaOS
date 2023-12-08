@@ -1,9 +1,13 @@
 FROM php:8.2-fpm
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+COPY composer.json composer.json
 
 RUN apt-get update && apt-get install -y \
     libicu-dev \
     libonig-dev \
-    nginx
+    nginx \
+       composer -n validate --strict ; \
+    composer -n install --no-scripts --ignore-platform-reqs --no-dev
 
 COPY . /var/www/html/
 
@@ -12,10 +16,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN docker-php-ext-install intl mbstring mysqli pdo pdo_mysql
 
 RUN chown -R www-data:www-data /var/www/html
-
-WORKDIR /var/www/html/
-
-RUN composer install --no-interaction -vvv
+COPY src /var/www/html
 
 RUN rm /etc/nginx/sites-enabled/default
 
