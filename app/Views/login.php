@@ -29,7 +29,7 @@
 </head>
 <body class="body animate__animated animate__fadeIn" onload="hideErrors();">
     <div class="container animate__animated animate__fadeIn">
-        <div class="row justify-content-center no-gutters animate__animated animate__fadeIn">
+        <div class="row no-gutters animate__animated animate__fadeIn">
             <div class="col-md-6 animate__animated animate__fadeIn">
                 <div class="card p-4 animate__animated animate__backInDown">
                     <div class="card-body animate__animated animate__fadeIn">
