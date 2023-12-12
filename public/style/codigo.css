@@ -10,8 +10,11 @@
     align-items: center;
     justify-content: center;
 }
-
-.card {
+.row {
+    margin: 0;
+}
+.card {  margin: 0 auto; 
+    width: 400px;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -119,103 +122,14 @@ div.reg{
     margin: 0 auto;
 }
 
-.loader {
-    margin-top: 10px;
-    height: 35px;
-    width: 1px;
-    position: relative;
-    border-style: solid;
-    box-sizing: border-box;
-    border-width: 20px 30px 15px 30px;
-    border-color: #00576d #96ebfc #6ec0bd #36f1f7;
-    animation: envFloating 1s ease-in infinite alternate;
-}
 
-.loader:after {
-    content: "";
-    position: absolute;
-    right: 31px;
-    top: -20px;
-    height: 35px;
-    width: 15px;
-    background-image: linear-gradient(blue 65px, transparent 0),
-        linear-gradient(blue 65px, transparent 0),
-        linear-gradient(blue 65px, transparent 0);
-    background-repeat: no-repeat;
-    background-size: 15px 2px;
-    background-position: 0px 5.5px , 4px 17.5px, 0px 30px;
-    animation: envDropping 0.75s linear infinite;
-}
-  
-  @keyframes envFloating {
-    0% {
-      transform: translate(-2px, -5px)
-    }
-  
-   50% {
-      transform: translate(0, 5px)
-    }
+.gear-icon {  margin-top: 30px;
+    animation: spin 2s linear infinite;
+    width: 50px;
   }
   
-  @keyframes envDropping {
-    0% {
-      background-position: 100px 11px , 115px 35px, 105px 60px;
-      opacity: 1;
-    }
-  
-    50% {
-      background-position: 0px 11px , 20px 35px, 5px 60px;
-    }
-  
-    60% {
-      background-position: -30px 11px , 0px 35px, -10px 60px;
-    }
-  
-    75%, 100% {
-      background-position: -30px 11px , -30px 35px, -30px 60px;
-      opacity: 0;
-    }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
-        
 
-
-
-
-
-
-
-
-
-
-
-
-  .spinner {
-    width: 56px;
-    height: 56px;
-    display: grid;
-    color: #004dff;
-    background: radial-gradient(farthest-side, currentColor calc(100% - 7px),#0000 calc(100% - 6px) 0);
-    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 15px),#000 calc(100% - 13px));
-    border-radius: 50%;
-    animation: spinner-sm4bhi 2s infinite linear;
-   }
-   
-   .spinner::before,
-   .spinner::after {
-    content: "";
-    grid-area: 1/1;
-    background: linear-gradient(currentColor 0 0) center,
-             linear-gradient(currentColor 0 0) center;
-    background-size: 100% 11px,11px 100%;
-    background-repeat: no-repeat;
-   }
-   
-   .spinner::after {
-    transform: rotate(45deg);
-   }
-   
-   @keyframes spinner-sm4bhi {
-    100% {
-     transform: rotate(1turn);
-    }
-   }

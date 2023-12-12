@@ -11,19 +11,29 @@
     justify-content: center;
 }
 
-.card {
+.card {   
+    width: 30vw;
+    margin: 0 auto; 
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
-
-.card-body {
-    padding: 2rem;
+.card img{
+    margin: 0;
+    padding: 0;
 }
-
-h1 {
-    font-size: 2rem;
-    font-weight: 700;
+.card-body {
+   
+}
+.text{font-size: 13px;
+    text-align: center;
+    margin: auto;
+    display: block;
+ width: 160px;
+}
+.card h3 {
+   
+    font-weight: 600;
     color: #343a40;
-    margin-bottom: 1rem;
+    
 }
 
 p {
@@ -34,32 +44,55 @@ p {
 .form-group {
     margin-bottom: 1rem;
 }
-
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
 label {
     font-weight: 500;
     display: block;
     margin-bottom: 0.5rem;
 }
-   .otp-input{
-    width: 40px;
+input[type="password"] {
     padding: 0.5rem;
-    margin: 1rem 0.2rem 1rem 0.3rem ;
     border: none;
         border-bottom: 2px solid #3a3a3a;
         outline: none;
         box-shadow: none;
         border-radius: 0;
-
+    width: 90%;
     font-size: 1rem;
-    color: #495057;
-   }
-   .otp-input:focus{
+    color: #495057;display: block;
+    margin: auto;
+}
+input[type="password"]:focus {
     box-shadow: none;
     border-bottom: #5feaff solid 2px;
     background-color: white;
     outline: none; 
 }
-   
+
+input[type="text"] {
+    padding: 0.5rem;
+    display: block;
+    margin: auto;
+
+    border: none;
+        border-bottom: 2px solid #3a3a3a;
+        outline: none;
+        box-shadow: none;
+        border-radius: 0;
+    width: 90%;
+    font-size: 1rem;
+    color: #495057;
+}
+input[type="text"]:focus {
+    box-shadow: none;
+    border-bottom: #5feaff solid 2px;
+    background-color: white;
+    outline: none; 
+}
+
 input[type="email"] {
     padding: 0.5rem;
     border: none;
@@ -67,9 +100,10 @@ input[type="email"] {
         outline: none;
         box-shadow: none;
         border-radius: 0;
-    width: 100%;
+    width: 90%;
     font-size: 1rem;
-    color: #495057;
+    color: #495057;display: block;
+    margin: auto;
 }
 input[type="email"]:focus {
     box-shadow: none;
@@ -97,12 +131,40 @@ input[type="email"]:focus {
     box-shadow: none;
 }
 
+#submitBtn {
+    transition: all 0.5s;
+}
+.text a {
+    color: #016199;
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.5s; 
+   
+}
 
+.text a:hover {
+    color: #36f1f7;
+}
+#submitBtn:hover {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 #submitBtn {
     background: linear-gradient(to right, #5feaff, #005a8f);
     border: none;
-    width: 100%;
+    width: 90%;
     height: 50px;
     font-size: large;
     color: white;

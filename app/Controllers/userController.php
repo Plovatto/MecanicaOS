@@ -152,6 +152,7 @@ class userController extends BaseController
         }
     }
 
+
     private function sendEmail($to, $subject, $body)
     {
         $mail = new PHPMailer(true);

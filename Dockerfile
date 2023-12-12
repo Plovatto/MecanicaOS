@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.2-apache
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,6 +21,12 @@ RUN composer install --no-scripts --ignore-platform-reqs --no-dev
 
 # Copy application files
 COPY . .
+
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite
+
+# Change document root for Apache
+RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html
