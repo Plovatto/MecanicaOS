@@ -42,20 +42,20 @@ $routes->get('/adicionarOS', 'osController::adicionarOS');
 $routes->post('/searchVeiculo', 'osController::searchVeiculo');
 
 $routes->group('user', ['namespace' => 'App\Controllers'], function ($routes) {
-    $routes->get('forgot-password', 'UserController::forgotPassword');
+    $routes->get('forgot-password', 'userController::forgotPassword');
 
-$routes->get('reset-password', 'UserController::forgotPassword3');
-$routes->post('send-reset-code', 'UserController::sendResetCode');
-$routes->get('confirm-code', 'UserController::confirmCode');
-$routes->post('verify-code', 'UserController::verifyCode');
+$routes->get('reset-password', 'userController::resetSenha');
+$routes->post('send-reset-code', 'userController::sendResetCode');
+$routes->get('confirm-code', 'userController::confirmCode');
+$routes->post('verify-code', 'userController::verifyCode');
     $routes->post('reset-password', 'userController::resetPassword');
 });
 
 
 $routes->get('/faturamento/(:num)', 'osController::Faturamento/$1');
 $routes->get('/gerarPdf/(:num)', 'osController::gerarPdf/$1');
-$routes->get('/os/editar/(:segment)', 'OsController::editar/$1');
-$routes->post('/os/editar/(:segment)', 'OsController::editar/$1');
-$routes->post('/os/editar/(:segment)', 'OsController::atualizar/$1');
+$routes->get('/os/editar/(:segment)', 'osController::editar/$1');
+$routes->post('/os/editar/(:segment)', 'osController::editar/$1');
+$routes->post('/os/editar/(:segment)', 'osController::atualizar/$1');
 $routes->post('/request_part', 'ListarController::requestPart');
 $routes->post('/request_part2', 'ListarController::requestPart2');

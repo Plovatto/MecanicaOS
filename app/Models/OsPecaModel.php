@@ -2,7 +2,7 @@
 
 use CodeIgniter\Model;
 
-class OsPecaModel extends Model
+class OSPecaModel extends Model
 {
     protected $table = 'ordemdeservico_peca';
 

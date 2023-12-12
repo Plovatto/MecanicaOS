@@ -85,7 +85,7 @@ class userController extends BaseController
     }
     
 
-    public function resetpassword2()
+    public function resetSenha()
     {
         return view('ResetSenha');
     }
@@ -111,7 +111,7 @@ class userController extends BaseController
         }
     }
 
-    public function confirmCode2()
+    public function confirmCode()
     {
         return view('ConfirmCode');
     }

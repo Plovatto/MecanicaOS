@@ -59,7 +59,7 @@ class OsController extends BaseController
 
         $osServicoModel = new OServicoModel();
         $osModel = new OSModel();
-        $osPecaModel = new OsPecaModel();
+        $osPecaModel = new OSPecaModel();
         $order = $osModel->find($id);
         $order = $osModel->getOrderWithDetails($id);
         $pecas = $osPecaModel->getPecasForOrdem($id);
@@ -197,7 +197,7 @@ class OsController extends BaseController
         $order = $osModel->getOrderWithDetails($id);
         $osServicoModel = new OServicoModel();
       
-        $osPecaModel = new OsPecaModel();
+        $osPecaModel = new OSPecaModel();
         $ServicoModel = new ServicoModel();
         $order = $osModel->find($id);
         $order = $osModel->getOrderWithDetails($id);
@@ -218,7 +218,7 @@ class OsController extends BaseController
     {
         $osModel = new OSModel();
         $osServicoModel = new OServicoModel();
-        $osPecaModel = new OsPecaModel();
+        $osPecaModel = new OSPecaModel();
         $ServicoModel = new ServicoModel();
         $order = $osModel->getOrderWithDetails($orderId);
         $pecas = $osPecaModel->getPecasForOrdem($orderId);
@@ -250,7 +250,7 @@ $this->response->setBody($dompdf->output());
         $equipeModel = new EquipeModel();
         $equipes = $equipeModel->where('status', 'ativo')->findAll();
         $formData = $this->request->getPost();
-        $osPecaModel = new OsPecaModel();
+        $osPecaModel = new OSPecaModel();
 
         $osServicoModel = new OServicoModel();
         $selectedPecas = $osPecaModel->where('ordemdeservico_id', $id)->findAll();
@@ -292,7 +292,7 @@ $this->response->setBody($dompdf->output());
 
              $quantidades = json_decode($this->request->getPost('quantidade_peca'), true);
 
-                $osPecaModel = new OsPecaModel();
+                $osPecaModel = new OSPecaModel();
 
                 if ($servicoIds === null) {
                     $servicoIds = [];
