@@ -3,6 +3,7 @@
  <html>
  <head>
     <title>Detalhes</title>
+    <link rel="icon"  type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="/style/detalhes2.css">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

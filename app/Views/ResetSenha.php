@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redefinir senha</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/css-spinners/1.1.2/load1.min.css"/>
-
+    <link rel="icon"  type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="/style/reset.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">

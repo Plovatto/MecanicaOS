@@ -2,8 +2,9 @@
 <html lang="en">
 <head>  <link rel="stylesheet" href="/style/perfil.css">
     <meta charset="UTF-8">
+    <link rel="icon"  type="image/png" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Usuário</title>
+    <title>Perfil</title>
 </head>
 <body>
 <h1>Perfil do Usuário</h1>

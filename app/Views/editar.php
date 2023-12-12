@@ -5,6 +5,7 @@
     <meta charset="UTF-8"> <link rel="stylesheet" href="/style/add.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Cliente</title>
+    <link rel="icon"  type="image/png" href="favicon.ico">
 </head>
 <body><?php if ($tipo === 'cliente'): ?>
     <h1>Editar Cliente</h1>
