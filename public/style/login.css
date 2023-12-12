@@ -5,14 +5,14 @@
     font-family: 'Inter', sans-serif;
 }
 .container {
-    height: 100vh;
+    height: 750px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .card {   
-    width: 30vw;
+    width: 500px;
     margin: 0 auto; 
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
@@ -244,13 +244,6 @@ div.reg{
 
 
 
-
-
-
-
-
-
-
   .spinner {
     width: 56px;
     height: 56px;
@@ -281,3 +274,27 @@ div.reg{
      transform: rotate(1turn);
     }
    }
+
+
+
+
+
+  @media (max-width: 600px) {
+    .card {
+        width: 1200px !important;
+        height: 900px;
+    }
+    div.container {
+        height: 1100px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .text {
+        width: 100%;
+    }
+    input[type="password"], input[type="text"], input[type="email"], #submitBtn {
+        width: 100%;
+    }
+}
+

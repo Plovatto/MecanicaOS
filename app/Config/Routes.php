@@ -42,8 +42,8 @@ $routes->get('/adicionarOS', 'osController::adicionarOS');
 $routes->post('/searchVeiculo', 'osController::searchVeiculo');
 
 $routes->group('user', ['namespace' => 'App\Controllers'], function ($routes) {
-    $routes->get('forgot-password', 'UserController::forgotPassword');
-
+    $routes->get('forgot-password', 'UserController::forgotpassword2');
+    $routes->post('forgot-password', 'UserController::forgotPassword');
 $routes->get('reset-password', 'UserController::forgotPassword3');
 $routes->post('send-reset-code', 'UserController::sendResetCode');
 $routes->get('confirm-code', 'UserController::confirmCode');

@@ -79,14 +79,14 @@ class userController extends BaseController
         return view('perfil', ['userType' => $userType, 'perfil' => $perfil]);
     }
 
-    public function forgotPassword()
+    public function forgotpassword2()
     {
 
         return view('Redefinir');
 
     }
 
-    public function forgotPassword3()
+    public function resetpassword2()
     {
         return view('ResetSenha');
     }
@@ -112,7 +112,7 @@ class userController extends BaseController
         }
     }
 
-    public function confirmCode()
+    public function confirmCode2()
     {
         return view('ConfirmCode');
     }
