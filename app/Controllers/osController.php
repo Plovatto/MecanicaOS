@@ -16,7 +16,7 @@ class OsController extends BaseController
 {
     public function index($id = null)
     {
-        $osModel = new OsModel();
+        $osModel = new OSModel();
         $clienteModel = new ClienteModel();
         $veiculoModel = new VeiculoModel();
         $clientes = $clienteModel->findAll();
@@ -58,7 +58,7 @@ class OsController extends BaseController
     {$equipeMecanicoModel = new EquipeMecanicoModel();
 
         $osServicoModel = new OServicoModel();
-        $osModel = new OsModel();
+        $osModel = new OSModel();
         $osPecaModel = new OsPecaModel();
         $order = $osModel->find($id);
         $order = $osModel->getOrderWithDetails($id);
@@ -196,7 +196,7 @@ class OsController extends BaseController
         $osModel = new OSModel();
         $order = $osModel->getOrderWithDetails($id);
         $osServicoModel = new OServicoModel();
-        $osModel = new OsModel();
+      
         $osPecaModel = new OsPecaModel();
         $ServicoModel = new ServicoModel();
         $order = $osModel->find($id);
@@ -241,7 +241,7 @@ $this->response->setBody($dompdf->output());
     }
     
     public function editar($id)
-    {$osModel = new OsModel();
+    {$osModel = new OSModel();
         $order = $osModel->getOrderWithDetails($id);
         $servicoModel = new ServicoModel();
         $pecaModel = new PecaModel();
@@ -261,7 +261,7 @@ $this->response->setBody($dompdf->output());
         $servicosIds = isset($formData['servico_codigo']) ? $formData['servico_codigo'] : [];
         if ($this->request->getMethod() === 'post') {
 
-            $osModel = new OsModel();
+            $osModel = new OSModel();
            
             
             $data = [

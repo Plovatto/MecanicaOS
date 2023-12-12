@@ -6,7 +6,7 @@ use App\Models\ClienteModel;
 use App\Models\EquipeMecanicoModel;
 use App\Models\EquipeModel;
 use App\Models\EspecialidadeModel;
-use App\Models\osModel;
+use App\Models\OSModel;
 use App\Models\PecaModel;
 use App\Models\ServicoModel;
 use App\Models\UserModel;
@@ -42,7 +42,7 @@ class ListarController extends BaseController
 
             $campoPesquisa2 = 'codigo';
             $campoPesquisa = 'data_previsao';
-            $model = new osModel();
+            $model = new OSModel();
         } elseif ($tipo === 'mecanico') {
             $campoPesquisa = 'nome_completo';
             $campoPesquisa2 = 'especialidade_nome';
@@ -163,7 +163,7 @@ class ListarController extends BaseController
                 $clienteDoVeiculo = $veiculoModel->getClienteFromVeiculo($veiculoCodigo);
                 $veiculo = $veiculoModel->getVeiculoWithMarcaModelo($id);
                 $item = $veiculo;
-                $osModel = new OsModel();
+                $osModel = new OSModel();
                 $order = $osModel->getOrdersByVehicle($veiculo->id);
 
                 break;
@@ -438,7 +438,7 @@ class ListarController extends BaseController
 
                 break;
             case 'os':
-                $osModel = new osModel();
+                $osModel = new OSModel();
                 $order = $osModel->find($id);
 
                 if ($order) {
