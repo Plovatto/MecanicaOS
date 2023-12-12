@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar</title>
-    <link rel="icon"  type="image/png" href="favicon.ico">
+    <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="/style/add.css">
@@ -109,7 +108,7 @@
  
     <option value="<?=$id?>"><?=esc($nome)?></option>
 <?php endforeach;?>
-<option value="other">Outro</option>
+<option value="other">Other</option>
 </select>
 <input type="text" id="marca_other" name="marca_other" style="display: none;">
 
@@ -122,7 +121,7 @@
         <option value="<?=$modelo->id?>"><?=$modelo->nome?></option>
     <?php endforeach;?>
 <?php endif;?>
-<option value="other">Outro</option>
+<option value="other">Other</option>
 </select><br> <label for="descricao">Descrição</label><br>
 <textarea required id="descricao" name="descricao" required><?=set_value('descricao')?></textarea>
 <br>
@@ -224,33 +223,19 @@
 <br>
 <label for="senha">senha</label>
 <div class="password-container">
-    <input type="password" placeholder="Senha" name="password" id="password">
-    <button type="button" id="togglePassword" class="eye-button">
-    <span class="material-icons" id="eyeIcon">
-        visibility_off
-    </span>
-</button>
+    <input type="password" id="senha" name="senha" required>
+    <button type="button" id="togglePassword">👁️</button>
 </div>
 
-<script>
-    const togglePassword = document.querySelector("#togglePassword");
-    const password = document.querySelector("#senha");
-
-    togglePassword.addEventListener('click', function (e) {
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
-        this.classList.toggle('fa-eye-slash');
-    });
-</script>
 <br>
 <label for="cpf">cpf</label>
 <input type="text" name="cpf" required>
 <br>
 <label for="tipo">Tipo</label>
 <select name="tipo" required>
- <option value="mecanico">Mecanico</option>
+
     <option value="admin">Admin</option>
-   
+    <option value="mecanico">Mecanico</option>
 </select>
 <br>
 <br>
@@ -277,7 +262,6 @@
 
 
 <?php endif;?>
-
 <?php if ($data['tipo'] === 'equipe'): ?>
   
 <?php echo form_open('adicionar/equipe'); ?>
@@ -361,7 +345,7 @@ $(document).ready(function() {
                         select.append(option);
                     }
 
-                    var option = $('<option></option>').val('Outro').text('Outro');
+                    var option = $('<option></option>').val('other').text('Other');
                     select.append(option);
                 });
 
@@ -376,7 +360,7 @@ $(document).ready(function() {
     $('#marca_id').change(function() {
         var marca_id = this.value;
         var marca_other = $('#marca_other');
-        if (marca_id === 'Outro') {
+        if (marca_id === 'other') {
             marca_other.show();
         } else {
             marca_other.hide();
@@ -386,7 +370,7 @@ $(document).ready(function() {
     $('#modelo_id').change(function() {
         var modelo_id = this.value;
         var modelo_other = $('#modelo_other');
-        if (modelo_id === 'Outro') {
+        if (modelo_id === 'other') {
             modelo_other.show();
         } else {
             modelo_other.hide();
@@ -414,7 +398,14 @@ document.getElementById('togglePassword').addEventListener('click', function () 
     } else {
         eyeIcon.textContent = 'visibility_off';
     }
-});
+});  const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#senha");
+
+    togglePassword.addEventListener('click', function (e) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+    });
 </script><style>.password-container {
     position: relative;
 }

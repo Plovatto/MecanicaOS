@@ -6,10 +6,10 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js"></script>
-<link rel="icon"  type="image/png" href="favicon.ico">
+
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar</title>
+    <title>Document</title>
 </head>
 <body>
 <form action="/adicionarOS"  method="post"><br><br>
@@ -107,16 +107,10 @@
 <br>
 <p id="quantidade_peca2"></p><br>
 <p id="valor_pecas2"></p><br>
-<<<<<<< HEAD
 <button type="submit">Adicionar OS</button><br><a  href="/orders">Home</a><br><br>
 </form>
 
 
-=======
-<button type="submit">Adicionar OS</button> 
-</form>
-<a href="/orders">Home</a>
->>>>>>> d1d48a76316fabed94a0632a26bf01d02dff9494
 </body>
 </html>
 

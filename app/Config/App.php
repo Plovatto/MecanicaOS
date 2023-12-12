@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'https://pecasandparafusos2.onrender.com/';
+    public string $baseURL = 'http://localhost:8080';
 
     public $allowMethodSpoofing = true;
 
