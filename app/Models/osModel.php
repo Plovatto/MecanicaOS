@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class OsModel extends Model
+class OSModel extends Model
 {
     protected $table = 'ordemdeservico';
     protected $primaryKey = 'id';
