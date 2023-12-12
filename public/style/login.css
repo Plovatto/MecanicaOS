@@ -281,13 +281,12 @@ div.reg{
 
   @media (max-width: 600px) {
     .card {
-        width: 1200px !important;
-        height: 900px;
+        width: 350px !important;
+        height: 650px;
     }
-    div.container {
-        height: 1100px;
+    .container {
+        height: auto;
         margin: 0;
-        padding: 0;
         width: 100%;
     }
     .text {

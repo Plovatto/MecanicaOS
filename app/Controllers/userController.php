@@ -79,10 +79,10 @@ class userController extends BaseController
         return view('perfil', ['userType' => $userType, 'perfil' => $perfil]);
     }
 
-    public function forgotpassword2()
+    public function forgotpassword()
     {
-
-        return view('Redefinir');
+   return view('Redefinir');
+     
 
     }
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">.
 <link rel="icon"  type="image/png" href="favicon.ico">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -29,7 +29,7 @@
 </head>
 <body class="body animate__animated animate__fadeIn" onload="hideErrors();">
     <div class="container animate__animated animate__fadeIn">
-        <div class="row  no-gutters animate__animated animate__fadeIn">
+        <div class="row justify-content-center no-gutters animate__animated animate__fadeIn">
             <div class="col-md-6 animate__animated animate__fadeIn">
                 <div class="card p-4 animate__animated animate__backInDown">
                     <div class="card-body animate__animated animate__fadeIn">
@@ -74,7 +74,7 @@
 
     <div class="form-group mt-3 d-flex justify-content-center align-items-center">
     <input type="submit" value="Entrar" class="btn animate__animated animate__fadeIn" id="submitBtn" data-aos="fade-up" data-aos-duration="1500">
-</div><br><div class="text animate__animated animate__backInDown " > Esqueceu a senha? <a href="/user/forgot-password">Clique aqui</a></div> <div class="reg">
+</div><br><div class="text animate__animated animate__backInDown " > Esqueceu a senha? <a href="/user/forgotpassword">Clique aqui</a></div> <div class="reg">
                         </form>  <div class="loader" id="spinner" style="display: none;"></div></div>
                     </div>
                 </div>
