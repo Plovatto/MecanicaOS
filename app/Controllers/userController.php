@@ -96,14 +96,40 @@ class userController extends BaseController
         $userModel = new UserModel();
         $user = $userModel->where('email', $email)->first();
 
+      
         if ($user) {
+            $nome = $user->nome_completo;
             $verificationCode = rand(100000, 999999);
             $userModel->updateVerificationCode($user->id, $verificationCode);
+    
+         
+            $message = "
+            <html style=\"height: auto; min-height:40rem;\">
+            <head>
+         
+            </head>
+            <body style=\"border: solid 1px #3E632C; background-color: #ffffff; height: auto;\">
+                <div style=\"width: auto; min-height: 120px; background: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSU7fLzjdVA0RezADB2bfz2CCfKwLEefwSKflppqtXwxXofKVZO'); background-size: cover;\"></div>
+                <br>
+                <h1 style=\"text-align: center; color: #3E632C;\">Redefinição de Senha</h1>
+                <p style=\"text-align: center;\">Prezado(a) $nome,</p>
+                <div style=\"margin: 1rem 3rem;\">
+                    <p>Esperamos que esta mensagem o encontre bem. Para concluir o processo de redefinição de senha em sua conta, por favor, utilize o código de verificação abaixo:</p>
+                    <p style=\"text-align: center;\"><span style=\"color: #3E632C;font-size: 18px;font-weight: 600; \">$verificationCode</span></p>                  
+                    <p>Agradecemos por sua cooperação e compreensão na manutenção da segurança de sua conta. Estamos à disposição para ajudar caso precise de assistência adicional.</p>
+                    <br>
+                    <p>Atenciosamente, <span style=\"color: #3E632C; font-weight: 600; font-size: 18px;\">Pista & Parafusos</span>.</p>
+                </div>
+                <div style=\"background-color: ##3E632C; height: 40px;\"></div>
+            </body>
+            </html>
+            ";
+    
 
-            $this->sendEmail($email, 'Verification Code', 'Your verification code is: ' . $verificationCode);
-
+            $this->sendEmail($email, 'Código de verificação', $message);
+    
             session()->set('email', $email);
-
+    
             return redirect()->to('/user/confirm-code');
         } else {
             session()->set('error', 'E-mail não cadastrado');
@@ -157,6 +183,7 @@ class userController extends BaseController
         $mail = new PHPMailer(true);
 
         try {
+            $mail->CharSet = 'UTF-8';
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
